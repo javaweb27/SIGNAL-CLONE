@@ -1,0 +1,23 @@
+{
+  "name": "proyecto-de-clon-de-signal",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "gh-pages -d dist",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.0.2",
+    "sass": "^1.43.4",
+    "gh-pages": "^3.2.3",
+    "prop-types": "^15.7.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^1.0.8",
+    "vite": "^2.6.14"
+  }
+}
