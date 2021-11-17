@@ -1,15 +1,11 @@
 import { Link } from "react-router-dom"
-import UserIcon from "../../../public/UserIcon"
+import UserIcon from "../../svg/UserIcon"
+import BasicHeader from "./BasicHeader"
 
 const Settings = () => {
   return (
     <>
-      <header>
-        <Link to="/">
-          flecha
-        </Link>
-        <h2>Ajustes</h2>
-      </header>
+      <BasicHeader linkPath="/" titleType="h2" titleText="Ajustes"/>
 
       <section className="settings">
         <Link to="profile" className="link">Usuario</Link>
