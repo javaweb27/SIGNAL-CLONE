@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import UserIcon from "../../svg/UserIcon"
+import UserProfile from "../fragments/UserProfile"
 import BasicHeader from "./BasicHeader"
 
 const Settings = () => {
@@ -8,7 +9,7 @@ const Settings = () => {
       <BasicHeader linkPath="/" titleType="h2" titleText="Ajustes"/>
 
       <section className="settings">
-        <Link to="profile" className="link">Usuario</Link>
+        <UserProfile forSettingsLink/>
 
         <Link to="account" className="link"><UserIcon/>Cuenta</Link>
         <Link to="linked-devices" className="link"><UserIcon/>Dispositivos enlazados</Link>
