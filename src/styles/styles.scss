@@ -1,2 +1,5 @@
 @use "./config";
 @use "./headers/home-header.scss";
+@use "./headers/basic-header.scss";
+@use "./sections/settings.scss";
+@use "./fragments/user-profile.scss";

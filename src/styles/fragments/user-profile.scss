@@ -1,0 +1,33 @@
+.user-profile {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  gap: 1.9rem;
+
+  &.for-header{
+    margin: auto;
+    border-radius: 50%;
+
+    .icon {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  .icon {
+    display: flex;
+    background-color: green;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+  }
+  .text {
+    display: inline-block;
+	  margin: auto;
+  }
+  .container {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+  }
+}
