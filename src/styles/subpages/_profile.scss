@@ -1,0 +1,23 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+
+  > .link:not(.user-profile) {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    padding: 1.2rem;
+    gap: 1.9rem;
+    align-items: center;
+  }
+  //contenedor que esta en cada link
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: .27rem;
+  }
+
+  .description {
+    padding: 1.9rem 1.2rem;
+  }
+}
