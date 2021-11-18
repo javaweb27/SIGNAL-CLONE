@@ -1,8 +1,6 @@
 .user-profile {
   all: unset;
   cursor: pointer;
-  display: flex;
-  gap: 1.9rem;
 
   &.for-header{
     margin: auto;
@@ -11,6 +9,15 @@
     .icon {
       width: 2rem;
       height: 2rem;
+    }
+  }
+
+  &.for-profile-page {
+    margin: .9rem auto;
+    display: inline-block;
+    .icon {
+      width: 5rem;
+      height: 5rem;
     }
   }
 
@@ -26,7 +33,6 @@
 	  margin: auto;
   }
   .container {
-    align-self: center;
     display: flex;
     flex-direction: column;
   }
