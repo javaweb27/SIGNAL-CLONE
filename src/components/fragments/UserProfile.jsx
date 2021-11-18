@@ -1,13 +1,11 @@
 import { Link } from "react-router-dom"
 
-const UserProfile = ({forHeader, forSettingsLink}) => {
-  const path = (
-    forHeader ? "settings" :
-    forSettingsLink ? "profile" : ""
-  )
+const UserProfile = ({forHeader, forSettingsLink, forProfilePage}) => {
+  const path = forHeader ? "settings" : forSettingsLink ? "profile" : ""
+  const className = forHeader ? "for-header" : forProfilePage ? "for-profile-page" : ""
 
   return (
-    <Link to={path} className={`link user-profile ${forHeader && "for-header"}`}>
+    <Link to={path} className={`link user-profile ${className}`}>
       <div className="icon">
         <span className="text">h</span>
       </div>
