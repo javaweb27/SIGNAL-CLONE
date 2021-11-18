@@ -8,7 +8,7 @@ const UserProfile = ({forHeader, forSettingsLink}) => {
 
   return (
     <Link to={path} className={`link user-profile ${forHeader && "for-header"}`}>
-      <div className={`icon ${forHeader && "for-header"}`}>
+      <div className="icon">
         <span className="text">h</span>
       </div>
       { forSettingsLink &&
