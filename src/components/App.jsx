@@ -7,6 +7,7 @@ import Page404 from "./pages/page404"
 import Profile from "./subpages/profile/Profile"
 import Account from "./subpages/account/Account"
 import LinkedDevices from "./subpages/linked-devices/LinkedDevices"
+import Appearance from "./subpages/appearance/Appearance"
 
 const App = () => (
   <BrowserRouter>
@@ -16,6 +17,7 @@ const App = () => (
       <Route path="settings/profile" element={<Profile/>}/>
       <Route path="settings/account" element={<Account/>}/>
       <Route path="settings/linked-devices" element={<LinkedDevices/>}/>
+      <Route path="settings/appearance" element={<Appearance/>}/>
       <Route path="*" element={<Page404/>}/>
     </Routes>
   </BrowserRouter>
