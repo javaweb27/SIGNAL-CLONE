@@ -4,7 +4,9 @@ import App from './components/App'
 
 render(
   <StrictMode>
-    <App />
+    <main>
+      <App />
+    </main>
   </StrictMode>,
   document.getElementById('root')
 )
