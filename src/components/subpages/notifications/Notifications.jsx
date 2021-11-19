@@ -8,7 +8,7 @@ const Notifications = () => {
       <BasicHeader linkPath="/settings" titleType="h3" titleText="Notificaciones"/>
 
       <section>
-        <h4>Notificarme cuando ...</h4>
+        <h4>Mensajes</h4>
         <TextButton toggle title="Notificaciones"/>
 
         <TextButton title="Sonido">
