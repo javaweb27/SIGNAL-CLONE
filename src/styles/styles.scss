@@ -1,6 +1,8 @@
 @use "./config";
-@use "./headers/home-header.scss";
-@use "./headers/basic-header.scss";
-@use "./sections/settings.scss";
-@use "./fragments/user-profile.scss";
+@use "./headers/home-header";
+@use "./headers/basic-header";
+@use "./sections/settings";
 @use "./subpages/profile";
+@use "./fragments/user-profile";
+@use "./fragments/sublink";
+@use "./fragments/text-button"

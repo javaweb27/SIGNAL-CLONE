@@ -1,0 +1,14 @@
+.text-button {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.9rem;
+  padding: 1.2rem 1.4rem;
+  align-items: center;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
