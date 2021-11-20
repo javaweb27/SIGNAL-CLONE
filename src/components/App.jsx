@@ -1,7 +1,7 @@
 import "../styles/styles.scss"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from "./pages/home"
-import AllSettings from "./pages/allSettings"
+import Settings from "./pages/settings"
 import Page404 from "./pages/page404"
 //subpages
 import Profile from "./subpages/profile/Profile"
@@ -15,7 +15,7 @@ const App = () => (
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home/>}/>
-      <Route path="settings" element={<AllSettings/>}/>
+      <Route path="settings" element={<Settings/>}/>
       <Route path="settings/profile" element={<Profile/>}/>
       <Route path="settings/account" element={<Account/>}/>
       <Route path="settings/linked-devices" element={<LinkedDevices/>}/>

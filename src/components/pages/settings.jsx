@@ -2,11 +2,11 @@ import BasicHeader from "../sections/BasicHeader"
 import SettingsLinks from "../sections/SettingsLinks"
 
 
-const AllSettings = () => (
+const Settings = () => (
   <>
     <BasicHeader linkPath="/" titleType="h2" titleText="Ajustes"/>
     <SettingsLinks/>
   </>
 )
 
-export default AllSettings
+export default Settings
