@@ -10,6 +10,7 @@ import LinkedDevices from "./subpages/linked-devices/LinkedDevices"
 import Appearance from "./subpages/appearance/Appearance"
 import ChatsSettings from "./subpages/chats-settings/ChatsSettings"
 import Notifications from "./subpages/notifications/Notifications"
+import Privacy from "./subpages/privacy/Privacy"
 
 const App = () => (
   <BrowserRouter>
@@ -22,6 +23,7 @@ const App = () => (
       <Route path="settings/appearance" element={<Appearance/>}/>
       <Route path="settings/chats" element={<ChatsSettings/>}/>
       <Route path="settings/notifications" element={<Notifications/>}/>
+      <Route path="settings/privacy" element={<Privacy/>}/>
       <Route path="*" element={<Page404/>}/>
     </Routes>
   </BrowserRouter>
