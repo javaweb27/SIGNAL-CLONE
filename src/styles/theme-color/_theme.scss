@@ -1,0 +1,30 @@
+@use "./icon-color";
+
+body {
+  @media (prefers-color-scheme: light) {
+    --bg-color: #fff;
+    --text-color: #000;
+    @include icon-color.icon-color-for-light-theme;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    --bg-color: rgb(27, 27, 27);
+    --text-color: rgb(248, 255, 241);
+    @include icon-color.icon-color-for-dark-theme
+  }
+  
+  &.light-theme{
+    --bg-color: #fff;
+    --text-color: #000;
+    @include icon-color.icon-color-for-light-theme;
+  }
+  
+  &.dark-theme {
+    --bg-color: rgb(27, 27, 27);
+    --text-color: rgb(248, 255, 241);
+    @include icon-color.icon-color-for-dark-theme
+  }
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
