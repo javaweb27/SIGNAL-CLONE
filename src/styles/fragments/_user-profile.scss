@@ -5,16 +5,17 @@
   &.for-header{
     margin: auto;
     border-radius: 50%;
-
+    
     .icon {
       width: 2rem;
       height: 2rem;
     }
   }
-
+  
   &.for-profile-page {
     margin: .9rem auto;
     display: inline-block;
+    border-radius: 50%;
     .icon {
       width: 5rem;
       height: 5rem;
@@ -35,5 +36,6 @@
   .container {
     display: flex;
     flex-direction: column;
+    gap: .27rem;
   }
 }
