@@ -1,8 +1,12 @@
+@use "../mixins/active-hover-transparent-bg" as hover-bg;
+
 .sublink {
   all: unset;
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  gap: .27rem;
+  gap: var(--text-gap);
   padding: 1.2rem 1.4rem;
+
+  @include hover-bg.active-hover-transparent-bg
 }

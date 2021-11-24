@@ -1,3 +1,5 @@
+@use "../mixins/active-hover-transparent-bg" as hover-bg;
+
 .profile {
   > .link:not(.user-profile) {
     all: unset;
@@ -6,12 +8,13 @@
     padding: 1.2rem 1.4rem;
     gap: 1.9rem;
     align-items: center;
+    @include hover-bg.active-hover-transparent-bg
   }
   //contenedor que esta en cada link
   .container {
     display: flex;
     flex-direction: column;
-    gap: .27rem;
+    gap: var(--text-gap);
   }
 
   .description {
