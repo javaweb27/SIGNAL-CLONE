@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import ProfileIcon from "../../../svg/ProfileIcon"
-import UserIcon from "../../../svg/UserIcon"
 import UserProfile from "../../fragments/UserProfile"
+import BiographyIcon from "../../../svg/BiographyIcon"
 import BasicHeader from "../../sections/BasicHeader"
 
 const Profile = () => {
@@ -21,7 +21,7 @@ const Profile = () => {
         </Link>
 
         <Link to="biography" className="link">
-          <UserIcon/>
+          <BiographyIcon/>
           <div className="container">
             <span>Biografia</span>
             <span>Escribe unas pocas palabras sobre ti</span>
