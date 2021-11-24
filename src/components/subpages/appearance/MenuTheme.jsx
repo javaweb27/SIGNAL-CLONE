@@ -3,7 +3,7 @@ import setTheme from "../../context/appearance/js/setTheme"
 const MenuTheme = ({updateActualTheme, setMenuState, menuState}) => {
 
   const closeMenu = e => {
-    if (e.target === document.querySelector(".menu-fixed")) {
+    if (e.target === document.querySelector(".container-fixed")) {
       setMenuState(false)
     }
   }
@@ -15,7 +15,7 @@ const MenuTheme = ({updateActualTheme, setMenuState, menuState}) => {
   }
 
   return (
-    <div className={`menu-fixed ${menuState && "active"}`} onClick={closeMenu}>
+    <div className={`container-fixed ${menuState && "active"}`} onClick={closeMenu}>
       <div className="menu-change-theme">
         <span>Tema</span>
         <ul>
