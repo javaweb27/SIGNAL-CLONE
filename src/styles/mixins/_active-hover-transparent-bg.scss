@@ -1,0 +1,10 @@
+@mixin active-hover-transparent-bg {
+  &:hover {
+    @media screen and (min-width: 1024px) {
+      background-color: var(--very-transparent-color);
+    }
+  }
+  &:active {
+    background-color: var(--very-transparent-color);
+  }
+}
