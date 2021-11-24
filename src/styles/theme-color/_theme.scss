@@ -1,4 +1,4 @@
-@use "./icon-color";
+@use "../mixins/icon-color";
 
 body {
   @media (prefers-color-scheme: light) {
