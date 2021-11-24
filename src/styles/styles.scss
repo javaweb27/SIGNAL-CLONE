@@ -1,4 +1,4 @@
-@use "./config";
+@use "./config/base-layout";
 @use "./theme-color/theme";
 @use "./headers/home-header";
 @use "./headers/basic-header";
@@ -7,4 +7,4 @@
 @use "./subpages/appearance-page/appearance";
 @use "./fragments/user-profile";
 @use "./fragments/sublink";
-@use "./fragments/text-button"
+@use "./fragments/text-button";
