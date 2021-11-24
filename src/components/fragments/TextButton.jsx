@@ -1,6 +1,6 @@
-const TextButton = ({toggle, title, children}) => {
+const TextButton = ({toggle, title, children, event}) => {
   return (
-    <button className="text-button">
+    <button className="text-button" {...event}>
       {!children && <span className="title">{title}</span>}
 
       { children &&
