@@ -4,7 +4,7 @@ const UserIcon = () => (
     <g transform="matrix(.98624 0 0 .98624 .10924 .10924)" fill="none">
       <path className="text-color-stroke-for-dark-theme" d="m0.5983 10.458s0.66748-0.93796 1.455-1.1862c1.6308-0.51402 3.9197-0.26014 5.8821-0.26014 1.9624-1e-7 4.2512-0.25388 5.8821 0.26014 0.78759 0.24824 1.455 1.1862 1.455 1.1862" fill="none" stroke="#000" strokeWidth=".72434"/>
       <circle className="text-color-stroke-for-dark-theme" cx="7.9375" cy="7.9375" r="7.6861" stroke="#000" strokeWidth=".72434"/>
-      <circle className="bg-color-stroke-for-dark-theme text-color-fill-for-dark-theme" cx="7.9375" cy="5.424" r="3.5851" fill="none" stroke="#000" strokeWidth=".72434"/>
+      <circle className="text-color-stroke-for-light-theme bg-color-fill-for-light-theme bg-color-stroke-for-dark-theme text-color-fill-for-dark-theme" cx="7.9375" cy="5.424" r="3.5851" fill="none" stroke="#000" strokeWidth=".72434"/>
     </g>
   </svg>
 )
