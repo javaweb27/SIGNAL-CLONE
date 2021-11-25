@@ -1,4 +1,4 @@
-import { DARK, DEFAULT, LIGHT } from "../values";
+import { DEFAULT, LIGHT, DARK } from "../values";
 
 const setTheme = (theme) => {
   const page = document.querySelector("body").classList
@@ -7,17 +7,17 @@ const setTheme = (theme) => {
     case DEFAULT:
       page.remove("light-theme")
       page.remove("dark-theme")
-    return "Predeterminado del dispositivo"
+    return {value: theme, text: "Predeterminado del dispositivo"}
 
     case LIGHT:
       page.remove("dark-theme")
       page.add("light-theme")
-    return "Claro"
+    return {value: theme, text: "Claro"}
 
     case DARK:
       page.remove("light-theme")
       page.add("dark-theme")
-    return "Oscuro"
+    return {value: theme, text: "Oscuro"}
   }
 }
 
