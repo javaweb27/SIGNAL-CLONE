@@ -1,25 +1,20 @@
 import Sublink from "../../fragments/Sublink"
 import TextButton from "../../fragments/TextButton"
 import BasicHeader from "../../sections/BasicHeader"
-import { useState } from "react"
-import MenuTheme from "./MenuTheme"
+import { useContext } from "react"
+import AppearanceContext from "../../context/appearance/AppearanceContext"
+import ThemeSettings from "./ThemeSettings"
 
 const Appearance = () => {
 
-  const [menuTheme, setMenuTheme] = useState(false)
-  const [actualTheme, setActualTheme] = useState("Predeterminado del dispositivo")
-
-  const openMenuTheme = () => setMenuTheme(true)
+  const [state, dispatch] = useContext(AppearanceContext)
 
   return (
     <>
       <BasicHeader linkPath="/settings" titleType="h3" titleText="Apariencia"/>
 
       <section>
-        <TextButton title="Tema" event={{onClick: openMenuTheme}}>
-          {actualTheme}
-        </TextButton>
-        <MenuTheme updateActualTheme={setActualTheme} setMenuState={setMenuTheme} menuState={menuTheme}/>
+        <ThemeSettings context={{theme: state.theme, dispatch}}/>
 
         <Sublink to="chat-color" title="Color y fondo del chat"/>
 
