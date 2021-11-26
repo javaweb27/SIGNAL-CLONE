@@ -31,4 +31,9 @@ body {
 
   background-color: var(--bg-color);
   color: var(--text-color);
+
+  svg {
+    width: 27px;
+    height: 27px;
+  }
 }
