@@ -5,6 +5,7 @@ import LinkedDevicesIcon from "../../svg/LinkedDevicesIcon"
 import ChatsIcon from "../../svg/ChatsIcon"
 import AppearanceIcon from "../../svg/AppearanceIcon"
 import NotificationsIcon from "../../svg/NotificationsIcon"
+import PrivacyIcon from "../../svg/PrivacyIcon"
 
 const SettingsLinks = () => {
   return (
@@ -17,7 +18,7 @@ const SettingsLinks = () => {
       <Link to="appearance" className="link"><AppearanceIcon/>Apariencia</Link>
       <Link to="chats" className="link"><ChatsIcon/>Chats</Link>
       <Link to="notifications" className="link"><NotificationsIcon/>Notificaciones</Link>
-      <Link to="privacy" className="link"><UserIcon/>Privacidad</Link>
+      <Link to="privacy" className="link"><PrivacyIcon/>Privacidad</Link>
       <Link to="data" className="link"><UserIcon/>Datos y almacenamiento</Link>
       <hr />
       <Link to="help" className="link"><UserIcon/>Ayuda</Link>
