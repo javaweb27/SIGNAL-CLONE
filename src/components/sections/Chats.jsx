@@ -1,7 +1,7 @@
 const Chats = () => {
   return (
     <section>
-      <p>Todavia no hay chats. <br/> Comienza a chatear con tus amistades.</p>
+      <p className="message-no-chats">Todavia no hay chats. <br/> Comienza a chatear con tus amistades.</p>
 
     </section>
   )
