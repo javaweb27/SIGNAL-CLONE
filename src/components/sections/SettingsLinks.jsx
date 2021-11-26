@@ -6,6 +6,7 @@ import ChatsIcon from "../../svg/ChatsIcon"
 import AppearanceIcon from "../../svg/AppearanceIcon"
 import NotificationsIcon from "../../svg/NotificationsIcon"
 import PrivacyIcon from "../../svg/PrivacyIcon"
+import DataStorageIcon from "../../svg/DataStorageIcon"
 
 const SettingsLinks = () => {
   return (
@@ -19,7 +20,7 @@ const SettingsLinks = () => {
       <Link to="chats" className="link"><ChatsIcon/>Chats</Link>
       <Link to="notifications" className="link"><NotificationsIcon/>Notificaciones</Link>
       <Link to="privacy" className="link"><PrivacyIcon/>Privacidad</Link>
-      <Link to="data" className="link"><UserIcon/>Datos y almacenamiento</Link>
+      <Link to="data" className="link"><DataStorageIcon/>Datos y almacenamiento</Link>
       <hr />
       <Link to="help" className="link"><UserIcon/>Ayuda</Link>
       <Link to="invite" className="link"><UserIcon/>¡Invita a tus amistades!</Link>
