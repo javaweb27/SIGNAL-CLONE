@@ -1,9 +1,9 @@
 import Chats from "../sections/Chats"
-import Header from "../sections/Header"
+import HomeHeader from "../sections/HomeHeader"
 
 const Home = () => (
   <>
-    <Header/>
+    <HomeHeader/>
     <Chats/>
   </>
   )

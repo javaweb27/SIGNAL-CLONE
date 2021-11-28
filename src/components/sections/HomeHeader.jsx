@@ -1,9 +1,8 @@
-import { Link } from "react-router-dom"
 import MoreOptions from "../fragments/MoreOptions"
 import Search from "../fragments/Search"
 import UserProfile from "../fragments/UserProfile"
 
-const Header = () => {
+const HomeHeader = () => {
   return (
     <header className="home-header">
       <UserProfile forHeader/>
@@ -14,4 +13,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default HomeHeader
