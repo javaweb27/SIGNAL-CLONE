@@ -1,3 +1,4 @@
+@use "../mixins/header-button";
 .home-header {
   display: grid;
   position: relative;
@@ -20,17 +21,8 @@
   .more-options, .search {
     all: unset;
     display: block;
-    padding: .6rem;
     cursor: pointer;
-    border-radius: 50%;
-    &:hover {
-      @media screen and (min-width: 1024px) {
-        background-color: var(--very-transparent-color);
-      }
-    }
-    &:active {
-        background-color: var(--very-transparent-color);
-    }
+    @include header-button.button
   }
 
   //CONTENEDOR DE LA BARRA DE BUSQUEDA Y EL BOTON

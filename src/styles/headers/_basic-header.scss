@@ -1,4 +1,17 @@
+@use "../mixins/header-button";
+
 .basic-header {
   display: flex;
   padding: .6rem;
+  align-items: center;
+  gap: 1.9rem;
+
+  .link {
+    padding: .6rem;
+    border-radius: 50%;
+    @include header-button.button;
+  }
+  svg {
+    display: block;
+  }
 }
