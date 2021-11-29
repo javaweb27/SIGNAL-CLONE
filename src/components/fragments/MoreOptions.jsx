@@ -4,8 +4,15 @@ import MoreOptionsIcon from "../../svg/MoreOptionsIcon"
 
 const MoreOptions = () => {
   const list = useRef()
+  const root = document.getElementById("root")
 
-  const openOptions = () => list.current.classList.add("open")
+  const closeOptions = (target, button) => {
+    if (list.current && target !== button ) list.current.classList.remove("open")
+  }
+  const openOptions = e => {
+    list.current.classList.add("open")
+    root.onclick = e_root => closeOptions(e_root.target, e.target)
+  }
 
   return (
     <div className="options-container">
