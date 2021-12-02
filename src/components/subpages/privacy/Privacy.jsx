@@ -15,22 +15,24 @@ const Privacy = () => {
 
         <hr />
 
-        <h4>Mensajeria</h4>
+        <h4 className="section-subtitle">Mensajeria</h4>
         <TextButton toggle title="Notificaciones de lectura">
           Consectetur adipisicing elit. Nemo, neque dignissimos perspiciatis eveniet sed odio impedit doloribus, voluptatibus nulla.
         </TextButton>
 
-        <TextButton toggle title="Incidacores de tecleo">
+        <TextButton toggle title="Indicadores de tecleo">
           Consectetur adipisicing elit. Nemo, neque dignissimos perspiciatis eveniet sed odio impedit doloribus, voluptatibus nulla.
         </TextButton>
 
         <hr />
 
-        <h4>Desaparicion de mensajes</h4>
+        <h4 className="section-subtitle">Desaparicion de mensajes</h4>
 
         <Sublink to="" title="Tiempo de desaparicion de mensajes por defecto en nuevos chats">
           Inactivo
         </Sublink>
+
+        <h4 className="section-subtitle">Seguridad de la aplicacion</h4>
 
         <TextButton toggle title="Bloqueo de pantalla">
           Bloquea el acceso a Signal con el codigo de bloqueo del dispositivo o la huella dactilar.
