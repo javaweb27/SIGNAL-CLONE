@@ -8,7 +8,7 @@ const Notifications = () => {
       <BasicHeader linkPath="/settings" titleType="h3" titleText="Notificaciones"/>
 
       <section>
-        <h4>Mensajes</h4>
+        <h4 className="section-subtitle">Mensajes</h4>
         <TextButton toggle title="Notificaciones"/>
 
         <TextButton title="Sonido">
@@ -31,7 +31,7 @@ const Notifications = () => {
 
         <hr />
 
-        <h4>LLamadas</h4>
+        <h4 className="section-subtitle">LLamadas</h4>
         <TextButton toggle title="Notificaciones"/>
 
         <TextButton title="Tono de llamada">
@@ -42,7 +42,7 @@ const Notifications = () => {
 
         <hr />
 
-        <h4>Notificarme cuando ...</h4>
+        <h4 className="section-subtitle">Notificarme cuando ...</h4>
         <TextButton toggle title="Alguien comienza a usar Signal"/>
       </section>
     </>
