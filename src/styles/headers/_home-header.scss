@@ -80,10 +80,16 @@
   .option {
     all: unset;
     display: block;
-    padding: .5em;
+    cursor: pointer;
+    padding: 1.2em ;
     white-space: nowrap;
+    &:hover {
+      @media screen and (min-width: 1024px) {
+        background-color: var(--very-transparent-color);
+      }
+    }
     &:active {
-      background-color: rgba(0, 0, 0, 0.541);
+      background-color: var(--very-transparent-color);
     }
   }
 }
