@@ -2,29 +2,33 @@
 
 body {
   @media (prefers-color-scheme: light) {
-    --bg-color: #fff;
+    --bg-color: hsl(220, 86%, 99%);
+    --menu-bg-color: #fff;
     --text-color: #000;
     --very-transparent-color: rgba(27, 27, 27, 0.19);
     @include icon-color.icon-color-for-light-theme;
   }
   
   @media (prefers-color-scheme: dark) {
-    --bg-color: rgb(27, 27, 27);
-    --text-color: rgb(248, 255, 241);
+    --bg-color: hsl(220, 86%, 2%);
+    --menu-bg-color: hsl(220, 2%, 17%);
+    --text-color: rgb(251, 255, 248);
     --very-transparent-color: rgba(240, 240, 240, 0.19);
     @include icon-color.icon-color-for-dark-theme
   }
   
   &.light-theme{
-    --bg-color: #fff;
+    --bg-color: hsl(220, 86%, 99%);
+    --menu-bg-color: #fff;
     --text-color: #000;
     --very-transparent-color: rgba(27, 27, 27, 0.19);
     @include icon-color.icon-color-for-light-theme;
   }
   
   &.dark-theme {
-    --bg-color: rgb(27, 27, 27);
-    --text-color: rgb(248, 255, 241);
+    --bg-color: hsl(220, 86%, 2%);
+    --menu-bg-color: hsl(220, 2%, 17%);
+    --text-color: rgb(251, 255, 248);
     --very-transparent-color: rgba(240, 240, 240, 0.19);
     @include icon-color.icon-color-for-dark-theme
   }
