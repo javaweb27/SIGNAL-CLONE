@@ -16,7 +16,7 @@ import Privacy from "./subpages/privacy/Privacy"
 
 const App = () => (
   <AppearanceProvider>
-    <BrowserRouter>
+    <BrowserRouter basename="/Proyecto-de-Clon-de-Signal">
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="settings" element={<Settings/>}/>
