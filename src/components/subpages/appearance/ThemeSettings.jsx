@@ -1,9 +1,9 @@
 import { useState } from "react"
 import { CHANGE_THEME } from "../../context/actions"
-import LiField from "../../fragments/LiField"
+import SubmenuInput from "../../fragments/SubmenuInput"
 import TextButton from "../../fragments/TextButton"
 
-const ThemeSettings = ({context, data }) => {
+const ThemeSettings = ({ context }) => {
   const [openMenu, setOpenMenu] = useState(false)
 
   const toggleMenu = e => {
@@ -28,15 +28,15 @@ const ThemeSettings = ({context, data }) => {
         <div className="menu-change-theme">
           <span>Tema</span>
           <ul>
-            <LiField name="theme" id="default" type="radio" event={{onClick: changeThemeAndClose}}>
+            <SubmenuInput name="theme" id="default" type="radio" event={{onClick: changeThemeAndClose}}>
               Predeterminado del dispositivo
-            </LiField>
-            <LiField name="theme" id="light" type="radio" event={{onClick: changeThemeAndClose}}>
+            </SubmenuInput>
+            <SubmenuInput name="theme" id="light" type="radio" event={{onClick: changeThemeAndClose}}>
               Claro
-            </LiField>
-            <LiField name="theme" id="dark" type="radio" event={{onClick: changeThemeAndClose}}>
+            </SubmenuInput>
+            <SubmenuInput name="theme" id="dark" type="radio" event={{onClick: changeThemeAndClose}}>
               Oscuro
-            </LiField>
+            </SubmenuInput>
           </ul>
         </div>
       </div>
