@@ -1,22 +1,23 @@
 import { DEFAULT, LIGHT, DARK } from "../values";
+import {dark_icons, light_icons} from "../../../../styles/svg/.module.scss";
 
 const setTheme = (theme) => {
   const page = document.querySelector("body").classList
 
   switch (theme) {
     case DEFAULT:
-      page.remove("light-theme")
-      page.remove("dark-theme")
+      page.remove("light-theme", light_icons)
+      page.remove("dark-theme", dark_icons)
     return {value: theme, text: "Predeterminado del dispositivo"}
 
     case LIGHT:
-      page.remove("dark-theme")
-      page.add("light-theme")
+      page.remove("dark-theme", dark_icons)
+      page.add("light-theme", light_icons)
     return {value: theme, text: "Claro"}
-
+      
     case DARK:
-      page.remove("light-theme")
-      page.add("dark-theme")
+      page.remove("light-theme", light_icons)
+      page.add("dark-theme", dark_icons)
     return {value: theme, text: "Oscuro"}
   }
 }

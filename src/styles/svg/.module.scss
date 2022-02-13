@@ -1,0 +1,29 @@
+.light {
+  @media (prefers-color-scheme: dark) {
+    display: none;
+  }
+}
+
+.dark {
+  @media (prefers-color-scheme: light) {
+    display: none;
+  }
+}
+
+.light_icons {
+  .light {
+    display: block;
+  }
+  .dark {
+    display: none;
+  }
+}
+
+.dark_icons {
+  .light {
+    display: none;
+  }
+  .dark {
+    display: block;
+  }
+}

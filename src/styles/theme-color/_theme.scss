@@ -1,6 +1,9 @@
 @use "../mixins/icon-color";
 
 body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
   @media (prefers-color-scheme: light) {
     --bg-color: hsl(220, 86%, 99%);
     --menu-bg-color: #fff;
@@ -31,13 +34,5 @@ body {
     --text-color: rgb(251, 255, 248);
     --very-transparent-color: rgba(240, 240, 240, 0.19);
     @include icon-color.icon-color-for-dark-theme
-  }
-
-  background-color: var(--bg-color);
-  color: var(--text-color);
-
-  svg {
-    width: 27px;
-    height: 27px;
   }
 }
