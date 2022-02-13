@@ -70,7 +70,7 @@ const Svg = ({ name = "" }) => {
   if (!icons[name]) return null
 
   const SVG = ({ children, className = null}) => (
-    <svg className={className} width={size} height={size} fill="var(--text-color)" version="1.1" viewBox="0 0 16 16" xmlns= "http://www.w3.org/2000/svg">
+    <svg className={className} width="27" height="27" fill="var(--text-color)" version="1.1" viewBox="0 0 16 16" xmlns= "http://www.w3.org/2000/svg">
       { children }
     </svg>
   )
