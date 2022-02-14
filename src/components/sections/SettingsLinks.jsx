@@ -1,24 +1,22 @@
-import { Link } from "react-router-dom"
+import SettingsLink from "../fragments/SettingsLink"
 import UserProfile from "../fragments/UserProfile"
-import Svg from "../svg"
 
 const SettingsLinks = () => {
   return (
     <section className="settings">
       <UserProfile forSettingsLink/>
-
-      <Link to="account" className="link"><Svg name="account"/>Cuenta</Link>
-      <Link to="linked-devices" className="link"><Svg name="linked_devices"/>Dispositivos enlazados</Link>
+      <SettingsLink to="account" text="Cuenta"/>
+      <SettingsLink to="linked_devices" text="Dispositivos enlazados"/>
       <hr />
-      <Link to="appearance" className="link"><Svg name="appearance"/>Apariencia</Link>
-      <Link to="chats" className="link"><Svg name="chats"/>Chats</Link>
-      <Link to="notifications" className="link"><Svg name="notifications"/>Notificaciones</Link>
-      <Link to="privacy" className="link"><Svg name="privacy"/>Privacidad</Link>
-      <Link to="data" className="link"><Svg name="data_storage"/>Datos y almacenamiento</Link>
+      <SettingsLink to="appearance" text="Apariencia"/>
+      <SettingsLink to="chats" text="Chats"/>
+      <SettingsLink to="notifications" text="Notificaciones"/>
+      <SettingsLink to="privacy" text="Privacidad"/>
+      <SettingsLink to="data_storage" text="Datos y almacenamiento"/>
       <hr />
-      <Link to="help" className="link"><Svg name="help"/>Ayuda</Link>
-      <Link to="invite" className="link"><Svg name="invite"/>¡Invita a tus amistades!</Link>
-      <Link to="support-signal" className="link"><Svg name="support"/>Donar a Signal</Link>
+      <SettingsLink to="help" text="Ayuda"/>
+      <SettingsLink to="invite" text="¡Invita a tus amistades!"/>
+      <SettingsLink to="support_signal" text="Donar a Signal"/>
     </section>
   )
 }

@@ -22,7 +22,7 @@ const App = () => (
         <Route path="settings" element={<Settings/>}/>
         <Route path="settings/profile" element={<Profile/>}/>
         <Route path="settings/account" element={<Account/>}/>
-        <Route path="settings/linked-devices" element={<LinkedDevices/>}/>
+        <Route path="settings/linked_devices" element={<LinkedDevices/>}/>
         <Route path="settings/appearance" element={<Appearance/>}/>
         <Route path="settings/chats" element={<ChatsSettings/>}/>
         <Route path="settings/notifications" element={<Notifications/>}/>
