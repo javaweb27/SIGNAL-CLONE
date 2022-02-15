@@ -1,32 +1,33 @@
+@mixin light-colors {
+  --bg-color: hsl(220, 86%, 99%);
+  --menu-bg-color: #fff;
+  --text-color: #000;
+  --very-transparent-color: rgba(27, 27, 27, 0.19);
+}
+@mixin dark-colors {
+  --bg-color: hsl(220, 86%, 2%);
+  --menu-bg-color: hsl(220, 2%, 17%);
+  --text-color: rgb(251, 255, 248);
+  --very-transparent-color: rgba(240, 240, 240, 0.19);
+}
+
 #root {
   background-color: var(--bg-color);
   color: var(--text-color);
 
   @media (prefers-color-scheme: light) {
-    --bg-color: hsl(220, 86%, 99%);
-    --menu-bg-color: #fff;
-    --text-color: #000;
-    --very-transparent-color: rgba(27, 27, 27, 0.19);
+    @include light-colors;
   }
-  
+
   @media (prefers-color-scheme: dark) {
-    --bg-color: hsl(220, 86%, 2%);
-    --menu-bg-color: hsl(220, 2%, 17%);
-    --text-color: rgb(251, 255, 248);
-    --very-transparent-color: rgba(240, 240, 240, 0.19);
+    @include dark-colors;
   }
   
   &.light-theme{
-    --bg-color: hsl(220, 86%, 99%);
-    --menu-bg-color: #fff;
-    --text-color: #000;
-    --very-transparent-color: rgba(27, 27, 27, 0.19);
+    @include light-colors;
   }
-  
+
   &.dark-theme {
-    --bg-color: hsl(220, 86%, 2%);
-    --menu-bg-color: hsl(220, 2%, 17%);
-    --text-color: rgb(251, 255, 248);
-    --very-transparent-color: rgba(240, 240, 240, 0.19);
+    @include dark-colors;
   }
 }
