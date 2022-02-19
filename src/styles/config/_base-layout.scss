@@ -4,23 +4,29 @@
 	margin: 0;
 }
 
-html, body, #root {
-	width: 100vw;
-	height: 100vh;
+html {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#root {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body, #root, main {
+  height: 100%;
 }
 
 main {
-  width: inherit;
-  height: inherit;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-} 
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
 
 section {
   display: flex;
   flex-direction: column;
-  overflow: auto;
 }
 
 hr {
