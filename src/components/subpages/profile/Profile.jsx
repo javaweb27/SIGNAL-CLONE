@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import UserProfile from "../../fragments/UserProfile"
+import ProfilePhoto from "../../fragments/ProfilePhoto"
 import BasicHeader from "../../sections/BasicHeader"
 import Svg from "../../svg"
 
@@ -9,7 +9,9 @@ const Profile = () => {
       <BasicHeader linkPath="/settings" titleType="h3" titleText="Perfil"/>
 
       <section className="profile">
-        <UserProfile forProfilePage/>
+        <div className="photo-container">
+          <ProfilePhoto/>
+        </div>
 
         <Link to="name" className="link">
           <Svg name="profile"/>

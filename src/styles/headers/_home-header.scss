@@ -6,9 +6,13 @@
   grid-template-columns: auto auto 1fr auto auto;
   align-items: center;
 
-  .user-icon {
+  .link-photo {
+    border-radius: 50%;
+    text-decoration: none;
+    margin: 0 1.9rem;
     grid-column: 1 / 2;
   }
+
   .title {
     grid-column: 2 / 3;
   }

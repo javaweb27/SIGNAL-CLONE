@@ -4,7 +4,7 @@ import UserProfile from "../fragments/UserProfile"
 const SettingsLinks = () => {
   return (
     <section className="settings">
-      <UserProfile forSettingsLink/>
+      <UserProfile/>
       <SettingsLink to="account" text="Cuenta"/>
       <SettingsLink to="linked_devices" text="Dispositivos enlazados"/>
       <hr />

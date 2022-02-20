@@ -1,0 +1,17 @@
+.photo {
+  display: flex;
+  background-color: green;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  
+  &.mini {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+}
+
+.text {
+  margin: auto;
+  color: var(--text-color);
+}

@@ -1,7 +1,12 @@
 @use "../mixins/active-hover-transparent-bg" as hover-bg;
 
 .profile {
-  > .link:not(.user-profile) {
+
+  .photo-container {
+    margin: .9rem auto;
+  }
+
+  & > .link {
     all: unset;
     cursor: pointer;
     display: flex;

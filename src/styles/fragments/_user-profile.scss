@@ -2,37 +2,6 @@
   all: unset;
   cursor: pointer;
 
-  &.for-header{
-    margin: auto 1.9rem;
-    border-radius: 50%;
-    
-    .icon {
-      width: 2.6rem;
-      height: 2.6rem;
-    }
-  }
-  
-  &.for-profile-page {
-    margin: .9rem auto;
-    display: inline-block;
-    border-radius: 50%;
-    .icon {
-      width: 5rem;
-      height: 5rem;
-    }
-  }
-
-  .icon {
-    display: flex;
-    background-color: green;
-    border-radius: 50%;
-    width: 5rem;
-    height: 5rem;
-  }
-  .text {
-    display: inline-block;
-	  margin: auto;
-  }
   .container {
     display: flex;
     flex-direction: column;
