@@ -3,11 +3,9 @@
 @use "./config/theme";
 @use "./headers/home-header";
 @use "./headers/basic-header";
-@use "./sections/settings";
 @use "./sections/chats";
 @use "./subpages/profile";
 @use "./subpages/appearance-page/appearance";
-@use "./fragments/user-profile";
 @use "./fragments/sublink";
 @use "./fragments/subtitle";
 @use "./fragments/text-button";
