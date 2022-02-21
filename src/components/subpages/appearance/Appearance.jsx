@@ -1,9 +1,9 @@
-import Sublink from "../../fragments/Sublink"
+import { useContext } from "react"
 import TextButton from "../../fragments/TextButton"
 import BasicHeader from "../../sections/BasicHeader"
-import { useContext } from "react"
 import AppearanceContext from "../../context/appearance/AppearanceContext"
 import ThemeSettings from "./ThemeSettings"
+import SubpageLink from "../../fragments/SubpageLink"
 
 const Appearance = () => {
 
@@ -16,7 +16,7 @@ const Appearance = () => {
       <section>
         <ThemeSettings context={{theme: state.theme, dispatch}}/>
 
-        <Sublink to="chat-color" title="Color y fondo del chat"/>
+        <SubpageLink to="chat-color" title="Color y fondo del chat"/>
 
         <TextButton title="Tamaño de fuente del mensaje">
           Normal

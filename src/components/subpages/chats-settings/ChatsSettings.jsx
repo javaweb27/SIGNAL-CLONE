@@ -1,4 +1,4 @@
-import Sublink from "../../fragments/Sublink"
+import SubpageLink from "../../fragments/SubpageLink"
 import TextButton from "../../fragments/TextButton"
 import BasicHeader from "../../sections/BasicHeader"
 
@@ -8,7 +8,7 @@ const ChatsSettings = () => {
       <BasicHeader linkPath="/settings" titleType="h3" titleText="Chats"/>
 
       <section>
-        <Sublink to="sms" title="SMS Y MMS"/>
+        <SubpageLink to="sms" title="SMS Y MMS"/>
 
         <TextButton toggle title="Generar vista previa de enlaces">
           Consectetur adipisicing elit. Nemo, neque dignissimos perspiciatis eveniet sed odio impedit doloribus, voluptatibus nulla.
@@ -28,9 +28,9 @@ const ChatsSettings = () => {
 
         <h4 className="section-subtitle">Copias de seguridad</h4>
 
-        <Sublink to="chats-backup" title="Copias de seguridad de los chats">
+        <SubpageLink to="chats-backup" title="Copias de seguridad de los chats">
           Desactivado
-        </Sublink>
+        </SubpageLink>
       </section>
     </>
   )

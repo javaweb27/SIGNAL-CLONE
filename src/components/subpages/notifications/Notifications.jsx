@@ -1,4 +1,4 @@
-import Sublink from "../../fragments/Sublink"
+import SubpageLink from "../../fragments/SubpageLink"
 import TextButton from "../../fragments/TextButton"
 import BasicHeader from "../../sections/BasicHeader"
 
@@ -27,7 +27,7 @@ const Notifications = () => {
           Nombre y mensaje
         </TextButton>
 
-        <Sublink to="" title="Prioridad"/>
+        <SubpageLink to="" title="Prioridad"/>
 
         <hr />
 

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import Sublink from "../../fragments/Sublink"
+import SubpageLink from "../../fragments/SubpageLink"
 import TextButton from "../../fragments/TextButton"
 import BasicHeader from "../../sections/BasicHeader"
 
@@ -9,9 +9,9 @@ const Privacy = () => {
       <BasicHeader linkPath="/settings" titleType="h3" titleText="Privacidad"/>
 
       <section>
-        <Sublink to="blocked-people" title="Personas bloqueadas">
+        <SubpageLink to="blocked-people" title="Personas bloqueadas">
           0 contactos
-        </Sublink>
+        </SubpageLink>
 
         <hr />
 
@@ -28,9 +28,9 @@ const Privacy = () => {
 
         <h4 className="section-subtitle">Desaparicion de mensajes</h4>
 
-        <Sublink to="" title="Tiempo de desaparicion de mensajes por defecto en nuevos chats">
+        <SubpageLink to="" title="Tiempo de desaparicion de mensajes por defecto en nuevos chats">
           Inactivo
-        </Sublink>
+        </SubpageLink>
 
         <h4 className="section-subtitle">Seguridad de la aplicacion</h4>
 
@@ -38,9 +38,9 @@ const Privacy = () => {
           Bloquea el acceso a Signal con el codigo de bloqueo del dispositivo o la huella dactilar.
         </TextButton>
 
-        <Sublink to="" title="Tiempo de inactividad para el bloqueo de pantalla">
+        <SubpageLink to="" title="Tiempo de inactividad para el bloqueo de pantalla">
           Ninguno
-        </Sublink>
+        </SubpageLink>
 
         <TextButton toggle title="Seguridad de pantalla">
           Bloquea capturas de pantalla en la lista de aplicaciones recientes y dentro de la aplicacion..
@@ -54,9 +54,9 @@ const Privacy = () => {
 
         <hr />
 
-        <Sublink to="" title="Avanzado">
+        <SubpageLink to="" title="Avanzado">
           Los mensajes y llamadas de Signal siempre usan remitente confidencial y las llamadas se desvian.
-        </Sublink>
+        </SubpageLink>
       </section>
     </>
   )
