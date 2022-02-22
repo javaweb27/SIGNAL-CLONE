@@ -6,6 +6,10 @@
   align-items: center;
   gap: 1.9rem;
 
+  .title {
+    color: var(--title-color);
+  }
+
   .link {
     padding: .6rem;
     border-radius: 50%;
