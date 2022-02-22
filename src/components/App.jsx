@@ -6,13 +6,13 @@ import Page404 from "./pages/page404"
 //context
 import AppearanceProvider from "./context/appearance/AppearanceProvider"
 //subpages
-import Profile from "./subpages/profile/Profile"
-import Account from "./subpages/account/Account"
-import LinkedDevices from "./subpages/linked-devices/LinkedDevices"
-import Appearance from "./subpages/appearance/Appearance"
-import ChatsSettings from "./subpages/chats-settings/ChatsSettings"
-import Notifications from "./subpages/notifications/Notifications"
-import Privacy from "./subpages/privacy/Privacy"
+import Profile from "./subpages/profile"
+import Account from "./subpages/account"
+import LinkedDevices from "./subpages/linked-devices"
+import Appearance from "./subpages/appearance"
+import ChatsSettings from "./subpages/chats-settings"
+import Notifications from "./subpages/notifications"
+import Privacy from "./subpages/privacy"
 
 const App = () => (
   <AppearanceProvider>
