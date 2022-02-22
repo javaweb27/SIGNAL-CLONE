@@ -1,8 +1,8 @@
 import { useContext } from "react"
-import TextButton from "../../fragments/TextButton"
 import BasicHeader from "../../sections/BasicHeader"
 import AppearanceContext from "../../context/appearance/AppearanceContext"
 import ThemeSettings from "./ThemeSettings"
+import SubpageButton from "../../fragments/SubpageButton"
 import SubpageLink from "../../fragments/SubpageLink"
 
 const Appearance = () => {
@@ -18,13 +18,13 @@ const Appearance = () => {
 
         <SubpageLink to="chat-color" title="Color y fondo del chat"/>
 
-        <TextButton title="Tamaño de fuente del mensaje">
+        <SubpageButton title="Tamaño de fuente del mensaje">
           Normal
-        </TextButton>
+        </SubpageButton>
 
-        <TextButton title ="Idioma">
+        <SubpageButton title ="Idioma">
           Predeterminado del sitema
-        </TextButton>
+        </SubpageButton>
       </section>
     </>
   )

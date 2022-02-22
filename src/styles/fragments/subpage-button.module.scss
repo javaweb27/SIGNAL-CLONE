@@ -1,6 +1,6 @@
 @use "../mixins/active-hover-transparent-bg" as hover-bg;
 
-.text-button {
+.button {
   all: unset;
   cursor: pointer;
   display: flex;
@@ -8,11 +8,19 @@
   gap: 1.9rem;
   padding: 1.2rem 1.4rem;
   align-items: center;
-
+  
   .container {
     display: flex;
     flex-direction: column;
     gap: var(--text-gap);
+  }
+  
+  .title {
+    color: var(--text-color);
+  }
+  
+  .subtitle {
+    color: var(--text-color);
   }
   
   @include hover-bg.active-hover-transparent-bg

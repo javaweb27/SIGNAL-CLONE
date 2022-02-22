@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import SubpageLink from "../../fragments/SubpageLink"
-import TextButton from "../../fragments/TextButton"
+import SubpageButton from "../../fragments/SubpageButton"
 import BasicHeader from "../../sections/BasicHeader"
 
 const Privacy = () => {
@@ -16,13 +16,13 @@ const Privacy = () => {
         <hr />
 
         <h4 className="section-subtitle">Mensajeria</h4>
-        <TextButton toggle title="Notificaciones de lectura">
+        <SubpageButton toggle title="Notificaciones de lectura">
           Consectetur adipisicing elit. Nemo, neque dignissimos perspiciatis eveniet sed odio impedit doloribus, voluptatibus nulla.
-        </TextButton>
+        </SubpageButton>
 
-        <TextButton toggle title="Indicadores de tecleo">
+        <SubpageButton toggle title="Indicadores de tecleo">
           Consectetur adipisicing elit. Nemo, neque dignissimos perspiciatis eveniet sed odio impedit doloribus, voluptatibus nulla.
-        </TextButton>
+        </SubpageButton>
 
         <hr />
 
@@ -34,21 +34,21 @@ const Privacy = () => {
 
         <h4 className="section-subtitle">Seguridad de la aplicacion</h4>
 
-        <TextButton toggle title="Bloqueo de pantalla">
+        <SubpageButton toggle title="Bloqueo de pantalla">
           Bloquea el acceso a Signal con el codigo de bloqueo del dispositivo o la huella dactilar.
-        </TextButton>
+        </SubpageButton>
 
         <SubpageLink to="" title="Tiempo de inactividad para el bloqueo de pantalla">
           Ninguno
         </SubpageLink>
 
-        <TextButton toggle title="Seguridad de pantalla">
+        <SubpageButton toggle title="Seguridad de pantalla">
           Bloquea capturas de pantalla en la lista de aplicaciones recientes y dentro de la aplicacion..
-        </TextButton>
+        </SubpageButton>
 
-        <TextButton toggle title="Teclado en modo incognito">
+        <SubpageButton toggle title="Teclado en modo incognito">
           Solicitar al teclado deshabilitar el aprendizaje personalizado.
-        </TextButton>
+        </SubpageButton>
 
         <p className="description">Activar esta opcion no garantiza que tu teclado no analice tu mensajes.<Link to="" rel="noreferrer noopener nofollow" target="_blank">Saber mas.</Link></p>
 

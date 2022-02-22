@@ -1,5 +1,5 @@
 import SubpageLink from "../../fragments/SubpageLink"
-import TextButton from "../../fragments/TextButton"
+import SubpageButton from "../../fragments/SubpageButton"
 import BasicHeader from "../../sections/BasicHeader"
 
 const ChatsSettings = () => {
@@ -10,20 +10,20 @@ const ChatsSettings = () => {
       <section>
         <SubpageLink to="sms" title="SMS Y MMS"/>
 
-        <TextButton toggle title="Generar vista previa de enlaces">
+        <SubpageButton toggle title="Generar vista previa de enlaces">
           Consectetur adipisicing elit. Nemo, neque dignissimos perspiciatis eveniet sed odio impedit doloribus, voluptatibus nulla.
           Consectetur adipisicing elit. Nemo, neque dignissimos perspiciatis eveniet sed odio impedit doloribus, voluptatibus nulla.
-        </TextButton>
+        </SubpageButton>
 
-        <TextButton toggle title="Usar fotos de la libreria de contactos del dispositivo">
+        <SubpageButton toggle title="Usar fotos de la libreria de contactos del dispositivo">
           Consectetur adipisicing elit. Nemo, neque dignissimos perspiciatis eveniet sed odio impedit doloribus, voluptatibus nulla.
-        </TextButton>
+        </SubpageButton>
 
         <hr />
 
         <h4 className="section-subtitle">Teclado</h4>
-        <TextButton toggle title="Usar emoji del sistema"/>
-        <TextButton toggle title="Enviar al tocar <<Intro<<"/>
+        <SubpageButton toggle title="Usar emoji del sistema"/>
+        <SubpageButton toggle title="Enviar al tocar <<Intro<<"/>
 
 
         <h4 className="section-subtitle">Copias de seguridad</h4>

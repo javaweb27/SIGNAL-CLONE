@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { CHANGE_THEME } from "../../context/actions"
 import SubmenuInput from "../../fragments/SubmenuInput"
-import TextButton from "../../fragments/TextButton"
+import SubpageButton from "../../fragments/SubpageButton"
 
 const ThemeSettings = ({ context }) => {
   const [openMenu, setOpenMenu] = useState(false)
@@ -21,9 +21,9 @@ const ThemeSettings = ({ context }) => {
 
   return (
     <>
-      <TextButton title="Tema" event={{onClick: toggleMenu}}>
+      <SubpageButton title="Tema" event={{onClick: toggleMenu}}>
         {context.theme.text}
-      </TextButton>
+      </SubpageButton>
       <div className={`container-fixed ${openMenu && "active"}`} onClick={toggleMenu}>
         <div className="menu-change-theme">
           <span>Tema</span>
