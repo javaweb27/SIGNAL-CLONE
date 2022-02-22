@@ -21,12 +21,12 @@ const ChatsSettings = () => {
 
         <hr />
 
-        <h4 className="section-subtitle">Teclado</h4>
+        <h4 className="subpage-section-title">Teclado</h4>
         <SubpageButton toggle title="Usar emoji del sistema"/>
         <SubpageButton toggle title="Enviar al tocar <<Intro<<"/>
 
 
-        <h4 className="section-subtitle">Copias de seguridad</h4>
+        <h4 className="subpage-section-title">Copias de seguridad</h4>
 
         <SubpageLink to="chats-backup" title="Copias de seguridad de los chats">
           Desactivado

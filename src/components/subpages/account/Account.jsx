@@ -8,7 +8,7 @@ const Account = () => {
       <BasicHeader linkPath="/settings" titleType="h3" titleText="Cuenta"/>
 
       <section className="cuenta">
-        <h4 className="section-subtitle">PIN de Signal</h4>
+        <h4 className="subpage-section-title">PIN de Signal</h4>
         <SubpageLink to="" title="Modificar PIN"/>
 
         <SubpageButton toggle title="Recordatorios de PIN">
@@ -22,7 +22,7 @@ const Account = () => {
 
         <hr />
 
-        <h4 className="section-subtitle">Cuenta</h4>
+        <h4 className="subpage-section-title">Cuenta</h4>
         <SubpageLink to="" title="Transferir cuenta">
           Transferir cuenta a otro dispositivo nuevo
         </SubpageLink>
