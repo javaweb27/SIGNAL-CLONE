@@ -7,6 +7,7 @@ const SettingsLinks = () => {
       <UserProfile/>
       <SettingsLink to="account" text="Cuenta"/>
       <SettingsLink to="linked_devices" text="Dispositivos enlazados"/>
+      <SettingsLink to="payments" text="Pagos"/>
       <hr />
       <SettingsLink to="appearance" text="Apariencia"/>
       <SettingsLink to="chats" text="Chats"/>
