@@ -1,7 +1,0 @@
-@use "./active-hover-transparent-bg" as hover-bg;
-
-@mixin button {
-  padding: .6rem;
-  border-radius: 50%;
-  @include hover-bg.active-hover-transparent-bg;
-}

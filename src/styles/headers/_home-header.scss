@@ -1,4 +1,3 @@
-@use "../mixins/header-button";
 .home-header {
   display: grid;
   position: relative;
@@ -18,18 +17,11 @@
     grid-column: 2 / 3;
   }
 
-  //BOTON SEARCH
-  .search {
-    all: unset;
-    display: block;
-    cursor: pointer;
-    @include header-button.button
-  }
-
   //CONTENEDOR DE LA BARRA DE BUSQUEDA Y EL BOTON
   .search-container {
     grid-column: 4 / 5;
   }
+
   //contenedor del input de busqueda
   .input-container {
     display: flex;

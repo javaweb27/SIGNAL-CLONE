@@ -1,15 +1,6 @@
-@use "../mixins/header-button";
-
 //CONTENEDOR DEL MENU LAS OPCIONES Y EL BOTON
 .container {
   grid-column: 5 / 6;
-}
-
-.button {
-  all: unset;
-  display: block;
-  cursor: pointer;
-  @include header-button.button
 }
 
 .menu {

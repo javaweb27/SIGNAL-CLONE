@@ -1,0 +1,10 @@
+@use "../mixins/active-hover-transparent-bg" as *;
+
+.button {
+  all: unset;
+  display: block;
+  cursor: pointer;
+  padding: .6rem;
+  border-radius: 50%;
+  @include active-hover-transparent-bg;
+}

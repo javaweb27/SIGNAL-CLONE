@@ -1,5 +1,5 @@
 import { useRef } from "react"
-import Svg from "../svg"
+import HeaderButton from "./HeaderButton"
 
 const Search = () => {
   const input = useRef()
@@ -8,9 +8,9 @@ const Search = () => {
 
   return (
     <div className="search-container">
-      <button onClick={toggleSearch} className="search"><Svg name="search"/></button>
+      <HeaderButton onClick={toggleSearch} iconName="search"/>
       <div ref={input} className="input-container">
-        <button onClick={toggleSearch} className="search">flecha</button>
+        <HeaderButton onClick={toggleSearch} iconName="arrow_left"/>
         <input type="text" />
       </div>
     </div>

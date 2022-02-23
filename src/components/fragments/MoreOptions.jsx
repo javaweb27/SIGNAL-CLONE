@@ -1,7 +1,7 @@
 import classes from "../../styles/fragments/more-options.module.scss"
 import { useRef } from "react"
 import { Link } from "react-router-dom"
-import Svg from "../svg"
+import HeaderButton from "./HeaderButton"
 
 const MoreOptions = () => {
   const list = useRef()
@@ -18,7 +18,7 @@ const MoreOptions = () => {
 
   return (
     <div className={classes.container}>
-      <button onClick={openMenu} className={classes.button}><Svg name="more_options"/></button>
+      <HeaderButton onClick={openMenu} iconName="more_options"/>
       <ul ref={list} className={classes.menu}>
         <li><Link className={classes.option} to="new-group">Nuevo grupo</Link></li>
         <li><button className={classes.option}>Marcar todos como leidos</button></li>
