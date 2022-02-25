@@ -1,4 +1,6 @@
 @mixin light-colors {
+  --primary-color: #2354ba;
+  --secondary-color: #99a8c9;
   --bg-color: hsl(220, 86%, 99%);
   --menu-bg-color: #fff;
   --title-color: #000;
@@ -7,6 +9,8 @@
 }
 
 @mixin dark-colors {
+  --primary-color: #4c72bd;
+  --secondary-color: #222e46;
   --bg-color: hsl(220, 86%, 2%);
   --menu-bg-color: hsl(220, 2%, 17%);
   --title-color: #fff;
