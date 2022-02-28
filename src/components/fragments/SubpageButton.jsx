@@ -1,4 +1,5 @@
 import classes from "../../styles/fragments/subpage-button.module.scss"
+import ButtonToggle from "./ButtonToggle"
 
 const SubpageButton = ({toggle, title, children, event}) => {
   return (
@@ -11,8 +12,7 @@ const SubpageButton = ({toggle, title, children, event}) => {
         :
         <span className={classes.title}>{title}</span>
       }
-
-      {toggle && <span>boton</span>}
+      {toggle && <ButtonToggle/>}
     </button>
   )
 }

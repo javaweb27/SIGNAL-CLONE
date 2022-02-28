@@ -1,0 +1,21 @@
+.container {
+  align-self: center;
+  width: 1.9rem;
+  height: 1rem;
+  border-radius: .5rem;
+  background-color: var(--secondary-color);
+}
+
+.circle {
+  display: inline-block;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  transition: .6s transform linear;
+  transform: scale(1.27);
+  background-color: var(--primary-color);
+
+  &.active {
+    transform: translateX(.9rem) scale(1.27);
+  }
+}
