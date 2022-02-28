@@ -1,9 +1,9 @@
 import { useState } from "react"
-import { CHANGE_THEME } from "../../context/actions"
 import SubmenuInput from "../../fragments/SubmenuInput"
 import SubpageButton from "../../fragments/SubpageButton"
+import { changeTheme } from "../../context/action-creators"
 
-const ThemeSettings = ({ context }) => {
+const ThemeSettings = ({ context: [theme, dispatch] }) => {
   const [openMenu, setOpenMenu] = useState(false)
 
   const toggleMenu = e => {
@@ -11,30 +11,27 @@ const ThemeSettings = ({ context }) => {
     if (!openMenu) setOpenMenu(true)
   }
 
-  const changeThemeAndClose = e => {
-    context.dispatch({
-      type: CHANGE_THEME,
-      theme: e.target.id.toUpperCase()
-    })
+  const change = e => {
+    dispatch(changeTheme(e.target.id.toUpperCase()))
     setOpenMenu(false)
   }
 
   return (
     <>
       <SubpageButton title="Tema" event={{onClick: toggleMenu}}>
-        {context.theme.text}
+        {theme.text}
       </SubpageButton>
       <div className={`container-fixed ${openMenu && "active"}`} onClick={toggleMenu}>
         <div className="menu-change-theme">
           <span>Tema</span>
           <ul>
-            <SubmenuInput name="theme" id="default" type="radio" event={{onClick: changeThemeAndClose}}>
+            <SubmenuInput name="theme" id="default" type="radio" event={{onClick: change}}>
               Predeterminado del dispositivo
             </SubmenuInput>
-            <SubmenuInput name="theme" id="light" type="radio" event={{onClick: changeThemeAndClose}}>
+            <SubmenuInput name="theme" id="light" type="radio" event={{onClick: change}}>
               Claro
             </SubmenuInput>
-            <SubmenuInput name="theme" id="dark" type="radio" event={{onClick: changeThemeAndClose}}>
+            <SubmenuInput name="theme" id="dark" type="radio" event={{onClick: change}}>
               Oscuro
             </SubmenuInput>
           </ul>

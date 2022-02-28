@@ -1,20 +1,20 @@
 import { useContext } from "react"
-import BasicHeader from "../../sections/BasicHeader"
-import AppearanceContext from "../../context/appearance/AppearanceContext"
+import Context from "../../context"
 import ThemeSettings from "./ThemeSettings"
+import BasicHeader from "../../sections/BasicHeader"
 import SubpageButton from "../../fragments/SubpageButton"
 import SubpageLink from "../../fragments/SubpageLink"
 
 const Appearance = () => {
 
-  const [state, dispatch] = useContext(AppearanceContext)
+  const [{appearance}, dispatch] = useContext(Context)
 
   return (
     <>
       <BasicHeader linkPath="/settings" titleType="h3" titleText="Apariencia"/>
 
       <section>
-        <ThemeSettings context={{theme: state.theme, dispatch}}/>
+        <ThemeSettings context={[appearance.theme, dispatch]}/>
 
         <SubpageLink to="chat-color" title="Color y fondo del chat"/>
 

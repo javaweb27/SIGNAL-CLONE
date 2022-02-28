@@ -4,7 +4,7 @@ import Home from "./pages/home"
 import Settings from "./pages/settings"
 import Page404 from "./pages/page404"
 //context
-import AppearanceProvider from "./context/appearance/AppearanceProvider"
+import ContextProvider from "./context/ContextProvider"
 //subpages
 import Profile from "./subpages/profile"
 import Account from "./subpages/account"
@@ -15,7 +15,7 @@ import Notifications from "./subpages/notifications"
 import Privacy from "./subpages/privacy"
 
 const App = () => (
-  <AppearanceProvider>
+  <ContextProvider>
     <BrowserRouter basename="/Proyecto-de-Clon-de-Signal">
       <Routes>
         <Route path="/" element={<Home/>}/>
@@ -30,7 +30,7 @@ const App = () => (
         <Route path="*" element={<Page404/>}/>
       </Routes>
     </BrowserRouter>
-  </AppearanceProvider>
+  </ContextProvider>
 )
 
 export default App

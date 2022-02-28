@@ -1,5 +1,5 @@
 import { DEFAULT, LIGHT, DARK } from "../values";
-import {dark_icons, light_icons} from "../../../../styles/svg/.module.scss";
+import {dark_icons, light_icons} from "../../../styles/svg/.module.scss";
 
 const setTheme = (theme) => {
   const page = document.getElementById("root").classList
