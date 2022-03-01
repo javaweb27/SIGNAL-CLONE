@@ -3,3 +3,33 @@
 	text-align: center;
 	color: var(--title-color);
 }
+
+.buttons-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.chat-btn {
+  border-radius: 50%;
+  margin: 0 1rem 1rem 0;
+  box-shadow: 1px 1px 9px -3px #000;
+  animation: 3s linear infinite;
+  animation-name: chat-btn;
+
+  @keyframes chat-btn {
+    5% {
+      transform: scale(1.27);
+    }
+    10% {
+      transform: scale(1);
+    }
+  }
+  
+  &.c-gray {
+    background-color: var(--menu-bg-color);
+  }
+  &.c-primary {
+    background-color: var(--primary-color);
+  }
+}
