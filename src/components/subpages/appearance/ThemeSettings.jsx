@@ -8,12 +8,11 @@ import { changeTheme } from "../../context/action-creators"
 const ThemeSettings = ({ context: [theme, dispatch] }) => {
   const containerRef = useRef()
 
-  const openMenu = () => {
-    containerRef.current.classList.add(active)
-  }
-
+  const openMenu = () => containerRef.current.classList.add(active)
+  
   const change = e => {
     dispatch(changeTheme(e.target.id.toUpperCase()))
+    containerRef.current.classList.remove(active)
   }
 
   return (

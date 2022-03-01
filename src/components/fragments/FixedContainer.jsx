@@ -2,7 +2,7 @@ import { container, active, menu } from "../../styles/fragments/fixed-container.
 
 const FixedContainer = ({ title, containerRef, children }) => {
   const closeMenu = e => {
-    if (e.target.matches(`.${container}`) || e.target.matches("ul *")) {
+    if (e.target.matches(`.${container}`)) {
       containerRef.current.classList.remove(active)
     }
   }
