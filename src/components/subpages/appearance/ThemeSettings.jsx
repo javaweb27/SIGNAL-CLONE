@@ -1,7 +1,7 @@
 import { active } from "../../../styles/fragments/fixed-container.module.scss"
 import { useRef } from "react"
-import FixedContainer from "../../fragments/FixedContainer";
-import SubmenuInput from "../../fragments/SubmenuInput"
+import FixedContainer from "../../fragments/FixedContainer"
+import Option from "../../fragments/FixedContainerOption"
 import SubpageButton from "../../fragments/SubpageButton"
 import { changeTheme } from "../../context/action-creators"
 
@@ -21,15 +21,15 @@ const ThemeSettings = ({ context: [theme, dispatch] }) => {
         {theme.text}
       </SubpageButton>
       <FixedContainer title="Tema" containerRef={containerRef}>
-        <SubmenuInput name="theme" id="default" type="radio" event={{onClick: change}}>
+        <Option name="theme" id="default" type="radio" event={{onClick: change}}>
           Predeterminado del dispositivo
-        </SubmenuInput>
-        <SubmenuInput name="theme" id="light" type="radio" event={{onClick: change}}>
+        </Option>
+        <Option name="theme" id="light" type="radio" event={{onClick: change}}>
           Claro
-        </SubmenuInput>
-        <SubmenuInput name="theme" id="dark" type="radio" event={{onClick: change}}>
+        </Option>
+        <Option name="theme" id="dark" type="radio" event={{onClick: change}}>
           Oscuro
-        </SubmenuInput>
+        </Option>
       </FixedContainer>
     </>
   )

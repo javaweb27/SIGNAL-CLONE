@@ -1,0 +1,10 @@
+.item {
+  list-style-type: none;
+}
+
+.option {
+  display: block;
+  padding: .12rem 0;
+  color: var(--title-color);
+  cursor: pointer;
+}
