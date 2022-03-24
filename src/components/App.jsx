@@ -17,7 +17,7 @@ import DataStorage from "./subpages/data-storage"
 
 const App = () => (
   <ContextProvider>
-    <BrowserRouter basename="/Proyecto-de-Clon-de-Signal">
+    <BrowserRouter basename="/SIGNAL-CLONE">
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="settings" element={<Settings/>}/>
