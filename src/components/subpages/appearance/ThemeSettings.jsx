@@ -9,7 +9,7 @@ const ThemeSettings = ({ context: [theme, dispatch] }) => {
   const containerRef = useRef()
 
   const openMenu = () => containerRef.current.classList.add(active)
-  
+
   const change = e => {
     dispatch(changeTheme(e.target.id.toUpperCase()))
     containerRef.current.classList.remove(active)
@@ -17,17 +17,18 @@ const ThemeSettings = ({ context: [theme, dispatch] }) => {
 
   return (
     <>
-      <SubpageButton title="Tema" event={{onClick: openMenu}}>
+      <SubpageButton event={{ onClick: openMenu }} title="Tema">
         {theme.text}
       </SubpageButton>
-      <FixedContainer title="Tema" containerRef={containerRef}>
-        <Option name="theme" id="default" type="radio" event={{onClick: change}}>
-          Predeterminado del dispositivo
+
+      <FixedContainer containerRef={containerRef} title="Tema">
+        <Option radio name="theme" id="default" onClick={change}>
+          Predeterminado del sistema
         </Option>
-        <Option name="theme" id="light" type="radio" event={{onClick: change}}>
+        <Option radio name="theme" id="light" onClick={change}>
           Claro
         </Option>
-        <Option name="theme" id="dark" type="radio" event={{onClick: change}}>
+        <Option radio name="theme" id="dark" onClick={change}>
           Oscuro
         </Option>
       </FixedContainer>
