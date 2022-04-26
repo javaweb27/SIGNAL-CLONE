@@ -4,7 +4,7 @@ import Home from "./pages/home"
 import Settings from "./pages/settings"
 import Page404 from "./pages/page404"
 //context
-import ContextProvider from "./context/ContextProvider"
+import AllProviders from "./context/AllProviders"
 //subpages
 import Profile from "./subpages/profile"
 import Account from "./subpages/account"
@@ -16,7 +16,7 @@ import Privacy from "./subpages/privacy"
 import DataStorage from "./subpages/data-storage"
 
 const App = () => (
-  <ContextProvider>
+  <AllProviders>
     <BrowserRouter basename="/SIGNAL-CLONE">
       <Routes>
         <Route path="/" element={<Home/>}/>
@@ -32,7 +32,7 @@ const App = () => (
         <Route path="*" element={<Page404/>}/>
       </Routes>
     </BrowserRouter>
-  </ContextProvider>
+  </AllProviders>
 )
 
 export default App
