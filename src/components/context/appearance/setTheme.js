@@ -7,17 +7,17 @@ const setTheme = (theme) => {
     case "DEFAULT":
       page.remove("light-theme", light_icons)
       page.remove("dark-theme", dark_icons)
-      return { value: theme, text: "Predeterminado del dispositivo" }
+      return theme
 
     case "LIGHT":
       page.remove("dark-theme", dark_icons)
       page.add("light-theme", light_icons)
-      return { value: theme, text: "Claro" }
+      return theme
 
     case "DARK":
       page.remove("light-theme", light_icons)
       page.add("dark-theme", dark_icons)
-      return { value: theme, text: "Oscuro" }
+      return theme
   }
 }
 

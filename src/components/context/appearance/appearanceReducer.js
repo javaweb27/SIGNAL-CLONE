@@ -5,10 +5,7 @@ const appearanceReducer = (state, { action, payload }) => {
     case "CHANGE-THEME":
       return {
         ...state,
-        theme: {
-          value: setTheme(payload).value,
-          text: setTheme(payload).text
-        }
+        theme: setTheme(payload)
       }
     case "CHANGE-LANGUAGE":
       return {

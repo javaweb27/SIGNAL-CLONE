@@ -4,11 +4,8 @@ import appearanceReducer from "./appearanceReducer";
 const AppearanceContext = createContext()
 
 const initialState = {
-  theme: {
-    value: "DEFAULT",
-    text: "Predeterminado del sistema"
-  },
-  language: "SPANISH"
+  theme: "DEFAULT",
+  language: "spanish"
 }
 
 const AppearanceProvider = ({ children }) => {
