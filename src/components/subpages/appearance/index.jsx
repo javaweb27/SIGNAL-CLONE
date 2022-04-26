@@ -4,10 +4,11 @@ import ThemeSettings from "./ThemeSettings"
 import BasicHeader from "../../sections/BasicHeader"
 import SubpageButton from "../../fragments/SubpageButton"
 import SubpageLink from "../../fragments/SubpageLink"
+import LanguageSettings from "./LanguageSettings"
 
 const Appearance = () => {
 
-  const [{ theme }, dispatch] = useContext(AppearanceContext)
+  const [{ theme, language }, dispatch] = useContext(AppearanceContext)
 
   return (
     <>
@@ -22,9 +23,7 @@ const Appearance = () => {
           Normal
         </SubpageButton>
 
-        <SubpageButton title ="Idioma">
-          Predeterminado del sitema
-        </SubpageButton>
+        <LanguageSettings context={[language, dispatch]}/>
       </section>
     </>
   )

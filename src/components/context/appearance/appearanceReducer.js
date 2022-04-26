@@ -13,9 +13,7 @@ const appearanceReducer = (state, { action, payload }) => {
     case "CHANGE-LANGUAGE":
       return {
         ...state,
-        language: {
-          value: payload
-        }
+        language: payload
       }
 
     default:

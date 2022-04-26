@@ -7,7 +7,8 @@ const initialState = {
   theme: {
     value: "DEFAULT",
     text: "Predeterminado del sistema"
-  }
+  },
+  language: "SPANISH"
 }
 
 const AppearanceProvider = ({ children }) => {
