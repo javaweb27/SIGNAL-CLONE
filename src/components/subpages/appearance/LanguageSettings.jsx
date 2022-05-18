@@ -1,3 +1,4 @@
+import { langLanguageSettings as texts } from "./langs/langLanguageSettings"
 import { active } from "../../../styles/fragments/fixed-container.module.scss"
 import { useRef } from "react"
 import FixedContainer from "../../fragments/FixedContainer"
@@ -6,7 +7,7 @@ import SubpageButton from "../../fragments/SubpageButton"
 import { changeLanguage } from "../../context/action-creators"
 import LangText from "../../fragments/LangText"
 
-const LanguageSettings = ({ context: [language, dispatch] }) => {
+const LanguageSettings = ({ context: [_language, dispatch] }) => {
   const containerRef = useRef()
 
   const openMenu = () => containerRef.current.classList.add(active)
@@ -17,13 +18,17 @@ const LanguageSettings = ({ context: [language, dispatch] }) => {
   }
 
   return <>
-    <SubpageButton event={{ onClick: openMenu }} title={<LangText spanish="Idioma" english="Language"/>}>
-      {language === "spanish" ? "Español" : "English"}
+    <SubpageButton event={{ onClick: openMenu }} title={<LangText spanish="Idioma" english="Language" />}>
+      <LangText {...texts.currentLanguage} />
     </SubpageButton>
 
-    <FixedContainer containerRef={containerRef} title={<LangText spanish="Idioma" english="Language"/>}>
-      <Option radio name="language" id="spanish" onClick={change}>Español</Option>
-      <Option radio name="language" id="english" onClick={change}>Ingles</Option>
+    <FixedContainer containerRef={containerRef} title={<LangText spanish="Idioma" english="Language" />}>
+      <Option radio name="language" id="spanish" onClick={change}>
+        <LangText {...texts.lSpanish} />
+      </Option>
+      <Option radio name="language" id="english" onClick={change}>
+        <LangText {...texts.lEnglish} />
+      </Option>
     </FixedContainer>
   </>
 }

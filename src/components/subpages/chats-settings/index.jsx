@@ -1,3 +1,4 @@
+import { langChatsSettings as texts } from "./langs/langChatsSettings"
 import SubpageLink from "../../fragments/SubpageLink"
 import SubpageButton from "../../fragments/SubpageButton"
 import BasicHeader from "../../sections/BasicHeader"
@@ -6,31 +7,29 @@ import LangText from "../../fragments/LangText"
 const ChatsSettings = () => {
   return (
     <>
-      <BasicHeader linkPath="/settings" titleType="h3" titleText={<LangText spanish="Chats" english="Chats" />} />
+      <BasicHeader linkPath="/settings" titleType="h3" titleText={<LangText {...texts.headerTitle} />} />
 
       <section>
-        <SubpageLink to="sms" title={<LangText spanish="SMS Y MMS" english="SMS and MMS" />} />
+        <SubpageLink to="sms" title={<LangText {...texts.MESSAGE} />} />
 
-        <SubpageButton toggle title={<LangText spanish="Generar vista previa de enlaces" english="Generate link previews" />}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, tempora accusantium corrupti assumenda necessitatibus.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, tempora accusantium corrupti assumenda necessitatibus.
+        <SubpageButton toggle title={<LangText {...texts.generateLinkPreviews} />}>
+          <LangText {...texts.generateLinkPreviewsPar} />
         </SubpageButton>
 
-        <SubpageButton toggle title={<LangText spanish="Usar fotos de la libreria de contactos del dispositivo" english="Use address book photos" />}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, tempora accusantium corrupti assumenda necessitatibus.
+        <SubpageButton toggle title={<LangText {...texts.usePhotosFromDevice} />}>
+          <LangText {...texts.usePhotosFromDevicePar} />
         </SubpageButton>
 
         <hr />
 
-        <h4 className="subpage-section-title">{<LangText spanish="Teclado" english="Keyboard" />}</h4>
-        <SubpageButton toggle title={<LangText spanish="Usar emoji del sistema" english="Use system emoji" />} />
-        <SubpageButton toggle title={<LangText spanish="Enviar al tocar <<Intro<<" english="Enter key sends" />} />
+        <h4 className="subpage-section-title"><LangText {...texts.subtitleKeyboard} /></h4>
+        <SubpageButton toggle title={<LangText {...texts.useSystemEmoji} />} />
+        <SubpageButton toggle title={<LangText {...texts.enterKeySends} />} />
 
+        <h4 className="subpage-section-title"><LangText {...texts.subtitleBackups} /></h4>
 
-        <h4 className="subpage-section-title">{<LangText spanish="Copias de seguridad" english="Backups" />}</h4>
-
-        <SubpageLink to="chats-backup" title={<LangText spanish="Copias de seguridad de los chats" english="Chat backups" />}>
-        <LangText spanish="Desactivado" english="Disabled" />
+        <SubpageLink to="chats-backup" title={<LangText {...texts.chatBackups} />}>
+          <LangText {...texts.chatBackupsPar} />
         </SubpageLink>
       </section>
     </>

@@ -1,3 +1,4 @@
+import { langThemeSettings as texts } from "./langs/langThemeSettings"
 import { active } from "../../../styles/fragments/fixed-container.module.scss"
 import { useRef } from "react"
 import FixedContainer from "../../fragments/FixedContainer"
@@ -20,21 +21,21 @@ const ThemeSettings = ({ context: [theme, dispatch] }) => {
     <>
       <SubpageButton event={{ onClick: openMenu }} title={<LangText spanish="Tema" english="Theme" />}>
         {
-          theme === "DEFAULT" ? <LangText spanish="Predeterminado del sistema" english="System default"/> :
-          theme === "DARK" ? <LangText spanish="Oscuro" english="Dark"/> :
-          theme === "LIGHT" ? <LangText spanish="Claro" english="Light"/> : null
+          theme === "DEFAULT" ? <LangText {...texts.default} /> :
+          theme === "DARK" ? <LangText {...texts.dark} /> :
+          theme === "LIGHT" ? <LangText {...texts.light} /> : null
         }
       </SubpageButton>
 
       <FixedContainer containerRef={containerRef} title={<LangText spanish="Tema" english="Theme" />}>
         <Option radio name="theme" id="default" onClick={change}>
-          <LangText spanish="Predeterminado del sistema" english="System default" />
+          <LangText {...texts.inputDefault} />
         </Option>
         <Option radio name="theme" id="light" onClick={change}>
-          <LangText spanish="Claro" english="Light" />
+          <LangText {...texts.inputLight} />
         </Option>
         <Option radio name="theme" id="dark" onClick={change}>
-          <LangText spanish="Oscuro" english="Dark" />
+          <LangText {...texts.inputDark} />
         </Option>
       </FixedContainer>
     </>

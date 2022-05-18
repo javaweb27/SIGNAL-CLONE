@@ -1,3 +1,4 @@
+import { langNotifications as texts } from "./langs/langNotifications"
 import SubpageLink from "../../fragments/SubpageLink"
 import SubpageButton from "../../fragments/SubpageButton"
 import BasicHeader from "../../sections/BasicHeader"
@@ -6,45 +7,45 @@ import LangText from "../../fragments/LangText"
 const Notifications = () => {
   return (
     <>
-      <BasicHeader linkPath="/settings" titleType="h3" titleText={<LangText spanish="Notificaciones" english="Notifications" />} />
+      <BasicHeader linkPath="/settings" titleType="h3" titleText={<LangText {...texts.headerTitle} />} />
 
       <section>
-        <h4 className="subpage-section-title"><LangText spanish="Mensajes" english="Messages" /></h4>
-        <SubpageButton toggle title={<LangText spanish="Notificaciones" english="Notifications" />} />
+        <h4 className="subpage-section-title"><LangText {...texts.subtitleMessages} /></h4>
+        <SubpageButton toggle title={<LangText {...texts.messageNotifications} />} />
 
-        <SubpageButton title={<LangText spanish="Sonido" english="Sound" />}>
-          <LangText spanish="Predeterminado" english="Default" /> (sound.ogg)
+        <SubpageButton title={<LangText {...texts.sound} />}>
+          <LangText {...texts.soundPar} /> (sound.ogg)
         </SubpageButton>
 
-        <SubpageButton toggle title={<LangText spanish="Vibracion" english="Vibrate" />} />
-        <SubpageButton toggle title={<LangText spanish="Color del LED" english="LED color" />} />
-        <SubpageButton toggle title={<LangText spanish="Sonidos en el chats" english="In-chat sounds" />} />
+        <SubpageButton toggle title={<LangText {...texts.messageVibrate} />} />
+        <SubpageButton toggle title={<LangText {...texts.ledColor} />} />
+        <SubpageButton toggle title={<LangText {...texts.inChatSounds} />} />
 
-        <SubpageButton title={<LangText spanish="Repetir alertas" english="Repeat alerts" />}>
-          <LangText spanish="Nunca" english="Never" />
+        <SubpageButton title={<LangText {...texts.repeatAlerts} />}>
+          <LangText {...texts.repeatAlertsPar} />
         </SubpageButton>
 
-        <SubpageButton title={<LangText spanish="Mostrar" english="Show" />}>
-          <LangText spanish="Nombre y mensaje" english="Name and message" />
+        <SubpageButton title={<LangText {...texts.show} />}>
+          <LangText {...texts.showPar} />
         </SubpageButton>
 
-        <SubpageLink to="" title={<LangText spanish="Prioridad" english="Priority" />} />
+        <SubpageLink to="" title={<LangText {...texts.priority} />} />
 
         <hr />
 
-        <h4 className="subpage-section-title"><LangText spanish="LLamadas" english="Calls" /></h4>
-        <SubpageButton toggle title={<LangText spanish="Notificaciones" english="Notifications" />} />
+        <h4 className="subpage-section-title"><LangText {...texts.subtitleCalls} /></h4>
+        <SubpageButton toggle title={<LangText {...texts.callNotifications} />} />
 
-        <SubpageButton title={<LangText spanish="Tono de llamada}" english="Ringtone" />}>
-        <LangText spanish="Predeterminado" english="Default" />
+        <SubpageButton title={<LangText {...texts.ringtone} />}>
+          <LangText {...texts.ringtonePar} />
         </SubpageButton>
 
-        <SubpageButton toggle title={<LangText spanish="Vibracion" english="Vibrate" />} />
+        <SubpageButton toggle title={<LangText {...texts.callVibrate} />} />
 
         <hr />
 
-        <h4 className="subpage-section-title"><LangText spanish="Notificarme cuando ..." english="Notify when" /></h4>
-        <SubpageButton toggle title={<LangText spanish="Alguien comienza a usar Signal" english="Contact joins Signal" />} />
+        <h4 className="subpage-section-title"><LangText {...texts.subtitleNotifyWhen} /></h4>
+        <SubpageButton toggle title={<LangText {...texts.contactJoinsSignal} />} />
       </section>
     </>
   )

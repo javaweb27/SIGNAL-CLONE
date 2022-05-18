@@ -1,3 +1,4 @@
+import { langMoreOptions as texts } from "./langs/langMoreOptions"
 import classes from "../../styles/fragments/more-options.module.scss"
 import { useRef } from "react"
 import { Link } from "react-router-dom"
@@ -22,23 +23,23 @@ const MoreOptions = () => {
       <HeaderButton onClick={openMenu} iconName="more_options" />
       <ul ref={list} className={classes.menu}>
         <li><Link className={classes.option} to="new-group">
-          <LangText spanish="Nuevo grupo" english="New group" />
+          <LangText {...texts.newGroup} />
         </Link></li>
 
         <li><button className={classes.option}>
-          <LangText spanish="Marcar todos como leidos" english="Mark all read" />
+          <LangText {...texts.markAllRead} />
         </button></li>
 
         <li><Link className={classes.option} to="invite-persons">
-          <LangText spanish="Invitar personas" english="Invite friends" />
+          <LangText {...texts.inviteFriends} />
         </Link></li>
 
         <li><Link className={classes.option} to="settings">
-          <LangText spanish="Ajustes" english="Settings" />
+          <LangText {...texts.settings} />
         </Link></li>
 
         <li><button className={classes.option}>
-          <LangText spanish="Perfil de notificaciones" english="Notification profile" />
+          <LangText {...texts.notification} />
         </button></li>
       </ul>
     </div>

@@ -1,3 +1,4 @@
+import { langAccount as texts } from "./langs/langAccount"
 import SubpageLink from "../../fragments/SubpageLink"
 import SubpageButton from "../../fragments/SubpageButton"
 import BasicHeader from "../../sections/BasicHeader"
@@ -6,31 +7,31 @@ import LangText from "../../fragments/LangText"
 const Account = () => {
   return (
     <>
-      <BasicHeader linkPath="/settings" titleType="h3" titleText={<LangText spanish="Cuenta" english="Account" />} />
+      <BasicHeader linkPath="/settings" titleType="h3" titleText={<LangText {...texts.headerTitle} />} />
 
       <section className="cuenta">
-        <h4 className="subpage-section-title">{<LangText spanish="PIN de Signal" english="Signal PIN" />}</h4>
-        <SubpageLink to="" title={<LangText spanish="Modificar PIN" english="Change your PIN" />} />
+        <h4 className="subpage-section-title"><LangText {...texts.subtitlePIN} /></h4>
+        <SubpageLink to="" title={<LangText {...texts.changePIN} />} />
 
-        <SubpageButton toggle title={<LangText spanish="Recordatorios de PIN" english="PIN reminders" />}>
-          <LangText spanish="Te lo soliitaremos menos a menudo con el pasar del tiempo" english="You'll be asked less frequently over time" />
+        <SubpageButton toggle title={<LangText {...texts.PINreminder} />}>
+          <LangText {...texts.PINreminderPar} />
         </SubpageButton>
 
-        <SubpageButton toggle title={<LangText spanish="Bloqueo de registro" english="Registration Lock" />}>
-          <LangText spanish="Requerir tu PIN de signal al volver a registrar tu numero con signal" english="Require your Signal PIN to register your phone number with Signal again" />
+        <SubpageButton toggle title={<LangText {...texts.registrationLock} />}>
+          <LangText {...texts.registrationLockPar} />
         </SubpageButton>
-        <SubpageLink to="" title={<LangText spanish="Ajustes avanzados del PIN" english="Advanced PIN settings" />} />
+        <SubpageLink to="" title={<LangText {...texts.PINsettings}/>} />
 
         <hr />
 
         <h4 className="subpage-section-title">
-          <LangText spanish="Cuenta" english="Account" />
+          <LangText {...texts.subtitleAccount} />
         </h4>
-        <SubpageLink to="" title={<LangText spanish="Transferir cuenta" english="Transfer account" />}>
-          <LangText spanish="Transferir cuenta a otro dispositivo nuevo" english="Transfer account to a new device" />
+        <SubpageLink to="" title={<LangText {...texts.transferAccount}  />}>
+          <LangText {...texts.transferAccountPar}  />
         </SubpageLink>
 
-        <SubpageLink to="" title={<LangText spanish="Eliminar cuenta" english="Delete account"/>} />
+        <SubpageLink to="" title={<LangText {...texts.deleteAccount} />} />
       </section>
     </>
   )

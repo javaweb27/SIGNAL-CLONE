@@ -1,3 +1,4 @@
+import { langAppearance as texts } from "./langs/langAppearance"
 import { useContext } from "react"
 import AppearanceContext from "../../context/appearance"
 import ThemeSettings from "./ThemeSettings"
@@ -13,17 +14,15 @@ const Appearance = () => {
 
   return (
     <>
-      <BasicHeader linkPath="/settings" titleType="h3" titleText={<LangText spanish="Apariencia" english="Appearance" />}
-      />
+      <BasicHeader linkPath="/settings" titleType="h3" titleText={<LangText {...texts.headerTitle} />}/>
 
       <section>
         <ThemeSettings context={[theme, dispatch]} />
 
-        <SubpageLink to="chat-color" title={<LangText spanish="Color y fondo del chat" english="Chat color & wallpaper" />}
-        />
+        <SubpageLink to="chat-color" title={<LangText {...texts.chatColor} />}/>
 
-        <SubpageButton title={<LangText spanish="Tamaño de fuente del mensaje" english="Message font size" />}>
-          <LangText spanish="Normal" english="Normal" />
+        <SubpageButton title={<LangText {...texts.messageFontSize} />}>
+          <LangText {...texts.messageFontSizePar} />
         </SubpageButton>
 
         <LanguageSettings context={[language, dispatch]}/>

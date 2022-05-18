@@ -1,3 +1,4 @@
+import { langChats as texts } from "./langs/langChats"
 import HeaderButton from "../fragments/HeaderButton"
 import LangText from "../fragments/LangText"
 
@@ -5,9 +6,9 @@ const Chats = () => {
   return (
     <section>
       <p className="message-no-chats">
-        <LangText spanish="Todavia no hay chats." english="No chats yet." />
+        <LangText {...texts.noChats} />
         <br />
-        <LangText spanish="Comienza a chatear con tus amistades." english="Get started by messaging a friend" />
+        <LangText {...texts.startChat} />
       </p>
       <div className="buttons-container">
         <div className="chat-btn c-gray"><HeaderButton iconName="camera" /></div>

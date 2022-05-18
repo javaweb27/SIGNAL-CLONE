@@ -1,3 +1,4 @@
+import { langSettingsLinks as texts } from "./langs/langSettingsLinks"
 import LangText from "../fragments/LangText"
 import SettingsLink from "../fragments/SettingsLink"
 import UserProfile from "../fragments/UserProfile"
@@ -6,19 +7,19 @@ const SettingsLinks = () => {
   return (
     <section className="settings">
       <UserProfile/>
-      <SettingsLink to="account" text={<LangText spanish="Cuenta" english="Account" />}/>
-      <SettingsLink to="linked_devices" text={<LangText spanish="Dispositivos enlazados" english="Linked devices" />}/>
-      <SettingsLink to="payments" text={<LangText spanish="Pagos" english="Payments" />}/>
+      <SettingsLink to="account" text={<LangText {...texts.account}  />}/>
+      <SettingsLink to="linked_devices" text={<LangText  {...texts.linkedDevices}/>}/>
+      <SettingsLink to="payments" text={<LangText {...texts.payments} />}/>
       <hr />
-      <SettingsLink to="appearance" text={<LangText spanish="Apariencia" english="Appearance" />}/>
-      <SettingsLink to="chats" text={<LangText spanish="Chats" english="Chats" />}/>
-      <SettingsLink to="notifications" text={<LangText spanish="Notificaciones" english="Notifications" />}/>
-      <SettingsLink to="privacy" text={<LangText spanish="Privacidad" english="Privacy" />}/>
-      <SettingsLink to="data_storage" text={<LangText spanish="Datos y almacenamiento" english="Data and storage" />}/>
+      <SettingsLink to="appearance" text={<LangText {...texts.appearance} />}/>
+      <SettingsLink to="chats" text={<LangText {...texts.chats} />}/>
+      <SettingsLink to="notifications" text={<LangText {...texts.notifications} />}/>
+      <SettingsLink to="privacy" text={<LangText {...texts.privacy} />}/>
+      <SettingsLink to="data_storage" text={<LangText {...texts.dataStorage} />}/>
       <hr />
-      <SettingsLink to="help" text={<LangText spanish="Ayuda" english="Help" />}/>
-      <SettingsLink to="invite" text={<LangText spanish="¡Invita a tus amistades!" english="Invite your friends" />}/>
-      <SettingsLink to="support_signal" text={<LangText spanish="Sostén Signal" english="Become a Signal Sustainer" />}/>
+      <SettingsLink to="help" text={<LangText {...texts.help} />}/>
+      <SettingsLink to="invite" text={<LangText {...texts.invite} />}/>
+      <SettingsLink to="support_signal" text={<LangText {...texts.supportSignal} />}/>
     </section>
   )
 }
