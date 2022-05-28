@@ -1,0 +1,39 @@
+.messages {
+	margin-top: auto;
+	font-size: 1.27rem;
+}
+
+.form {
+	position: sticky;
+	bottom: 0;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: flex-end;
+}
+
+.textArea {
+	border: unset;
+	outline: unset;
+	box-sizing: border-box;
+	background-color: #1b1b1b;
+	color: var(--title-color);
+	font-size: 1.09rem;
+	min-height: 1.27rem;
+	padding: .6rem .8rem;
+	resize: unset;
+}
+
+.btn {
+	all: unset;
+	border: 1px solid green;
+	padding: .6rem .8rem;
+	cursor: pointer;
+	border-radius: 6rem;
+	transition-property: color, border-color;
+	transition-duration: .27s;
+
+	&:hover, &:active {
+		color: var(--title-color);
+		border-color: lime;
+	}
+}

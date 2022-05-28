@@ -14,12 +14,14 @@ import ChatsSettings from "./subpages/chats-settings"
 import Notifications from "./subpages/notifications"
 import Privacy from "./subpages/privacy"
 import DataStorage from "./subpages/data-storage"
+import Chat from "./pages/chat"
 
 const App = () => (
   <AllProviders>
     <BrowserRouter basename="/SIGNAL-CLONE">
       <Routes>
         <Route path="/" element={<Home/>}/>
+        <Route path="/chat" element={<Chat/>}/>
         <Route path="settings" element={<Settings/>}/>
         <Route path="settings/profile" element={<Profile/>}/>
         <Route path="settings/account" element={<Account/>}/>

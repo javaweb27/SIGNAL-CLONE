@@ -1,7 +1,23 @@
+.btn-guest {
+  all: unset;
+  margin: 0 auto;
+  padding: .8rem;
+  cursor: pointer;
+  border-radius: 6rem;
+  color: var(--title-color);
+  background-color: var(--menu-bg-color);
+  font-weight: bold;
+  font-size: 1.27rem;
+
+  &:active {
+    filter: brightness(.72);
+  }
+}
+
 .message-no-chats {
-	margin: 72px auto;
-	text-align: center;
-	color: var(--title-color);
+  margin: 72px auto;
+  text-align: center;
+  color: var(--title-color);
 }
 
 .buttons-container {
@@ -21,14 +37,16 @@
     5% {
       transform: scale(1.27);
     }
+
     10% {
       transform: scale(1);
     }
   }
-  
+
   &.c-gray {
     background-color: var(--menu-bg-color);
   }
+
   &.c-primary {
     background-color: var(--primary-color);
   }

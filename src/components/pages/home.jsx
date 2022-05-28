@@ -1,11 +1,11 @@
-import Chats from "../sections/Chats"
+import ChatsListContainer from "../sections/chats-list-container"
 import HomeHeader from "../sections/HomeHeader"
 
 const Home = () => (
   <>
-    <HomeHeader/>
-    <Chats/>
+    <HomeHeader />
+    <ChatsListContainer />
   </>
-  )
+)
 
 export default Home

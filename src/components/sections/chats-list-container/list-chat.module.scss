@@ -1,0 +1,60 @@
+.link {
+  text-decoration: unset;
+}
+
+.chat {
+  display: flex;
+  padding: 0.4rem .6rem;
+  align-items: center;
+  transition: background-color .19s linear;
+
+  &:active {
+    background-color: #272727;
+  }
+
+  .lastColumn {
+    margin-left: auto;
+  }
+}
+
+.userImg {
+  display: block;
+  background-color: rgb(1, 36, 24);
+  border-radius: 50%;
+  margin-right: .6rem;
+  width: 2.9rem;
+  height: 2.9rem;
+}
+
+.title {
+  display: block;
+  font-size: 1.14rem;
+  font-weight: bold;
+  color: var(--title-color);
+}
+
+.subtitle {
+  color: var(--text-color);
+}
+
+.date {
+  display: block;
+  color: var(--text-color);
+}
+
+.number {
+  margin-left: auto;
+  text-align: right;
+  
+  span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .9rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 1.9rem;
+    background-color: var(--primary-color);
+    color: var(--title-color);
+  }
+}
