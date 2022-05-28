@@ -8,6 +8,7 @@
   background-color: var(--menu-bg-color);
   font-weight: bold;
   font-size: 1.27rem;
+  box-shadow: 0 0 9px -4px #1d1d1d;
 
   &:active {
     filter: brightness(.72);
