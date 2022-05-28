@@ -1,7 +1,6 @@
 import { io } from "socket.io-client"
 
-const socketio = io("http://localhost:3060");
-
+const socketio = io(import.meta.env.VITE_NODE_API);
 socketio.on("connect", () => {
   console.log("conectado");
 })
