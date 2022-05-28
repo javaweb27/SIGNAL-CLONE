@@ -1,7 +1,7 @@
 import { dark_icons, light_icons } from "../../../styles/svg/.module.scss";
 
 const setTheme = (theme) => {
-  const page = document.getElementById("root").classList
+  const page = document.getElementById("main").classList
 
   switch (theme) {
     case "DEFAULT":
