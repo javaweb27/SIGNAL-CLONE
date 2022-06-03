@@ -1,6 +1,6 @@
 {
   "name": "signal-clone",
-  "version": "0.0.0",
+  "homepage": "https://devfjavier.github.io/SIGNAL-CLONE/",
   "private": true,
   "scripts": {
     "deploy": "gh-pages -d dist",

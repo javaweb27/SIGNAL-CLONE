@@ -1,6 +1,7 @@
 import "../styles/styles.scss"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from "./pages/home"
+import Chat from "./pages/chat"
 import Settings from "./pages/settings"
 import Page404 from "./pages/page404"
 //context
@@ -14,7 +15,6 @@ import ChatsSettings from "./subpages/chats-settings"
 import Notifications from "./subpages/notifications"
 import Privacy from "./subpages/privacy"
 import DataStorage from "./subpages/data-storage"
-import Chat from "./pages/chat"
 
 const App = () => (
   <AllProviders>

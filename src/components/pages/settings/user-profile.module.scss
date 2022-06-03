@@ -1,0 +1,13 @@
+// estilos para el link UserProfile y tambien comparte estilos de settings-link.module.scss
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--text-gap);
+
+  .title {
+    color: var(--title-color);
+  }
+  .subtitle {
+    color: var(--text-color);
+  }
+}

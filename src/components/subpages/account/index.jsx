@@ -1,7 +1,7 @@
 import { langAccount as texts } from "./langs/langAccount"
-import SubpageLink from "../../fragments/SubpageLink"
-import SubpageButton from "../../fragments/SubpageButton"
-import BasicHeader from "../../sections/BasicHeader"
+import SubpageLink from "../../fragments/subpage-link"
+import SubpageButton from "../../fragments/subpage-button"
+import BasicHeader from "../../core-sections/basic-header"
 import LangText from "../../fragments/LangText"
 
 const Account = () => {

@@ -1,8 +1,4 @@
 @use "./config/base-layout";
 @use "./config/root-vars";
 @use "./config/theme";
-@use "./headers/chat-header";
-@use "./headers/home-header";
-@use "./headers/basic-header";
-@use "./subpages/profile";
-@use "./fragments/subpage-section-title";
+@use "./html-tags/subpage-section-title";

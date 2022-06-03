@@ -1,8 +1,8 @@
 import { langPrivacy as texts } from "./langs/langPrivacy"
 import { Link } from "react-router-dom"
-import SubpageLink from "../../fragments/SubpageLink"
-import SubpageButton from "../../fragments/SubpageButton"
-import BasicHeader from "../../sections/BasicHeader"
+import SubpageLink from "../../fragments/subpage-link"
+import SubpageButton from "../../fragments/subpage-button"
+import BasicHeader from "../../core-sections/basic-header"
 import LangText from "../../fragments/LangText"
 
 const Privacy = () => {

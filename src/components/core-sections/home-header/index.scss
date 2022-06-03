@@ -1,0 +1,21 @@
+.home-header {
+  display: grid;
+  position: relative;
+  overflow-x: hidden;
+  padding: .6rem 0;
+  grid-template-columns: auto auto 1fr auto auto;
+  align-items: center;
+
+  .link-photo {
+    border-radius: 50%;
+    text-decoration: none;
+    margin: 0 1.9rem;
+    grid-column: 1 / 2;
+  }
+
+  .title {
+    color: var(--title-color);
+    grid-column: 2 / 3;
+  }
+}
+

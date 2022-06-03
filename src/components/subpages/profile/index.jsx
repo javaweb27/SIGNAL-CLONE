@@ -1,7 +1,8 @@
+import "./index.scss"
 import { Link } from "react-router-dom"
 import LangText from "../../fragments/LangText"
-import ProfilePhoto from "../../fragments/ProfilePhoto"
-import BasicHeader from "../../sections/BasicHeader"
+import ProfilePhoto from "../../fragments/profile-photo"
+import BasicHeader from "../../core-sections/basic-header"
 import Svg from "../../svg"
 
 const Profile = () => {

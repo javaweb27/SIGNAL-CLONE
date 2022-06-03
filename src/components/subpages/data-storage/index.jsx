@@ -1,8 +1,8 @@
 import { langDataStorage as texts } from "./langs/langDataStorage"
 import LangText from "../../fragments/LangText"
-import SubpageButton from "../../fragments/SubpageButton"
-import SubpageLink from "../../fragments/SubpageLink"
-import BasicHeader from "../../sections/BasicHeader"
+import SubpageButton from "../../fragments/subpage-button"
+import SubpageLink from "../../fragments/subpage-link"
+import BasicHeader from "../../core-sections/basic-header"
 
 const DataStorage = () => {
   return (

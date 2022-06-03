@@ -1,4 +1,4 @@
-import { dark_icons, light_icons } from "../../../styles/svg/.module.scss";
+import { dark_icons, light_icons } from "../../svg/index.module.scss";
 
 const setTheme = (theme) => {
   const page = document.getElementById("main").classList

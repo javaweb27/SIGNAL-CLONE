@@ -1,0 +1,28 @@
+//CONTENEDOR DE LA BARRA DE BUSQUEDA Y EL BOTON
+.container {
+  grid-column: 4 / 5;
+}
+
+//contenedor del input de busqueda
+.inputContainer {
+  display: flex;
+  position: absolute;
+  gap: 1.2rem;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  transition: .12s;
+  transform: translateX(100%);
+
+  &.open {
+    transform: translateX(0);
+  }
+}
+
+//input de busqueda
+.input {
+  width: 100%;
+  height: 100%;
+}

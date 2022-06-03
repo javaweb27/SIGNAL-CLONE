@@ -1,6 +1,6 @@
 import { langLinkedDevices as texts } from "./langs/langLinkedDevices"
 import LangText from "../../fragments/LangText"
-import BasicHeader from "../../sections/BasicHeader"
+import BasicHeader from "../../core-sections/basic-header"
 
 const LinkedDevices = () => {
   return (

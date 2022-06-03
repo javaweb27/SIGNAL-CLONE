@@ -1,9 +1,9 @@
 import { langLanguageSettings as texts } from "./langs/langLanguageSettings"
-import { active } from "../../../styles/fragments/fixed-container.module.scss"
 import { useRef } from "react"
-import FixedContainer from "../../fragments/FixedContainer"
-import Option from "../../fragments/FixedContainerOption"
-import SubpageButton from "../../fragments/SubpageButton"
+import { active } from "../../fragments/fixed-container/index.module.scss"
+import FixedContainer from "../../fragments/fixed-container"
+import Option from "../../fragments/fixed-container-option"
+import SubpageButton from "../../fragments/subpage-button"
 import { changeLanguage } from "../../context/action-creators"
 import LangText from "../../fragments/LangText"
 
