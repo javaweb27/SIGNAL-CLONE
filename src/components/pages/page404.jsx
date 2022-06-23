@@ -1,17 +1,24 @@
 import { Link } from "react-router-dom"
+import BasicHeader from "../core-sections/basic-header"
 import LangText from "../fragments/LangText"
 
 const Page404 = () => (
   <>
-    <h1>404, <LangText spanish="la pagina no existe" english="this page does not exist" /></h1>
-    <div>
-      <Link to="/">
-        <LangText spanish="Ir al home" english="Go to home" />
-      </Link>
+    <BasicHeader linkPath="#" titleType="h2" titleText="404"></BasicHeader>
+    <div style={{ textAlign: "center",fontSize: "1.19rem" }}>
+      <p><LangText spanish="Esta pagina no existe" english="This page does not exist" /></p>
       <hr />
-      <Link to="/settings">
-        <LangText spanish="Ir a ajustes" english="Go the settings page" />
-      </Link>
+      <div>
+        <Link to="/" style={{ color: "var(--title-color)"}}>
+          <LangText spanish="Ir al home" english="Go to home" />
+        </Link>
+      </div>
+      <br />
+      <div>
+        <Link to="/settings" style={{ color: "var(--title-color)"}}>
+          <LangText spanish="Ir a la pagina ajustes" english="Go to settings page" />
+        </Link>
+      </div>
     </div>
   </>
 )
