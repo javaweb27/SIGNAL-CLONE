@@ -5,7 +5,7 @@ const AppearanceContext = createContext()
 
 const initialState = {
   theme: "DEFAULT",
-  language: "spanish"
+  language: "english"
 }
 
 const AppearanceProvider = ({ children }) => {
