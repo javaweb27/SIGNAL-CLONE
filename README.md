@@ -7,6 +7,18 @@ Context API from React is used to handle the state and for real-time communicati
 Single Page Aplication (SPA)
 
 The source code of the Backend is in the `main` branch
+***
+Branch: master\
+Role: Frontend
+
+**Stack:**
+
+- Build tool: Vite
+- UI Library: React with JavaScript
+- Styles: Sass, CSS Modules
+- App State: Context API
+- Routing: React Router
+- WebSocket: socket.io
 
 ## Available Scripts
 
@@ -29,7 +41,7 @@ Your app is ready to be deployed!
 
 ### `yarn preview`
 
-Runs the app that was built to the `dist` folder.
+Runs the app that was built to the `dist` folder.\
 Open [http://localhost:4173](http://localhost:4173) to view it in the browser.
 
 ### `yarn deploy`
