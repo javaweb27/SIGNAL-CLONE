@@ -1,0 +1,17 @@
+.link {
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  border-radius: 6px;
+  padding: .6rem 0;
+  border: 2px solid var(--primary-color);
+}
+
+.fill {
+  color: #fff;
+  background-color: var(--primary-color);
+}
+
+.stroke {
+  color: var(--primary-color);
+}

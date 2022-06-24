@@ -1,0 +1,22 @@
+.container {
+  gap: 1.27rem;
+  text-align: center;
+  height: 100%;
+  padding: 2.7rem;
+}
+
+.title {
+  color: var(--title-color);
+  margin: 1.27rem 0;
+}
+
+.terms {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.img {
+  height: 27%;
+  align-self: center;
+  margin: 1.27rem 0;
+}
