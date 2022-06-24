@@ -1,5 +1,5 @@
 import "../styles/styles.scss"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { HashRouter, Routes, Route } from "react-router-dom"
 import Home from "./pages/home"
 import Chat from "./pages/chat"
 import Settings from "./pages/settings"
@@ -20,7 +20,7 @@ import Register from "./pages/register"
 
 const App = () => (
   <AllProviders>
-    <BrowserRouter basename="/SIGNAL-CLONE">
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Welcome/>}/>
         <Route path="register" element={<Register/>}/>
@@ -37,7 +37,7 @@ const App = () => (
         <Route path="settings/data_storage" element={<DataStorage/>}/>
         <Route path="*" element={<Page404/>}/>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </AllProviders>
 )
 
