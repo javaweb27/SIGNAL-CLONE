@@ -9,7 +9,7 @@ const Page404 = () => (
       <p><LangText spanish="Esta pagina no existe" english="This page does not exist" /></p>
       <hr />
       <div>
-        <Link to="/" style={{ color: "var(--title-color)"}}>
+        <Link to="/home" style={{ color: "var(--title-color)"}}>
           <LangText spanish="Ir al home" english="Go to home" />
         </Link>
       </div>

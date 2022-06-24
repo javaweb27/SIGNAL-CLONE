@@ -22,9 +22,9 @@ const App = () => (
   <AllProviders>
     <BrowserRouter basename="/SIGNAL-CLONE">
       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="welcome" element={<Welcome/>}/>
+        <Route path="/" element={<Welcome/>}/>
         <Route path="register" element={<Register/>}/>
+        <Route path="home" element={<Home/>}/>
         <Route path="chat" element={<Chat/>}/>
         <Route path="settings" element={<Settings/>}/>
         <Route path="settings/profile" element={<Profile/>}/>

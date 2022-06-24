@@ -7,7 +7,7 @@ const Register = () => (
   <section className={classes.container}>
     <h1><LangText {...texts.title} /></h1>
     <p><LangText {...texts.par} /></p>
-    <LinkPrimary to="/"><LangText {...texts.btnGuest} /></LinkPrimary>
+    <LinkPrimary to="/home"><LangText {...texts.btnGuest} /></LinkPrimary>
   </section>
 )
 

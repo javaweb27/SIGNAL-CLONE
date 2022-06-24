@@ -34,7 +34,7 @@ const MoreOptions = () => {
           <LangText {...texts.inviteFriends} />
         </Link></li>
 
-        <li><Link className={classes.option} to="settings">
+        <li><Link className={classes.option} to="/settings">
           <LangText {...texts.settings} />
         </Link></li>
 
