@@ -1,7 +1,11 @@
 import { Server as WebSocketServer } from "socket.io"
-import httpServer from "./app"
+import httpServer, { app } from "./app"
 import sockets from "./sockets"
 import { CORS_ORIGIN_URL } from "./config"
+import userRoutes from "./routes/user-routes"
+import connectMongoDB from "./connectMongoDB"
+
+connectMongoDB()
 
 const io = new WebSocketServer(httpServer, {
   cors: {
@@ -10,3 +14,6 @@ const io = new WebSocketServer(httpServer, {
 })
 
 sockets(io)
+
+//ROUTES
+app.use(userRoutes)
