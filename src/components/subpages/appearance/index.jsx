@@ -1,6 +1,5 @@
 import { langAppearance as texts } from "./langs/langAppearance"
-import { useContext } from "react"
-import AppearanceContext from "../../context/appearance"
+import { useAppearanceContext } from "../../context/appearance"
 import ThemeSettings from "./ThemeSettings"
 import BasicHeader from "../../core-sections/basic-header"
 import SubpageButton from "../../fragments/subpage-button"
@@ -9,8 +8,7 @@ import LangText from "../../fragments/LangText"
 import LanguageSettings from "./LanguageSettings"
 
 const Appearance = () => {
-
-  const [{ theme, language }, dispatch] = useContext(AppearanceContext)
+  const [{ theme, language }, dispatch] = useAppearanceContext()
 
   return (
     <>

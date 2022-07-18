@@ -1,8 +1,7 @@
-import { useContext } from "react"
-import AppearanceContext from "../context/appearance"
+import { useAppearanceContext } from "../context/appearance"
 
 const LangText = (props) => {
-  const { language } = useContext(AppearanceContext)[0]
+  const { language } = useAppearanceContext()[0]
 
   return props[language] ?? null
 }
