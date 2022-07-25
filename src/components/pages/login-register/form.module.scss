@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  color: var(--title-color);
+}
+
+.btnHidden {
+  all: unset;
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 .9rem;
+  align-self: center;
+  padding-top: .46rem;
+  padding-bottom: .27rem;
+}
+
+.passwordContainer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.btnSubmit {
+  all: unset;
+  cursor: pointer;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  padding: .6rem 0;
+  border-radius: 6rem;
+  border: 2px solid var(--primary-color);
+  background-color: var(--primary-color);
+  margin: .6rem 0;
+}

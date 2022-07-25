@@ -8,7 +8,11 @@ export const langRegister = {
     english: "Continue as guest."
   },
   btnGuest: {
-    spanish: "INVITADO",
-    english: "GUEST"
+    spanish: "Continuar como invitado",
+    english: "Continue as a guest"
+  },
+  btnNext: {
+    spanish: "Siguiente",
+    english: "Next"
   }
 }
