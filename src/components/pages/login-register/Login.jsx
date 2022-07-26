@@ -4,6 +4,7 @@ import { langLogin as texts } from "./langLogin"
 import LangText from "../../fragments/LangText"
 import fetchJSON from "../../../lib/fetchJSON"
 import FormLoginRegister from "./Form"
+import { lsSetAuthToken } from "../../../lib/localStorageHandlers"
 
 const Login = () => {
   const navigate = useNavigate()
@@ -14,7 +15,10 @@ const Login = () => {
       body: JSON.stringify(userData)
     })
 
-    if (res?.ok) navigate("/home")
+    if (!res?.ok) return
+
+    lsSetAuthToken(res.json.token)
+    navigate("/home")
   }
 
   return (

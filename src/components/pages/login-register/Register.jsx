@@ -4,6 +4,7 @@ import { langRegister as texts } from "./langRegister"
 import LangText from "../../fragments/LangText"
 import fetchJSON from "../../../lib/fetchJSON"
 import FormLoginRegister from "./Form"
+import { lsSetAuthToken } from "../../../lib/localStorageHandlers"
 
 const Register = () => {
   const navigate = useNavigate()
@@ -29,7 +30,7 @@ const Register = () => {
         handleSubmit={handleSubmit}
         submitBtnText={<LangText {...texts.btnNext} />}
       />
-      <Link to="/home" className={classes.linkGuest}>
+      <Link to="/home" onClick={() => lsSetAuthToken("GUEST")} className={classes.linkGuest}>
         <LangText {...texts.btnGuest} />
       </Link>
     </section>
