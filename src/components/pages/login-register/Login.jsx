@@ -1,5 +1,5 @@
 import classes from "./index.module.scss"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { langLogin as texts } from "./langLogin"
 import LangText from "../../fragments/LangText"
 import fetchJSON from "../../../lib/fetchJSON"
@@ -15,7 +15,6 @@ const Login = () => {
     })
 
     if (res?.ok) navigate("/home")
-    console.log(userData, res)
   }
 
   return (
@@ -27,6 +26,9 @@ const Login = () => {
         handleSubmit={handleSubmit}
         submitBtnText={<LangText {...texts.title} />}
       />
+      <Link to="/register" className={classes.linkGuest}>
+        <LangText {...texts.linkToRegister} />
+      </Link>
     </section>
   )
 }
