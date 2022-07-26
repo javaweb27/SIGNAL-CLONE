@@ -6,5 +6,9 @@ export const langLogin = {
   btnNext: {
     spanish: "Siguiente",
     english: "Next"
+  },
+  linkToRegister: {
+    spanish: "¿No tienes una cuenta? Registrate",
+    english: "Don't have an account? Register"
   }
 }
