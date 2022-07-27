@@ -5,8 +5,10 @@ import LangText from "../../fragments/LangText"
 import fetchJSON from "../../../lib/fetchJSON"
 import FormLoginRegister from "./Form"
 import { lsSetAuthToken } from "../../../lib/localStorageHandlers"
+import { refreshLoginStatus, useLoginStatusContext } from "../../context/login-status"
 
 const Register = () => {
+  const [, setLoginStatus] = useLoginStatusContext()
   const navigate = useNavigate()
 
   const handleSubmit = async (userData) => {
@@ -19,6 +21,10 @@ const Register = () => {
 
     console.log(userData, res)
   }
+  const handleLoginStatus = () => {
+    lsSetAuthToken("GUEST")
+    setLoginStatus(refreshLoginStatus())
+  }
 
   return (
     <section className={classes.rootTag}>
@@ -30,7 +36,7 @@ const Register = () => {
         handleSubmit={handleSubmit}
         submitBtnText={<LangText {...texts.btnNext} />}
       />
-      <Link to="/home" onClick={() => lsSetAuthToken("GUEST")} className={classes.linkGuest}>
+      <Link to="/home" onClick={handleLoginStatus} className={classes.linkGuest}>
         <LangText {...texts.btnGuest} />
       </Link>
     </section>

@@ -5,9 +5,10 @@ import LangText from "../../fragments/LangText"
 import fetchJSON from "../../../lib/fetchJSON"
 import FormLoginRegister from "./Form"
 import { lsSetAuthToken } from "../../../lib/localStorageHandlers"
+import { refreshLoginStatus, useLoginStatusContext } from "../../context/login-status"
 
 const Login = () => {
-  const navigate = useNavigate()
+  const [, setLoginStatus] = useLoginStatusContext()
 
   const handleSubmit = async (userData) => {
     const res = await fetchJSON("/login", true, {
@@ -18,7 +19,7 @@ const Login = () => {
     if (!res?.ok) return
 
     lsSetAuthToken(res.json.token)
-    navigate("/home")
+    setLoginStatus(refreshLoginStatus())
   }
 
   return (

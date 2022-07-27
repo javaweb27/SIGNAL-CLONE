@@ -1,8 +1,11 @@
 import { AppearanceProvider } from "./appearance"
+import { LoginStatusProvider } from "./login-status"
 
 const AllProviders = ({ children }) => (
   <AppearanceProvider>
-    {children}
+    <LoginStatusProvider>
+      {children}
+    </LoginStatusProvider>
   </AppearanceProvider>
 )
 
