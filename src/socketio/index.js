@@ -1,8 +1,9 @@
 import { io } from "socket.io-client"
+import { NODE_API } from "../config"
 
-const socketio = io(import.meta.env.VITE_NODE_API || "http://localhost:3060");
+const socketio = io(NODE_API)
 socketio.on("connect", () => {
-  console.log("socket.io connect");
+  console.log("socket.io connect")
 })
 
 export default socketio

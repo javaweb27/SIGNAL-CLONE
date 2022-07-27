@@ -1,4 +1,5 @@
-const NODE_API = import.meta.env.VITE_NODE_API || "http://localhost:3060"
+import { NODE_API } from "../config"
+
 /**
  * Fetchs or sends JSON data, try and catch is already included.
  * @param {string} endpoint base path of the Node API is already included, "/" is necessary.
