@@ -19,4 +19,8 @@ export const langMoreOptions = {
     spanish: "Perfil de notificaciones",
     english: "Notification profile"
   },
+  btnLogout: {
+    spanish: "Cerrar sesión",
+    english: "Logout"
+  },
 }

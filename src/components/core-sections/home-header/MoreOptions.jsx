@@ -4,8 +4,11 @@ import { useRef } from "react"
 import { Link } from "react-router-dom"
 import HeaderButton from "../../fragments/header-button"
 import LangText from "../../fragments/LangText"
+import { refreshLoginStatus, useLoginStatusContext } from "../../context/login-status"
+import { lsDeleteAuthToken } from "../../../lib/localStorageHandlers"
 
 const MoreOptions = () => {
+  const [, setLoginStatus] = useLoginStatusContext()
   const list = useRef()
   const root = document.getElementById("root")
 
@@ -16,6 +19,11 @@ const MoreOptions = () => {
   const openMenu = e => {
     list.current.classList.add(classes.open)
     root.onclick = e_root => closeMenu(e_root.target, e.target)
+  }
+
+  const logout = () => {
+    lsDeleteAuthToken()
+    setLoginStatus(refreshLoginStatus())
   }
 
   return (
@@ -40,6 +48,10 @@ const MoreOptions = () => {
 
         <li><button className={classes.option}>
           <LangText {...texts.notification} />
+        </button></li>
+
+        <li><button className={classes.option} onClick={logout}>
+          <LangText {...texts.btnLogout} />
         </button></li>
       </ul>
     </div>
