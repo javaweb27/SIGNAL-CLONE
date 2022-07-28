@@ -1,19 +1,20 @@
-import classes from "./index.module.scss"
-import { Link, useNavigate } from "react-router-dom"
+import classes from "./login-register-section.module.scss"
+import { Link } from "react-router-dom"
 import { langLogin as texts } from "./langLogin"
 import LangText from "../../fragments/LangText"
 import fetchJSON from "../../../lib/fetchJSON"
 import FormLoginRegister from "./Form"
 import { lsSetAuthToken } from "../../../lib/localStorageHandlers"
 import { refreshLoginStatus, useLoginStatusContext } from "../../context/login-status"
+import LoginRegisterSection from "./LoginRegisterSection"
 
 const Login = () => {
   const [, setLoginStatus] = useLoginStatusContext()
 
-  const handleSubmit = async (userData) => {
+  const handleSubmit = async (formData) => {
     const res = await fetchJSON("/login", true, {
       method: "POST",
-      body: JSON.stringify(userData)
+      body: JSON.stringify(formData)
     })
 
     if (!res?.ok) return
@@ -23,7 +24,7 @@ const Login = () => {
   }
 
   return (
-    <section className={classes.rootTag}>
+    <LoginRegisterSection>
       <div className={classes.container}>
         <h1><LangText {...texts.title} /></h1>
       </div>
@@ -34,7 +35,7 @@ const Login = () => {
       <Link to="/register" className={classes.linkGuest}>
         <LangText {...texts.linkToRegister} />
       </Link>
-    </section>
+    </LoginRegisterSection>
   )
 }
 

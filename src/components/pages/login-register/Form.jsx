@@ -4,22 +4,25 @@ import Svg from "../../svg"
 import FieldLoginRegister from "./Field"
 import { langForm as texts } from "./langForm"
 import LangText from "../../fragments/LangText"
+import FixedErrorMsg, { isFormDataValid } from "./FixedErrorMsg"
+import { useFormDataContext } from "./FromDataContext"
 
 const FormLoginRegister = ({ handleSubmit, submitBtnText }) => {
+  const [errorsCount, setErrorsCount] = useState(0)
   const [hidden, setHidden] = useState(true)
-  const [userData, setUserData] = useState({ email: "", password: "" })
+  const [formData, setFormData] = useFormDataContext()
   const passwordRef = useRef()
 
   const onSubmit = (event) => {
     event.preventDefault()
 
-    if (!userData.password || !userData.password) return console.log("datos incompletos")
+    if (isFormDataValid(formData)) return handleSubmit(formData)
 
-    handleSubmit(userData)
+    setErrorsCount(current => current + 1)
   }
 
-  const handleChange = ({ target }) => setUserData({
-    ...userData,
+  const handleChange = ({ target }) => setFormData({
+    ...formData,
     [target.name]: target.value
   })
 
@@ -32,19 +35,19 @@ const FormLoginRegister = ({ handleSubmit, submitBtnText }) => {
     <form onSubmit={onSubmit}>
       <div className={classes.container}>
         <FieldLoginRegister
-          labelText={<LangText {...texts.email}/>}
+          labelText={<LangText {...texts.email} />}
           t="email"
           name="email"
-          value={userData.email}
+          value={formData.email}
           onChange={handleChange}
         />
         <div className={classes.passwordContainer}>
           <FieldLoginRegister
-            labelText={<LangText {...texts.password}/>}
+            labelText={<LangText {...texts.password} />}
             t={hidden ? "password" : "text"}
             name="password"
             inputRef={passwordRef}
-            value={userData.password}
+            value={formData.password}
             onChange={handleChange}
             autoComplete="new-password"
           />
@@ -56,6 +59,7 @@ const FormLoginRegister = ({ handleSubmit, submitBtnText }) => {
       <div>
         <button className={classes.btnSubmit}>{submitBtnText}</button>
       </div>
+      {errorsCount > 0 && <FixedErrorMsg resetErrors={() => setErrorsCount(0)} />}
     </form>
   )
 }

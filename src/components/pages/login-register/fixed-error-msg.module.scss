@@ -1,0 +1,15 @@
+.msg {
+  pointer-events: none;
+  position: fixed;
+  background-color: var(--menu-bg-color);
+  color: var(--title-color);
+  border-radius: 19rem;
+  padding: .72rem;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  max-width: calc(12rem + 12%);
+  line-height: 1.27rem;
+  box-shadow: 1px 1px 19px -9px black;
+}
