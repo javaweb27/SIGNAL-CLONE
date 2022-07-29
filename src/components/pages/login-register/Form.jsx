@@ -32,7 +32,7 @@ const FormLoginRegister = ({ handleSubmit, submitBtnText }) => {
   }
 
   return (
-    <form onSubmit={onSubmit}>
+    <form>
       <div className={classes.container}>
         <FieldLoginRegister
           labelText={<LangText {...texts.email} />}
@@ -57,7 +57,9 @@ const FormLoginRegister = ({ handleSubmit, submitBtnText }) => {
         </div>
       </div>
       <div>
-        <button className={classes.btnSubmit}>{submitBtnText}</button>
+        <button onClick={onSubmit} className={classes.btnSubmit}>
+          {submitBtnText}
+        </button>
       </div>
       {errorsCount > 0 && <FixedErrorMsg resetErrors={() => setErrorsCount(0)} />}
     </form>
