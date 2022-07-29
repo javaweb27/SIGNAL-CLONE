@@ -21,7 +21,7 @@ const Register = () => {
     if (res?.ok) navigate("/login")
   }
 
-  const handleLoginStatus = () => {
+  const handleGuest = () => {
     lsSetAuthToken("GUEST")
     setLoginStatus(refreshLoginStatus())
   }
@@ -36,7 +36,7 @@ const Register = () => {
         handleSubmit={handleSubmit}
         submitBtnText={<LangText {...texts.btnNext} />}
       />
-      <Link to="/home" onClick={handleLoginStatus} className={classes.linkGuest}>
+      <Link to="/home" onClick={handleGuest} className={classes.linkGuest}>
         <LangText {...texts.btnGuest} />
       </Link>
     </LoginRegisterSection>
