@@ -14,5 +14,9 @@ export const langRegister = {
   btnNext: {
     spanish: "Siguiente",
     english: "Next"
+  },
+  emailNotAvailable: {
+    spanish: "Ya hay una cuenta con este correo electrónico",
+    english: "There is already an account with this email"
   }
 }

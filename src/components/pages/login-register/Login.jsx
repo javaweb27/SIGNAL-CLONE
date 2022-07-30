@@ -1,4 +1,5 @@
 import classes from "./login-register-section.module.scss"
+import { useState } from "react"
 import { Link } from "react-router-dom"
 import { langLogin as texts } from "./langLogin"
 import LangText from "../../fragments/LangText"
@@ -7,9 +8,11 @@ import FormLoginRegister from "./Form"
 import { lsSetAuthToken } from "../../../lib/localStorageHandlers"
 import { refreshLoginStatus, useLoginStatusContext } from "../../context/login-status"
 import LoginRegisterSection from "./LoginRegisterSection"
+import FixedMessage from "./FixedMessage"
 
 const Login = () => {
   const [, setLoginStatus] = useLoginStatusContext()
+  const [errors, setErrors] = useState(0)
 
   const handleSubmit = async (formData) => {
     const res = await fetchJSON("/login", true, {
@@ -17,10 +20,13 @@ const Login = () => {
       body: JSON.stringify(formData)
     })
 
-    if (!res?.ok) return
+    if (res?.ok) {
+      lsSetAuthToken(res.json.token)
+      setLoginStatus(refreshLoginStatus())
+      return
+    }
 
-    lsSetAuthToken(res.json.token)
-    setLoginStatus(refreshLoginStatus())
+    setErrors(current => current + 1)
   }
 
   return (
@@ -35,6 +41,10 @@ const Login = () => {
       <Link to="/register" className={classes.linkGuest}>
         <LangText {...texts.linkToRegister} />
       </Link>
+      {errors > 0 && <FixedMessage
+        resetErrors={() => setErrors(0)}
+        msg={<LangText {...texts.incorrectData} />}
+      />}
     </LoginRegisterSection>
   )
 }

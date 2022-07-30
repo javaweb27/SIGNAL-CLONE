@@ -1,16 +1,19 @@
-import classes from "./login-register-section.module.scss"
-import { Link, useNavigate } from "react-router-dom"
 import { langRegister as texts } from "./langRegister"
+import classes from "./login-register-section.module.scss"
+import { useState } from "react"
+import { Link, useNavigate } from "react-router-dom"
 import LangText from "../../fragments/LangText"
 import fetchJSON from "../../../lib/fetchJSON"
 import FormLoginRegister from "./Form"
 import { lsSetAuthToken } from "../../../lib/localStorageHandlers"
 import { refreshLoginStatus, useLoginStatusContext } from "../../context/login-status"
 import LoginRegisterSection from "./LoginRegisterSection"
+import FixedMessage from "./FixedMessage"
 
 const Register = () => {
   const [, setLoginStatus] = useLoginStatusContext()
   const navigate = useNavigate()
+  const [errors, setErrors] = useState(0)
 
   const handleSubmit = async (formData) => {
     const res = await fetchJSON("/register", true, {
@@ -18,7 +21,9 @@ const Register = () => {
       body: JSON.stringify(formData)
     })
 
-    if (res?.ok) navigate("/login")
+    if (res?.ok) return navigate("/login")
+
+    setErrors(current => current + 1)
   }
 
   const handleGuest = () => {
@@ -39,6 +44,10 @@ const Register = () => {
       <Link to="/home" onClick={handleGuest} className={classes.linkGuest}>
         <LangText {...texts.btnGuest} />
       </Link>
+      {errors > 0 && <FixedMessage
+        resetState={() => setErrors(0)}
+        msg={<LangText {...texts.emailNotAvailable} />}
+      />}
     </LoginRegisterSection>
   )
 }
