@@ -1,7 +1,7 @@
 import { AppearanceProvider } from "./appearance"
 import { LoginStatusProvider } from "./login-status"
 
-const AllProviders = ({ children }) => (
+const AllProviders = ({ children }: { children: JSX.Element }) => (
   <AppearanceProvider>
     <LoginStatusProvider>
       {children}

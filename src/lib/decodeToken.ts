@@ -5,7 +5,7 @@ import jwt_decode from "jwt-decode"
  * @param {string} token
  * @returns The data from the decoded token or null if the token is invalid.
  */
-const decodeToken = (token) => {
+const decodeToken = (token: string) => {
   try {
     return jwt_decode(token || "")
   }

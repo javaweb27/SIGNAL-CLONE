@@ -2,12 +2,14 @@
 import { Navigate } from "react-router-dom"
 import { useLoginStatusContext } from "../components/context/login-status"
 
+interface I_Props { page: JSX.Element }
+
 /**
  * Verifies the login status, if the user is logged or guest, it is redirected to Home page.
  * @param {*} Component page to render, it must be called as a Component
  * @returns Component
  */
-export const AsPublic = ({ page: Component }) => {
+export const AsPublic = ({ page: Component }: I_Props) => {
   const [loginStatus] = useLoginStatusContext()
 
   if (loginStatus.isLogged || loginStatus.isGuest) return < Navigate to="/home" />
@@ -20,7 +22,7 @@ export const AsPublic = ({ page: Component }) => {
  * @param {*} Component page to render, it must be called as a Component
  * @returns Component
  */
-export const AsPrivate = ({ page: Component }) => {
+export const AsPrivate = ({ page: Component }: I_Props) => {
   const [loginStatus] = useLoginStatusContext()
 
   if (!loginStatus.isLogged && !loginStatus.isGuest) return < Navigate to="/login" />
