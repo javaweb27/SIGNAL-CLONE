@@ -2,8 +2,6 @@ import { createContext, useContext, useState } from "react"
 import decodeToken from "../../../lib/decodeToken"
 import { lsDeleteAuthToken, lsGetAuthToken } from "../../../lib/localStorageHandlers"
 
-const Context = createContext()
-
 export const refreshLoginStatus = () => {
   const authToken = lsGetAuthToken()
 
@@ -21,9 +19,16 @@ export const refreshLoginStatus = () => {
 
 const initialState = refreshLoginStatus()
 
+type T_InitialState = typeof initialState
+
+const Context = createContext<readonly [
+  T_InitialState,
+  React.Dispatch<React.SetStateAction<T_InitialState>>
+]>(undefined!)
+
 export const useLoginStatusContext = () => useContext(Context)
 
-export const LoginStatusProvider = ({ children }) => {
+export const LoginStatusProvider = ({ children }: { children: JSX.Element }) => {
 
   const [status, setStatus] = useState(initialState)
 
@@ -32,9 +37,12 @@ export const LoginStatusProvider = ({ children }) => {
   </Context.Provider>
 }
 
-function getDataFromToken(token) {
-  const decoded = decodeToken(token)
+interface I_TokenData {
+  userData: { endDate: number }
+}
 
+function getDataFromToken(token: string | null) {
+  const decoded = decodeToken<I_TokenData>(token)
   if (!decoded) {
     return null
   }

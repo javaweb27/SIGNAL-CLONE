@@ -37,7 +37,7 @@ const App = () => (
         <Route path="settings/notifications" element={<AsPrivate page={<Notifications />} />} />
         <Route path="settings/privacy" element={<AsPrivate page={<Privacy />} />} />
         <Route path="settings/data_storage" element={<AsPrivate page={<DataStorage />} />} />
-        <Route path="*" element={<Page404 />} />
+        <Route path="*" element={<AsPrivate page={<Page404 />} />} />
       </Routes>
     </HashRouter>
   </AllProviders>

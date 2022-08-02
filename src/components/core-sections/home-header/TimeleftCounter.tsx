@@ -8,20 +8,25 @@ const getCurrentTime = () => Math.trunc((new Date).getTime() / 1000)
 
 /**
  * Shows a decreasing number if the user is logged, or "GUEST" text if the user is a guest.
-
+ 
  * When the number is less than 0, the token is deleted and the login status is refreshed.
+ 
+ * NOTE: This component must be called only when the user is logged or is guest,
+ * like the AsPrivate Component.
  */
 const TimeleftCounter = () => {
   const [loginStatus, setLoginStatus] = useLoginStatusContext()
+  const refTimeleft = useRef<HTMLElement | null>(null)
+  const endDate = Number(loginStatus.data?.endDate)// if "data" is null, it results in 0
 
-  const refTimeleft = useRef(null)
   useEffect(() => {
+    // "isLogged" is false when "loginStatus.data" is null and the token is not "GUEST" text.
     if (!loginStatus.isLogged) return
 
     const idInterval = setInterval(() => {
-      const timeleft = loginStatus.data.endDate - getCurrentTime()
+      const timeleft = endDate - getCurrentTime()
 
-      refTimeleft.current.textContent = String(timeleft)
+      refTimeleft.current!.textContent = String(timeleft)
 
       if (timeleft < 0) {
         clearInterval(idInterval)
@@ -36,7 +41,7 @@ const TimeleftCounter = () => {
   if (loginStatus.isGuest) return <span><LangText {...langChatsList.btnGuest} /></span>
 
   return <span ref={refTimeleft}>
-    {loginStatus && loginStatus.data.endDate - getCurrentTime()}
+    {loginStatus && endDate - getCurrentTime()}
   </span>
 }
 
