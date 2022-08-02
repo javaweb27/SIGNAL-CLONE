@@ -1,6 +1,15 @@
 import classes from "./field.module.scss"
 
-const FieldLoginRegister = ({ t, name, labelText, inputRef, ...rest }) => {
+interface I_Props {
+  t: "email" | "password" | "text";
+  name: "email" | "password";
+  labelText: React.ReactNode;
+  inputRef?: React.MutableRefObject<HTMLInputElement | null>;
+  [x: string]: any;
+}
+
+const FieldLoginRegister = ({ t, name, labelText, inputRef, ...rest }: I_Props) => {
+
   return (
     <div className={classes.container}>
       <label htmlFor={name} className={classes.label}>{labelText}</label>

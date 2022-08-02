@@ -9,19 +9,24 @@ import { lsSetAuthToken } from "../../../lib/localStorageHandlers"
 import { refreshLoginStatus, useLoginStatusContext } from "../../context/login-status"
 import LoginRegisterSection from "./LoginRegisterSection"
 import FixedMessage from "./FixedMessage"
+import { I_FormDataState } from "./FromDataContext"
+
+interface I_LoginData {
+  token: string
+}
 
 const Login = () => {
   const [, setLoginStatus] = useLoginStatusContext()
   const [errors, setErrors] = useState(0)
 
-  const handleSubmit = async (formData) => {
-    const res = await fetchJSON("/login", true, {
+  const handleSubmit = async (formData: I_FormDataState) => {
+    const res = await fetchJSON<I_LoginData>("/login", true, {
       method: "POST",
       body: JSON.stringify(formData)
     })
 
-    if (res?.ok) {
-      lsSetAuthToken(res.json.token)
+    if (res && res.ok) {
+      lsSetAuthToken(res.json!.token)
       setLoginStatus(refreshLoginStatus())
       return
     }

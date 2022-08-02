@@ -9,13 +9,14 @@ import { lsSetAuthToken } from "../../../lib/localStorageHandlers"
 import { refreshLoginStatus, useLoginStatusContext } from "../../context/login-status"
 import LoginRegisterSection from "./LoginRegisterSection"
 import FixedMessage from "./FixedMessage"
+import { I_FormDataState } from "./FromDataContext"
 
 const Register = () => {
   const [, setLoginStatus] = useLoginStatusContext()
   const navigate = useNavigate()
   const [errors, setErrors] = useState(0)
 
-  const handleSubmit = async (formData) => {
+  const handleSubmit = async (formData: I_FormDataState) => {
     const res = await fetchJSON("/register", true, {
       method: "PUT",
       body: JSON.stringify(formData)
@@ -45,7 +46,7 @@ const Register = () => {
         <LangText {...texts.btnGuest} />
       </Link>
       {errors > 0 && <FixedMessage
-        resetState={() => setErrors(0)}
+        resetErrors={() => setErrors(0)}
         msg={<LangText {...texts.emailNotAvailable} />}
       />}
     </LoginRegisterSection>

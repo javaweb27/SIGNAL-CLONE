@@ -5,15 +5,20 @@ import FieldLoginRegister from "./Field"
 import { langForm as texts } from "./langForm"
 import LangText from "../../fragments/LangText"
 import FixedErrorMsg, { isFormDataValid } from "./FixedErrorMsg"
-import { useFormDataContext } from "./FromDataContext"
+import { I_FormDataState, useFormDataContext } from "./FromDataContext"
 
-const FormLoginRegister = ({ handleSubmit, submitBtnText }) => {
+interface I_Props {
+  handleSubmit: (param: I_FormDataState) => void;
+  submitBtnText: React.ReactNode;
+}
+
+const FormLoginRegister = ({ handleSubmit, submitBtnText }: I_Props) => {
   const [errorsCount, setErrorsCount] = useState(0)
   const [hidden, setHidden] = useState(true)
   const [formData, setFormData] = useFormDataContext()
-  const passwordRef = useRef()
+  const passwordRef = useRef<HTMLInputElement | null>(null)
 
-  const onSubmit = (event) => {
+  const onSubmit = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     event.preventDefault()
 
     if (isFormDataValid(formData)) return handleSubmit(formData)
@@ -21,12 +26,12 @@ const FormLoginRegister = ({ handleSubmit, submitBtnText }) => {
     setErrorsCount(current => current + 1)
   }
 
-  const handleChange = ({ target }) => setFormData({
+  const handleChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => setFormData({
     ...formData,
     [target.name]: target.value
   })
 
-  const toggleHidden = (event) => {
+  const toggleHidden = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     event.preventDefault()
     setHidden(current => !current)
   }
@@ -52,7 +57,7 @@ const FormLoginRegister = ({ handleSubmit, submitBtnText }) => {
             autoComplete="new-password"
           />
           <button className={classes.btnHidden} onClick={toggleHidden}>
-            <Svg name={hidden ? "eye" : "eye_slash"} width="1.9rem" height="1.9rem" />
+            <Svg name={hidden ? "eye" : "eye_slash"} />
           </button>
         </div>
       </div>
