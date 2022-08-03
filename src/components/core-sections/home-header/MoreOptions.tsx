@@ -9,16 +9,16 @@ import { lsDeleteAuthToken } from "../../../lib/localStorageHandlers"
 
 const MoreOptions = () => {
   const [, setLoginStatus] = useLoginStatusContext()
-  const list = useRef()
-  const root = document.getElementById("root")
+  const list = useRef<HTMLUListElement | null>(null)
+  const root = document.getElementById("root") as HTMLDivElement
 
-  const closeMenu = (target, button) => {
+  const closeMenu = (target: EventTarget, button: EventTarget) => {
     if (list.current && target !== button) list.current.classList.remove(classes.open)
   }
 
-  const openMenu = e => {
-    list.current.classList.add(classes.open)
-    root.onclick = e_root => closeMenu(e_root.target, e.target)
+  const openMenu = ({ target }: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    list.current!.classList.add(classes.open)
+    root.onclick = (eventCloseMenu) => closeMenu(eventCloseMenu.target!, target)
   }
 
   const logout = () => {

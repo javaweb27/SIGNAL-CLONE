@@ -2,6 +2,8 @@ import classes from "./index.module.scss"
 import pathsDarkLight from "./paths-dark-light"
 import pathsNormal from "./paths-normal"
 
+export type T_SvgPaths = T_PathsDarkLight | T_PathsNormal
+
 type T_PathsNormal = keyof typeof pathsNormal
 type T_PathsDarkLight = keyof typeof pathsDarkLight
 

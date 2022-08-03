@@ -4,7 +4,7 @@ import SettingsLinks from "./SettingsLinks"
 
 const Settings = () => (
   <>
-    <BasicHeader linkPath="/home" titleType="h2" titleText={<LangText spanish="Ajustes" english="Settings" />}/>
+    <BasicHeader linkPath="/home" titleTag="h2" titleText={<LangText spanish="Ajustes" english="Settings" />}/>
     <SettingsLinks/>
   </>
 )

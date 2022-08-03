@@ -3,7 +3,7 @@ import { useState } from "react"
 import MsgNoChats from "./MsgNoChats"
 
 const List = () => {
-  const [contacts, setContacts] = useState([])
+  const [contacts, setContacts] = useState<[] | [number]>([])
 
   if (contacts.length === 0) return <MsgNoChats onClick={() => setContacts([1])} />
 

@@ -7,7 +7,7 @@ import LangText from "../../fragments/LangText"
 const Account = () => {
   return (
     <>
-      <BasicHeader linkPath="/settings" titleType="h3" titleText={<LangText {...texts.headerTitle} />} />
+      <BasicHeader linkPath="/settings" titleTag="h3" titleText={<LangText {...texts.headerTitle} />} />
 
       <section className="cuenta">
         <h4 className="subpage-section-title"><LangText {...texts.subtitlePIN} /></h4>

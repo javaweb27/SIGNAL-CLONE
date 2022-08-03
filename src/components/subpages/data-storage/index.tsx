@@ -7,7 +7,7 @@ import BasicHeader from "../../core-sections/basic-header"
 const DataStorage = () => {
   return (
     <>
-      <BasicHeader linkPath="/settings" titleType="h3" titleText={<LangText {...texts.headerTitle} />} />
+      <BasicHeader linkPath="/settings" titleTag="h3" titleText={<LangText {...texts.headerTitle} />} />
 
       <section>
         <SubpageLink to="" title={<LangText {...texts.manageStorage} />}>0 B</SubpageLink>
@@ -39,7 +39,7 @@ const DataStorage = () => {
         <hr />
 
         <h4 className="subpage-section-title"><LangText {...texts.subtitleProxy} /></h4>
-        <SubpageLink to="" title={<LangText  />}>
+        <SubpageLink to="" title={<LangText {...{ spanish: null, english: null }} />}>
           <LangText {...texts.useProxyPar} />
         </SubpageLink>
 

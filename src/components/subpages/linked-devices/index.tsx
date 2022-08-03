@@ -5,7 +5,7 @@ import BasicHeader from "../../core-sections/basic-header"
 const LinkedDevices = () => {
   return (
     <>
-      <BasicHeader linkPath="/settings" titleType="h3" titleText={<LangText {...texts.haederTitle} />} />
+      <BasicHeader linkPath="/settings" titleTag="h3" titleText={<LangText {...texts.haederTitle} />} />
 
       <section>
         <p><LangText {...texts.noLinkedDevices} /></p>

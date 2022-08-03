@@ -1,7 +1,14 @@
 import classes from "./index.module.scss"
 import { Link } from "react-router-dom"
 
-const LinkPrimary = ({ to, className, fill, children }) => {
+interface I_Props {
+  to: string;
+  className?: string;
+  fill?: boolean;
+  children: React.ReactNode;
+}
+
+const LinkPrimary = ({ to, className, fill, children }: I_Props) => {
 
   return (
     <Link

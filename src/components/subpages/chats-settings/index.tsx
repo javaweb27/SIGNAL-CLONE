@@ -7,7 +7,7 @@ import LangText from "../../fragments/LangText"
 const ChatsSettings = () => {
   return (
     <>
-      <BasicHeader linkPath="/settings" titleType="h3" titleText={<LangText {...texts.headerTitle} />} />
+      <BasicHeader linkPath="/settings" titleTag="h3" titleText={<LangText {...texts.headerTitle} />} />
 
       <section>
         <SubpageLink to="sms" title={<LangText {...texts.MESSAGE} />} />

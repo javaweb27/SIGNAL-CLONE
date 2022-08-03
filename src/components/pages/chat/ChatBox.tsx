@@ -4,14 +4,19 @@ import socketio from "../../../socketio"
 import ChatForm from "./ChatForm"
 import ScrollIntoView from "../../fragments/ScrollIntoView"
 
+interface I_ChatMsg {
+  name: string;
+  msg: string;
+}
+
 const ChatBox = () => {
-  const [chatHistory, setChatHistory] = useState([])
+  const [chatHistory, setChatHistory] = useState<I_ChatMsg[]>([])
 
   useEffect(() => {
     socketio.on("server:chat", (name, msg) => {
       setChatHistory(chats => chats.concat({ name, msg }))
     })
-    return () => socketio.off()
+    return () => { socketio.off() }
   }, [])
 
   return <>

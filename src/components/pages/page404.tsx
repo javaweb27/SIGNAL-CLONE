@@ -4,7 +4,7 @@ import LangText from "../fragments/LangText"
 
 const Page404 = () => (
   <>
-    <BasicHeader linkPath="#" titleType="h2" titleText="404"></BasicHeader>
+    <BasicHeader linkPath="#" titleTag="h2" titleText="404"></BasicHeader>
     <div style={{ textAlign: "center",fontSize: "1.19rem" }}>
       <p><LangText spanish="Esta pagina no existe" english="This page does not exist" /></p>
       <hr />

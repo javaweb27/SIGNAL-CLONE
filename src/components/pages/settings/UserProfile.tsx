@@ -1,15 +1,15 @@
 import classes from "./settings-link.module.scss"
 import { Link } from "react-router-dom"
-import { container, title, subtitle } from "./user-profile.module.scss"
+import profileClasses from "./user-profile.module.scss"
 import ProfilePhoto from "../../fragments/profile-photo"
 
 const UserProfile = () => {
   return (
     <Link to="profile" className={classes.link}>
       <ProfilePhoto/>
-      <div className={container}>
-        <span className={title}>Usuario</span>
-        <span className={subtitle}>123456789</span>
+      <div className={profileClasses.container}>
+        <span className={profileClasses.title}>Usuario</span>
+        <span className={profileClasses.subtitle}>123456789</span>
       </div>
     </Link>
   )

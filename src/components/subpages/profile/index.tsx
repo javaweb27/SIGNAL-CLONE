@@ -8,7 +8,7 @@ import Svg from "../../svg"
 const Profile = () => {
   return (
     <>
-      <BasicHeader linkPath="/settings" titleType="h3" titleText={<LangText spanish="Perfil" english="Profile" />} />
+      <BasicHeader linkPath="/settings" titleTag="h3" titleText={<LangText spanish="Perfil" english="Profile" />} />
 
       <section className="profile">
         <div className="photo-container">

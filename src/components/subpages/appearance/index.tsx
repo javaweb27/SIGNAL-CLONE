@@ -12,7 +12,7 @@ const Appearance = () => {
 
   return (
     <>
-      <BasicHeader linkPath="/settings" titleType="h3" titleText={<LangText {...texts.headerTitle} />}/>
+      <BasicHeader linkPath="/settings" titleTag="h3" titleText={<LangText {...texts.headerTitle} />}/>
 
       <section>
         <ThemeSettings context={[theme, dispatch]} />

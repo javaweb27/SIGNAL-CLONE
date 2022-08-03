@@ -1,20 +1,21 @@
 import { langThemeSettings as texts } from "./langs/langThemeSettings"
 import { useRef } from "react"
-import { active } from "../../fragments/fixed-container/index.module.scss"
+import classes from "../../fragments/fixed-container/index.module.scss"
 import FixedContainer from "../../fragments/fixed-container"
 import Option from "../../fragments/fixed-container-option"
 import SubpageButton from "../../fragments/subpage-button"
 import { changeTheme } from "../../context/action-creators"
 import LangText from "../../fragments/LangText"
 
-const ThemeSettings = ({ context: [theme, dispatch] }) => {
-  const containerRef = useRef()
+const ThemeSettings = ({ context: [theme, dispatch] }: any) => {
+  const containerRef = useRef<HTMLDivElement | null>(null)
 
-  const openMenu = () => containerRef.current.classList.add(active)
+  const openMenu = () => containerRef.current!.classList.add(classes.active)
 
-  const change = e => {
-    dispatch(changeTheme(e.target.id.toUpperCase()))
-    containerRef.current.classList.remove(active)
+  const change = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    const target = e.target as HTMLElement
+    dispatch(changeTheme(target.id.toUpperCase() as any))
+    containerRef.current!.classList.remove(classes.active)
   }
 
   return (
@@ -28,13 +29,13 @@ const ThemeSettings = ({ context: [theme, dispatch] }) => {
       </SubpageButton>
 
       <FixedContainer containerRef={containerRef} title={<LangText spanish="Tema" english="Theme" />}>
-        <Option radio name="theme" id="default" onClick={change}>
+        <Option t="radio" name="theme" id="default" onClick={change}>
           <LangText {...texts.inputDefault} />
         </Option>
-        <Option radio name="theme" id="light" onClick={change}>
+        <Option t="radio" name="theme" id="light" onClick={change}>
           <LangText {...texts.inputLight} />
         </Option>
-        <Option radio name="theme" id="dark" onClick={change}>
+        <Option t="radio" name="theme" id="dark" onClick={change}>
           <LangText {...texts.inputDark} />
         </Option>
       </FixedContainer>

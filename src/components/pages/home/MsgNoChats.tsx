@@ -1,7 +1,7 @@
 import { langChatsList as texts } from "./langMsgNoChats"
 import LangText from "../../fragments/LangText"
 
-const MsgNoChats = ({ onClick }) => <>
+const MsgNoChats = ({ onClick }: { onClick: React.MouseEventHandler<HTMLButtonElement> }) => <>
   <p className="message-no-chats">
     <LangText {...texts.noChats} />
     <br />

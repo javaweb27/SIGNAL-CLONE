@@ -1,10 +1,17 @@
 import classes from "./index.module.scss"
 import ButtonToggle from "../button-toggle"
 
-const SubpageButton = ({toggle, title, children, event}) => {
+interface I_Props {
+  toggle?: boolean,
+  title: React.ReactNode,
+  children?: React.ReactNode,
+  event?: any;
+}
+
+const SubpageButton = ({ toggle, title, children, event }: I_Props) => {
   return (
     <button className={classes.button} {...event}>
-      { children ?
+      {children ?
         <div className={classes.container}>
           <span className={classes.title}>{title}</span>
           <span className={classes.subtitle}>{children}</span>
@@ -12,7 +19,7 @@ const SubpageButton = ({toggle, title, children, event}) => {
         :
         <span className={classes.title}>{title}</span>
       }
-      {toggle && <ButtonToggle/>}
+      {toggle && <ButtonToggle />}
     </button>
   )
 }

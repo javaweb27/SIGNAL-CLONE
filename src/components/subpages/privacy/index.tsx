@@ -8,7 +8,7 @@ import LangText from "../../fragments/LangText"
 const Privacy = () => {
   return (
     <>
-      <BasicHeader linkPath="/settings" titleType="h3" titleText={<LangText {...texts.headerTitle} />} />
+      <BasicHeader linkPath="/settings" titleTag="h3" titleText={<LangText {...texts.headerTitle} />} />
 
       <section>
         <SubpageLink to="blocked-people" title={<LangText {...texts.blocked} />}>
