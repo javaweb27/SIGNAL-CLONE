@@ -1,12 +1,20 @@
-//Se usa para los links de la pagina Settings, exepto el primer link que lleva a la configuracion del perfil del usuario
 import classes from "./settings-link.module.scss"
 import { Link } from "react-router-dom"
 import Svg from "../../svg"
 
-const SettingsLink = ({ to, text }) => {
+interface I_Props {
+  to: string;
+  text: React.ReactNode;
+}
+
+/**
+ * Is used for the links of the settings page, least the first link that redirect to user profile configuration.
+ */
+
+const SettingsLink = ({ to, text }: I_Props) => {
   return (
     <Link to={to} className={classes.link}>
-      <Svg name={to}/>{ text }
+      <Svg name={to as any}/>{ text }
     </Link>
   )
 }
