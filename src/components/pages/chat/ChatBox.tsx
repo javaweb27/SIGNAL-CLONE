@@ -4,26 +4,33 @@ import socketio from "../../../socketio"
 import ChatForm from "./ChatForm"
 import ScrollIntoView from "../../fragments/ScrollIntoView"
 
-interface I_ChatMsg {
-  name: string;
-  msg: string;
+interface I_Message {
+  body: string;
+  from: string;
 }
 
 const ChatBox = () => {
-  const [chatHistory, setChatHistory] = useState<I_ChatMsg[]>([])
+  const [chatHistory, setChatHistory] = useState<I_Message[]>([])
+  const isItMe = (id: string) => socketio.id === id
 
   useEffect(() => {
-    socketio.on("server:chat", (name, msg) => {
-      setChatHistory(chats => chats.concat({ name, msg }))
-    })
-    return () => { socketio.off() }
-  }, [])
+    const receiveChat = (message: I_Message) => {
+      setChatHistory(chats => chats.concat(message))
+    }
+
+    socketio.on("server:chat", receiveChat)
+
+    return () => {
+      socketio.off("server:chat", receiveChat)
+    }
+  }, [chatHistory])
 
   return <>
     <section className={classes.messages}>
-      {chatHistory.map((chat, i) =>
-        <div key={i}>
-          <span>{chat.name}</span>: <span>{chat.msg}</span>
+      {chatHistory.map((message, i) =>
+        <div className={classes["chatFrom" + (isItMe(message.from) ? "Me" : "Other")]} key={i}>
+          <span>{isItMe(message.from) ? "Me" : "An user"}</span>:
+          <span>{message.body}</span>
         </div>
       )}
       <ScrollIntoView />

@@ -13,7 +13,7 @@ const ChatForm = ({ userName = "" }) => {
     event.preventDefault()
     if (message.length === 0) return
 
-    socketio.emit("client:chat", userName, message)
+    socketio.emit("client:chat", { from: "Me", body: message })
     adjustHeight(true, textAreaRef.current!)
     setMessage("")
   }

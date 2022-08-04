@@ -1,6 +1,7 @@
 .messages {
 	margin-top: auto;
 	font-size: 1.27rem;
+	color: var(--title-color);
 }
 
 .form {
@@ -36,4 +37,22 @@
 		color: var(--title-color);
 		border-color: lime;
 	}
+}
+
+.chatFromMe {
+	background-color: var(--primary-color);
+	margin-left: auto;
+	max-width: 72%;
+	padding: .9rem;
+	border-radius: 9px;
+	margin-bottom: .27rem;
+}
+
+.chatFromOther {
+	margin-bottom: .27rem;
+	border-radius: 9px;
+	padding: .72rem;
+	margin-right: auto;
+	max-width: 72%;
+	background-color: var(--menu-bg-color);
 }
