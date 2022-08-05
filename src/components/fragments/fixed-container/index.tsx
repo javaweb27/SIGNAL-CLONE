@@ -16,7 +16,7 @@ const FixedContainer = ({ title, containerRef, children }: I_Props) => {
   }
 
   return (
-    <div ref={containerRef} onClick={(ev) => closeMenu} className={classes.container}>
+    <div ref={containerRef} onClick={closeMenu} className={classes.container}>
       <div className={classes.menu}>
         <span>{title}</span>
         <ul>
