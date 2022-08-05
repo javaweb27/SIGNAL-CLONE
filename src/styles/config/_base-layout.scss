@@ -5,20 +5,22 @@
 }
 
 #root {
-  width: 100%;
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
+#main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
 }
 
 section {
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
 }
 
 hr {

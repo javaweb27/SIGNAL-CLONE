@@ -1,0 +1,22 @@
+%msg {
+	padding: .72rem;
+	border-radius: 9px;
+	margin-bottom: .27rem;
+	max-width: 90%;
+
+	@media screen and (min-width: 640px) {
+		max-width: 72%;
+	}
+}
+
+.msgFromMe {
+	@extend %msg;
+	background-color: var(--primary-color);
+	align-self: flex-end;
+}
+
+.msgFromOther {
+	@extend %msg;
+	align-self: flex-start;
+	background-color: var(--menu-bg-color);
+}
