@@ -12,29 +12,43 @@ const LanguageSettings = ({ context: [language, dispatch] }: any) => {
     dispatch(changeLanguage(lang))
   }
 
-  return <>
-    <SubpageButton
-      event={{ onClick: () => openFixedMenu(fixedMenuRef.current!) }}
-      title={<LangText spanish="Idioma" english="Language" />}
-    >
-      <LangText {...texts.currentLanguage} />
-    </SubpageButton>
+  return (
+    <>
+      <SubpageButton
+        event={{ onClick: () => openFixedMenu(fixedMenuRef.current!) }}
+        title={<LangText spanish="Idioma" english="Language" />}
+      >
+        <LangText {...texts.currentLanguage} />
+      </SubpageButton>
 
-    <FixedMenu
-      title={<LangText spanish="Idioma" english="Language" />}
-      containerRef={fixedMenuRef}
-      isChecked={id => id === language}
-    >
-      {Item => <>
-        <Item t="radio" name="lang" id="spanish" callback={() => callbackChange("spanish")}>
-          <LangText {...texts.lSpanish} />
-        </Item>
-        <Item t="radio" name="lang" id="english" callback={() => callbackChange("english")}>
-          <LangText {...texts.lEnglish} />
-        </Item>
-      </>}
-    </FixedMenu>
-  </>
+      <FixedMenu
+        title={<LangText spanish="Idioma" english="Language" />}
+        containerRef={fixedMenuRef}
+        isChecked={id => id === language}
+      >
+        {Item => (
+          <>
+            <Item
+              t="radio"
+              name="lang"
+              id="spanish"
+              callback={() => callbackChange("spanish")}
+            >
+              <LangText {...texts.lSpanish} />
+            </Item>
+            <Item
+              t="radio"
+              name="lang"
+              id="english"
+              callback={() => callbackChange("english")}
+            >
+              <LangText {...texts.lEnglish} />
+            </Item>
+          </>
+        )}
+      </FixedMenu>
+    </>
+  )
 }
 
 export default LanguageSettings

@@ -1,26 +1,26 @@
 export const langThemeSettings = {
   default: {
     spanish: "Predeterminado del sistema",
-    english: "System default"
+    english: "System default",
   },
   light: {
     spanish: "Claro",
-    english: "Light"
+    english: "Light",
   },
   dark: {
     spanish: "Oscuro",
-    english: "Dark"
+    english: "Dark",
   },
   inputDefault: {
     spanish: "Predeterminado del sistema",
-    english: "System default"
+    english: "System default",
   },
   inputLight: {
     spanish: "Claro",
-    english: "Light"
+    english: "Light",
   },
   inputDark: {
     spanish: "Oscuro",
-    english: "Dark"
-  }
+    english: "Dark",
+  },
 }

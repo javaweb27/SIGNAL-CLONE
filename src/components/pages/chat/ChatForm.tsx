@@ -5,7 +5,7 @@ import socketio from "../../../socketio"
 import adjustHeight from "../../../lib/adjustHeight"
 import LangText from "../../fragments/LangText"
 
-const ChatForm = ({ userName = "" }) => {
+const ChatForm = () => {
   const [message, setMessage] = useState(``)
   const textAreaRef = useRef<HTMLTextAreaElement | null>(null)
 

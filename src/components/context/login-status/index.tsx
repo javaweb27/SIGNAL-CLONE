@@ -10,31 +10,27 @@ export const refreshLoginStatus = () => {
 
   if (!isGuest && !data) lsDeleteAuthToken()
 
-  return ({
+  return {
     data,
     isGuest,
     isLogged: Boolean(data) && !isGuest,
-  })
+  }
 }
 
 const initialState = refreshLoginStatus()
 
 type T_InitialState = typeof initialState
 
-const Context = createContext<readonly [
-  T_InitialState,
-  React.Dispatch<React.SetStateAction<T_InitialState>>
-]>(undefined!)
+const Context = createContext<
+  readonly [T_InitialState, React.Dispatch<React.SetStateAction<T_InitialState>>]
+>(undefined!)
 
 export const useLoginStatusContext = () => useContext(Context)
 
 export const LoginStatusProvider = ({ children }: { children: JSX.Element }) => {
-
   const [status, setStatus] = useState(initialState)
 
-  return <Context.Provider value={[status, setStatus]}>
-    {children}
-  </Context.Provider>
+  return <Context.Provider value={[status, setStatus]}>{children}</Context.Provider>
 }
 
 interface I_TokenData {
@@ -51,10 +47,9 @@ function getDataFromToken(token: string | null) {
     return {
       // name: atob(decoded.userData.name),
       // email: atob(decoded.userData.email),
-      endDate: decoded.userData.endDate
+      endDate: decoded.userData.endDate,
     }
-  }
-  catch {
+  } catch {
     return null
   }
 }

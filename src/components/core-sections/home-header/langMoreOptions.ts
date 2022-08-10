@@ -1,26 +1,26 @@
 export const langMoreOptions = {
   newGroup: {
     spanish: "Nuevo grupo",
-    english: "New group"
+    english: "New group",
   },
   markAllRead: {
     spanish: "Marcar todos como leidos",
-    english: "Mark all read"
+    english: "Mark all read",
   },
   inviteFriends: {
     spanish: "Invitar personas",
-    english: "Invite friends"
+    english: "Invite friends",
   },
   settings: {
     spanish: "Ajustes",
-    english: "Settings"
+    english: "Settings",
   },
   notification: {
     spanish: "Perfil de notificaciones",
-    english: "Notification profile"
+    english: "Notification profile",
   },
   btnLogout: {
     spanish: "Cerrar sesión",
-    english: "Logout"
+    english: "Logout",
   },
 }

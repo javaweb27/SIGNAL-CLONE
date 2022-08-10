@@ -10,12 +10,12 @@ const appearanceReducer = (
     case "CHANGE-THEME":
       return {
         ...state,
-        theme: setTheme(payload)
+        theme: setTheme(payload),
       }
     case "CHANGE-LANGUAGE":
       return {
         ...state,
-        language: payload
+        language: payload,
       }
 
     default:

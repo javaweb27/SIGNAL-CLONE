@@ -3,9 +3,7 @@ import { LoginStatusProvider } from "./login-status"
 
 const AllProviders = ({ children }: { children: JSX.Element }) => (
   <AppearanceProvider>
-    <LoginStatusProvider>
-      {children}
-    </LoginStatusProvider>
+    <LoginStatusProvider>{children}</LoginStatusProvider>
   </AppearanceProvider>
 )
 

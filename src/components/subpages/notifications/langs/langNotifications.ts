@@ -1,82 +1,82 @@
 export const langNotifications = {
   headerTitle: {
     spanish: "Notificaciones",
-    english: "Notifications"
+    english: "Notifications",
   },
   subtitleMessages: {
     spanish: "Mensajes",
-    english: "Messages"
+    english: "Messages",
   },
   messageNotifications: {
     spanish: "Notificaciones",
-    english: "Notifications"
+    english: "Notifications",
   },
   sound: {
     spanish: "Sonido",
-    english: "Sound"
+    english: "Sound",
   },
   soundPar: {
     spanish: "Predeterminado",
-    english: "Default"
+    english: "Default",
   },
   messageVibrate: {
     spanish: "Vibracion",
-    english: "Vibrate"
+    english: "Vibrate",
   },
   ledColor: {
     spanish: "Color del LED",
-    english: "LED color"
+    english: "LED color",
   },
   inChatSounds: {
     spanish: "Sonidos en el chats",
-    english: "In-chat sounds"
+    english: "In-chat sounds",
   },
   repeatAlerts: {
     spanish: "Repetir alertas",
-    english: "Repeat alerts"
+    english: "Repeat alerts",
   },
   repeatAlertsPar: {
     spanish: "Nunca",
-    english: "Never"
+    english: "Never",
   },
   show: {
     spanish: "Mostrar",
-    english: "Show"
+    english: "Show",
   },
   showPar: {
     spanish: "Nombre y mensaje",
-    english: "Name and message"
+    english: "Name and message",
   },
   priority: {
     spanish: "Prioridad",
-    english: "Priority"
+    english: "Priority",
   },
   subtitleCalls: {
     spanish: "LLamadas",
-    english: "Calls"
+    english: "Calls",
   },
   callNotifications: {
     spanish: "Notificaciones",
-    english: "Notifications"
+    english: "Notifications",
   },
   ringtone: {
     spanish: "Tono de llamada}",
-    english: "Ringtone"
+    english: "Ringtone",
   },
   ringtonePar: {
     spanish: "Predeterminado",
-    english: "Default"
+    english: "Default",
   },
   callVibrate: {
     spanish: "Vibracion",
-    english: "Vibrate"
+    english: "Vibrate",
   },
   subtitleNotifyWhen: {
     spanish: "Notificarme cuando ...",
-    english: "Notify when"
+    english: "Notify when",
   },
   contactJoinsSignal: {
     spanish: "Alguien comienza a usar Signal",
-    english: "Contact joins Signal"
-  }
+    english: "Contact joins Signal",
+  },
 }

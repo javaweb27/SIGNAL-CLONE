@@ -1,18 +1,18 @@
 export const langAppearance = {
   headerTitle: {
     spanish: "Apariencia",
-    english: "Appearance"
+    english: "Appearance",
   },
   chatColor: {
     spanish: "Color y fondo del chat",
-    english: "Chat color & wallpaper"
+    english: "Chat color & wallpaper",
   },
   messageFontSize: {
     spanish: "Tamaño de fuente del mensaje",
-    english: "Message font size"
+    english: "Message font size",
   },
   messageFontSizePar: {
     spanish: "Normal",
-    english: "Normal"
-  }
+    english: "Normal",
+  },
 }

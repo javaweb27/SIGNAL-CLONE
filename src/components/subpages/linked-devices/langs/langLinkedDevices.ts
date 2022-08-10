@@ -1,10 +1,10 @@
 export const langLinkedDevices = {
   haederTitle: {
     spanish: "Dispositivos enlazados",
-    english: "Linked devices"
+    english: "Linked devices",
   },
   noLinkedDevices: {
     spanish: "no hay dispositivos enlazados",
-    english: "No devices linked"
-  }
+    english: "No devices linked",
+  },
 }

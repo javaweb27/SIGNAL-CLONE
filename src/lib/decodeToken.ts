@@ -8,8 +8,7 @@ import jwt_decode from "jwt-decode"
 const decodeToken = <T>(token: string | null): T | null => {
   try {
     return jwt_decode(token as string)
-  }
-  catch (error) {
+  } catch (error) {
     return null
   }
 }

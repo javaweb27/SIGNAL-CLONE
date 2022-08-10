@@ -11,7 +11,9 @@ const HomeHeader = () => {
       <Link to="/settings" className="link-photo">
         <ProfilePhoto mini />
       </Link>
-      <h1 className="title">Signal - <TimeleftCounter /></h1>
+      <h1 className="title">
+        Signal - <TimeleftCounter />
+      </h1>
       <Search />
       <MoreOptions />
     </header>

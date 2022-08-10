@@ -22,7 +22,7 @@ const Login = () => {
   const handleSubmit = async (formData: I_FormDataState) => {
     const res = await fetchJSON<I_LoginData>("/login", true, {
       method: "POST",
-      body: JSON.stringify(formData)
+      body: JSON.stringify(formData),
     })
 
     if (res && res.ok) {
@@ -37,7 +37,9 @@ const Login = () => {
   return (
     <LoginRegisterSection>
       <div className={classes.container}>
-        <h1><LangText {...texts.title} /></h1>
+        <h1>
+          <LangText {...texts.title} />
+        </h1>
       </div>
       <FormLoginRegister
         handleSubmit={handleSubmit}
@@ -46,10 +48,12 @@ const Login = () => {
       <Link to="/register" className={classes.linkGuest}>
         <LangText {...texts.linkToRegister} />
       </Link>
-      {errors > 0 && <FixedMessage
-        resetErrors={() => setErrors(0)}
-        msg={<LangText {...texts.incorrectData} />}
-      />}
+      {errors > 0 && (
+        <FixedMessage
+          resetErrors={() => setErrors(0)}
+          msg={<LangText {...texts.incorrectData} />}
+        />
+      )}
     </LoginRegisterSection>
   )
 }

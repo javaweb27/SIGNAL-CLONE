@@ -10,7 +10,7 @@ export const openFixedMenu = (target: HTMLDivElement) => {
 
 /**
  * Is used only in the FixedMenuContainer component.
- * 
+ *
  * Closes the fixed menu when the user clicks in the container part,
  * not the centered menu or its items
  * @param target ref of the fixed menu to remove the "active" class name.

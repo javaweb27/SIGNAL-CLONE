@@ -1,46 +1,46 @@
 export const langSettingsLinks = {
   account: {
     spanish: "Cuenta",
-    english: "Account"
+    english: "Account",
   },
   linkedDevices: {
     spanish: "Dispositivos enlazados",
-    english: "Linked devices"
+    english: "Linked devices",
   },
   payments: {
     spanish: "Pagos",
-    english: "Payments"
+    english: "Payments",
   },
   appearance: {
     spanish: "Apariencia",
-    english: "Appearance"
+    english: "Appearance",
   },
   chats: {
     spanish: "Chats",
-    english: "Chats"
+    english: "Chats",
   },
   notifications: {
     spanish: "Notificaciones",
-    english: "Notifications"
+    english: "Notifications",
   },
   privacy: {
     spanish: "Privacidad",
-    english: "Privacy"
+    english: "Privacy",
   },
   dataStorage: {
     spanish: "Datos y almacenamiento",
-    english: "Data and storage"
+    english: "Data and storage",
   },
   help: {
     spanish: "Ayuda",
-    english: "Help"
+    english: "Help",
   },
   invite: {
     spanish: "¡Invita a tus amistades!",
-    english: "Invite your friends"
+    english: "Invite your friends",
   },
   supportSignal: {
     spanish: "Sostén Signal",
-    english: "Become a Signal Sustainer"
+    english: "Become a Signal Sustainer",
   },
 }

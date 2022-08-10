@@ -17,16 +17,17 @@ const fetchJSON = async <T>(
       ...init,
       headers: {
         ...init.headers,
-        "Content-Type": "application/json"
-      }
+        "Content-Type": "application/json",
+      },
     })
 
-    return withDataBack ? {
-      ok: res.ok,
-      json: await res.json() as T
-    } : { ok: res.ok }
-  }
-  catch (error) {
+    return withDataBack
+      ? {
+          ok: res.ok,
+          json: (await res.json()) as T,
+        }
+      : { ok: res.ok }
+  } catch (error) {
     console.error("error fetch json:", error)
     return null
   }

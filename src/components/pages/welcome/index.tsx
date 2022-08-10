@@ -15,10 +15,16 @@ const Welcome = () => (
       <LangText {...texts.title2} />
     </h1>
 
-    <Link to="" className={classes.terms}><LangText {...texts.terms} /></Link>
+    <Link to="" className={classes.terms}>
+      <LangText {...texts.terms} />
+    </Link>
 
-    <LinkPrimary to="/register" fill><LangText {...texts.btnContinue} /></LinkPrimary>
-    <LinkPrimary to=""><LangText {...texts.btnAccount} /></LinkPrimary>
+    <LinkPrimary to="/register" fill>
+      <LangText {...texts.btnContinue} />
+    </LinkPrimary>
+    <LinkPrimary to="">
+      <LangText {...texts.btnAccount} />
+    </LinkPrimary>
   </section>
 )
 

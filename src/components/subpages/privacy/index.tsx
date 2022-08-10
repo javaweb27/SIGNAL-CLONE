@@ -8,7 +8,11 @@ import LangText from "../../fragments/LangText"
 const Privacy = () => {
   return (
     <>
-      <BasicHeader linkPath="/settings" titleTag="h3" titleText={<LangText {...texts.headerTitle} />} />
+      <BasicHeader
+        linkPath="/settings"
+        titleTag="h3"
+        titleText={<LangText {...texts.headerTitle} />}
+      />
 
       <section>
         <SubpageLink to="blocked-people" title={<LangText {...texts.blocked} />}>
@@ -17,7 +21,9 @@ const Privacy = () => {
 
         <hr />
 
-        <h4 className="subpage-section-title"><LangText {...texts.subtitleMessaging} /></h4>
+        <h4 className="subpage-section-title">
+          <LangText {...texts.subtitleMessaging} />
+        </h4>
         <SubpageButton toggle title={<LangText {...texts.readReceipts} />}>
           <LangText {...texts.readReceiptsPar} />
         </SubpageButton>
@@ -28,13 +34,17 @@ const Privacy = () => {
 
         <hr />
 
-        <h4 className="subpage-section-title"><LangText {...texts.subtitleDisappearing} /></h4>
+        <h4 className="subpage-section-title">
+          <LangText {...texts.subtitleDisappearing} />
+        </h4>
 
         <SubpageLink to="" title={<LangText {...texts.disappearingTimer} />}>
           <LangText {...texts.disappearingTimerPar} />
         </SubpageLink>
 
-        <h4 className="subpage-section-title"><LangText {...texts.subtitleAppSecurity} /></h4>
+        <h4 className="subpage-section-title">
+          <LangText {...texts.subtitleAppSecurity} />
+        </h4>
 
         <SubpageButton toggle title={<LangText {...texts.screenLock} />}>
           <LangText {...texts.screenLockPar} />
@@ -60,7 +70,7 @@ const Privacy = () => {
         </p>
         <hr />
 
-        <SubpageLink to="" title={<LangText {...texts.advanced}/>}>
+        <SubpageLink to="" title={<LangText {...texts.advanced} />}>
           <LangText {...texts.advancedPar} />
         </SubpageLink>
       </section>

@@ -9,10 +9,11 @@ const List = () => {
 
   return (
     <div>
-      {contacts.map(data => <ListChat key={data} />)}
+      {contacts.map(data => (
+        <ListChat key={data} />
+      ))}
     </div>
   )
 }
-
 
 export default List

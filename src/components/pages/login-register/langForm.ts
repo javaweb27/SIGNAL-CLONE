@@ -1,10 +1,10 @@
 export const langForm = {
   email: {
     spanish: "Correo electrónico",
-    english: "Email"
+    english: "Email",
   },
   password: {
     spanish: "Contraseña",
-    english: "Password"
-  }
+    english: "Password",
+  },
 }

@@ -18,7 +18,7 @@ const MoreOptions = () => {
 
   const openMenu = ({ target }: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     list.current!.classList.add(classes.open)
-    root.onclick = (eventCloseMenu) => closeMenu(eventCloseMenu.target!, target)
+    root.onclick = eventCloseMenu => closeMenu(eventCloseMenu.target!, target)
   }
 
   const logout = () => {
@@ -30,29 +30,41 @@ const MoreOptions = () => {
     <div className={classes.container}>
       <HeaderButton onClick={openMenu} iconName="more_options" />
       <ul ref={list} className={classes.menu}>
-        <li><Link className={classes.option} to="new-group">
-          <LangText {...texts.newGroup} />
-        </Link></li>
+        <li>
+          <Link className={classes.option} to="new-group">
+            <LangText {...texts.newGroup} />
+          </Link>
+        </li>
 
-        <li><button className={classes.option}>
-          <LangText {...texts.markAllRead} />
-        </button></li>
+        <li>
+          <button className={classes.option}>
+            <LangText {...texts.markAllRead} />
+          </button>
+        </li>
 
-        <li><Link className={classes.option} to="invite-persons">
-          <LangText {...texts.inviteFriends} />
-        </Link></li>
+        <li>
+          <Link className={classes.option} to="invite-persons">
+            <LangText {...texts.inviteFriends} />
+          </Link>
+        </li>
 
-        <li><Link className={classes.option} to="/settings">
-          <LangText {...texts.settings} />
-        </Link></li>
+        <li>
+          <Link className={classes.option} to="/settings">
+            <LangText {...texts.settings} />
+          </Link>
+        </li>
 
-        <li><button className={classes.option}>
-          <LangText {...texts.notification} />
-        </button></li>
+        <li>
+          <button className={classes.option}>
+            <LangText {...texts.notification} />
+          </button>
+        </li>
 
-        <li><button className={classes.option} onClick={logout}>
-          <LangText {...texts.btnLogout} />
-        </button></li>
+        <li>
+          <button className={classes.option} onClick={logout}>
+            <LangText {...texts.btnLogout} />
+          </button>
+        </li>
       </ul>
     </div>
   )

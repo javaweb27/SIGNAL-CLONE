@@ -6,5 +6,5 @@ export const langFixedErrorMgs = {
   emailNotValid: {
     spanish: "Tu correo electrónico esta incompleto o tiene caracteres no validos",
     english: "Your email is incomplete or has invalid characters",
-  }
+  },
 }

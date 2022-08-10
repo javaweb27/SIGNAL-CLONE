@@ -19,7 +19,7 @@ const Register = () => {
   const handleSubmit = async (formData: I_FormDataState) => {
     const res = await fetchJSON("/register", true, {
       method: "PUT",
-      body: JSON.stringify(formData)
+      body: JSON.stringify(formData),
     })
 
     if (res?.ok) return navigate("/login")
@@ -35,8 +35,12 @@ const Register = () => {
   return (
     <LoginRegisterSection>
       <div className={classes.container}>
-        <h1><LangText {...texts.title} /></h1>
-        <p><LangText {...texts.par} /></p>
+        <h1>
+          <LangText {...texts.title} />
+        </h1>
+        <p>
+          <LangText {...texts.par} />
+        </p>
       </div>
       <FormLoginRegister
         handleSubmit={handleSubmit}
@@ -45,10 +49,12 @@ const Register = () => {
       <Link to="/home" onClick={handleGuest} className={classes.linkGuest}>
         <LangText {...texts.btnGuest} />
       </Link>
-      {errors > 0 && <FixedMessage
-        resetErrors={() => setErrors(0)}
-        msg={<LangText {...texts.emailNotAvailable} />}
-      />}
+      {errors > 0 && (
+        <FixedMessage
+          resetErrors={() => setErrors(0)}
+          msg={<LangText {...texts.emailNotAvailable} />}
+        />
+      )}
     </LoginRegisterSection>
   )
 }

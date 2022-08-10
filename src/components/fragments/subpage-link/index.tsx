@@ -2,9 +2,9 @@ import classes from "./index.module.scss"
 import { Link } from "react-router-dom"
 
 interface I_Props {
-  to: string;
-  title: React.ReactNode;
-  children?: React.ReactNode;
+  to: string
+  title: React.ReactNode
+  children?: React.ReactNode
 }
 
 const SubpageLink = ({ to, title, children }: I_Props) => {

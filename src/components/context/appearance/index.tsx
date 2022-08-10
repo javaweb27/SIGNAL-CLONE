@@ -1,6 +1,18 @@
 import { createContext, useContext, useReducer } from "react"
-import { T_CtxThemeValue, T_CtxLanguageValue, T_CtxLanguageAction, T_CtxThemeAction } from "../action-creators"
+import {
+  T_CtxThemeValue,
+  T_CtxThemeAction,
+  T_CtxLanguageValue,
+  T_CtxLanguageAction,
+} from "../action-creators"
 import appearanceReducer from "./appearanceReducer"
+
+const initialState = {
+  theme: "DEFAULT" as T_CtxThemeValue,
+  language: "english" as T_CtxLanguageValue,
+}
+
+export type T_AppearanceInitialState = typeof initialState
 
 const Context = createContext<
   readonly [
@@ -9,19 +21,10 @@ const Context = createContext<
   ]
 >(undefined!)
 
-export type T_AppearanceInitialState = typeof initialState
-
-const initialState = {
-  theme: "DEFAULT" as T_CtxThemeValue,
-  language: "english" as T_CtxLanguageValue
-}
-
 export const useAppearanceContext = () => useContext(Context)
 
-export const AppearanceProvider = ({ children }: {children: JSX.Element}) => {
+export const AppearanceProvider = ({ children }: { children: JSX.Element }) => {
   const [state, dispatch] = useReducer(appearanceReducer, initialState)
 
-  return <Context.Provider value={[state, dispatch]}>
-    {children}
-  </Context.Provider>
+  return <Context.Provider value={[state, dispatch]}>{children}</Context.Provider>
 }

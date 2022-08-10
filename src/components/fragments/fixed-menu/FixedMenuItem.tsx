@@ -1,19 +1,19 @@
 import classes from "./fixed-menu-item.module.scss"
 
-export interface I_ItemPropsAsParam extends I_BaseProps {
-  callback: () => void
-}
-
 interface I_BaseProps {
-  name: string;
-  id: string;
-  t: "text" | "radio" | "password";
-  children: React.ReactNode;
-  [x: string]: any;
+  name: string
+  id: string
+  t: "text" | "radio" | "password"
+  children: React.ReactNode
+  [x: string]: any
 }
 
 interface I_Props extends I_BaseProps {
-  handleClick: () => void;
+  handleClick: () => void
+}
+
+export interface I_ItemPropsAsParam extends I_BaseProps {
+  callback: () => void
 }
 
 /**

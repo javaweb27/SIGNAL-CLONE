@@ -8,8 +8,8 @@ import FixedErrorMsg, { isFormDataValid } from "./FixedErrorMsg"
 import { I_FormDataState, useFormDataContext } from "./FromDataContext"
 
 interface I_Props {
-  handleSubmit: (param: I_FormDataState) => void;
-  submitBtnText: React.ReactNode;
+  handleSubmit: (param: I_FormDataState) => void
+  submitBtnText: React.ReactNode
 }
 
 const FormLoginRegister = ({ handleSubmit, submitBtnText }: I_Props) => {
@@ -26,10 +26,11 @@ const FormLoginRegister = ({ handleSubmit, submitBtnText }: I_Props) => {
     setErrorsCount(current => current + 1)
   }
 
-  const handleChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => setFormData({
-    ...formData,
-    [target.name]: target.value
-  })
+  const handleChange = ({ target }: React.ChangeEvent<HTMLInputElement>) =>
+    setFormData({
+      ...formData,
+      [target.name]: target.value,
+    })
 
   const toggleHidden = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     event.preventDefault()

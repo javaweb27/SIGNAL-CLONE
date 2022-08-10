@@ -5,8 +5,8 @@ import ScrollIntoView from "../../fragments/ScrollIntoView"
 import ChatMessage from "./ChatMessage"
 
 interface I_Message {
-  body: string;
-  from: string;
+  body: string
+  from: string
 }
 
 const ChatBox = () => {
@@ -27,11 +27,7 @@ const ChatBox = () => {
   return (
     <section className={classes.messages}>
       {chatHistory.map((message, i) => (
-        <ChatMessage
-          body={message.body}
-          isItMe={message.from === socketio.id}
-          key={i}
-        />
+        <ChatMessage body={message.body} isItMe={message.from === socketio.id} key={i} />
       ))}
       <ScrollIntoView />
     </section>

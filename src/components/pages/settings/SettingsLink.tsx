@@ -3,8 +3,8 @@ import { Link } from "react-router-dom"
 import Svg from "../../svg"
 
 interface I_Props {
-  to: string;
-  text: React.ReactNode;
+  to: string
+  text: React.ReactNode
 }
 
 /**
@@ -14,7 +14,8 @@ interface I_Props {
 const SettingsLink = ({ to, text }: I_Props) => {
   return (
     <Link to={to} className={classes.link}>
-      <Svg name={to as any}/>{ text }
+      <Svg name={to as any} />
+      {text}
     </Link>
   )
 }

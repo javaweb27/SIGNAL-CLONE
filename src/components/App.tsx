@@ -5,9 +5,9 @@ import Home from "./pages/home"
 import Chat from "./pages/chat"
 import Settings from "./pages/settings"
 import Page404 from "./pages/page404"
-//context
+// context
 import AllProviders from "./context/AllProviders"
-//subpages
+// subpages
 import Profile from "./subpages/profile"
 import Account from "./subpages/account"
 import LinkedDevices from "./subpages/linked-devices"
@@ -31,12 +31,21 @@ const App = () => (
         <Route path="settings" element={<AsPrivate page={<Settings />} />} />
         <Route path="settings/profile" element={<AsPrivate page={<Profile />} />} />
         <Route path="settings/account" element={<AsPrivate page={<Account />} />} />
-        <Route path="settings/linked_devices" element={<AsPrivate page={<LinkedDevices />} />} />
+        <Route
+          path="settings/linked_devices"
+          element={<AsPrivate page={<LinkedDevices />} />}
+        />
         <Route path="settings/appearance" element={<AsPrivate page={<Appearance />} />} />
         <Route path="settings/chats" element={<AsPrivate page={<ChatsSettings />} />} />
-        <Route path="settings/notifications" element={<AsPrivate page={<Notifications />} />} />
+        <Route
+          path="settings/notifications"
+          element={<AsPrivate page={<Notifications />} />}
+        />
         <Route path="settings/privacy" element={<AsPrivate page={<Privacy />} />} />
-        <Route path="settings/data_storage" element={<AsPrivate page={<DataStorage />} />} />
+        <Route
+          path="settings/data_storage"
+          element={<AsPrivate page={<DataStorage />} />}
+        />
         <Route path="*" element={<AsPrivate page={<Page404 />} />} />
       </Routes>
     </HashRouter>

@@ -1,22 +1,24 @@
 export const langRegister = {
   title: {
     spanish: "Ingresa tu correo electrónico para comenzar o continua como invitado",
-    english: "Enter your email to get started or continue as a guest"
+    english: "Enter your email to get started or continue as a guest",
   },
   par: {
-    spanish: "Tu cuenta será eliminada 6 minutos después de crearse. La conexión podría no ser rápida, por favor sea paciente.",
-    english: "Your account will be deleted 6 minutes after it is created. The connection may not be fast, please be patient."
+    spanish:
+      "Tu cuenta será eliminada 6 minutos después de crearse. La conexión podría no ser rápida, por favor sea paciente.",
+    english:
+      "Your account will be deleted 6 minutes after it is created. The connection may not be fast, please be patient.",
   },
   btnGuest: {
     spanish: "Continuar como invitado",
-    english: "Continue as a guest"
+    english: "Continue as a guest",
   },
   btnNext: {
     spanish: "Siguiente",
-    english: "Next"
+    english: "Next",
   },
   emailNotAvailable: {
     spanish: "Ya hay una cuenta con este correo electrónico",
-    english: "There is already an account with this email"
-  }
+    english: "There is already an account with this email",
+  },
 }

@@ -7,10 +7,16 @@ import LangText from "../../fragments/LangText"
 const Notifications = () => {
   return (
     <>
-      <BasicHeader linkPath="/settings" titleTag="h3" titleText={<LangText {...texts.headerTitle} />} />
+      <BasicHeader
+        linkPath="/settings"
+        titleTag="h3"
+        titleText={<LangText {...texts.headerTitle} />}
+      />
 
       <section>
-        <h4 className="subpage-section-title"><LangText {...texts.subtitleMessages} /></h4>
+        <h4 className="subpage-section-title">
+          <LangText {...texts.subtitleMessages} />
+        </h4>
         <SubpageButton toggle title={<LangText {...texts.messageNotifications} />} />
 
         <SubpageButton title={<LangText {...texts.sound} />}>
@@ -33,7 +39,9 @@ const Notifications = () => {
 
         <hr />
 
-        <h4 className="subpage-section-title"><LangText {...texts.subtitleCalls} /></h4>
+        <h4 className="subpage-section-title">
+          <LangText {...texts.subtitleCalls} />
+        </h4>
         <SubpageButton toggle title={<LangText {...texts.callNotifications} />} />
 
         <SubpageButton title={<LangText {...texts.ringtone} />}>
@@ -44,7 +52,9 @@ const Notifications = () => {
 
         <hr />
 
-        <h4 className="subpage-section-title"><LangText {...texts.subtitleNotifyWhen} /></h4>
+        <h4 className="subpage-section-title">
+          <LangText {...texts.subtitleNotifyWhen} />
+        </h4>
         <SubpageButton toggle title={<LangText {...texts.contactJoinsSignal} />} />
       </section>
     </>

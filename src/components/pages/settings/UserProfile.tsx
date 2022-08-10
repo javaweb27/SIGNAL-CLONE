@@ -6,7 +6,7 @@ import ProfilePhoto from "../../fragments/profile-photo"
 const UserProfile = () => {
   return (
     <Link to="profile" className={classes.link}>
-      <ProfilePhoto/>
+      <ProfilePhoto />
       <div className={profileClasses.container}>
         <span className={profileClasses.title}>Usuario</span>
         <span className={profileClasses.subtitle}>123456789</span>

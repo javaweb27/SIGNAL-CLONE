@@ -7,7 +7,9 @@ const ChatHeader = () => {
     <header className="chat-header">
       <HeaderButton to="/home" iconName="arrow_left" />
       icono
-      <h2>global - <TimeleftCounter /></h2>
+      <h2>
+        global - <TimeleftCounter />
+      </h2>
       <p>ult. vez recientemente</p>
     </header>
   )

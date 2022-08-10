@@ -1,14 +1,14 @@
 export const langLanguageSettings = {
   currentLanguage: {
-    spanish:"Español",
-    english:"English"
+    spanish: "Español",
+    english: "English",
   },
   lSpanish: {
     spanish: "Español",
-    english: "Spanish"
+    english: "Spanish",
   },
   lEnglish: {
     spanish: "Inglés",
-    english: "English"
-  }
+    english: "English",
+  },
 }

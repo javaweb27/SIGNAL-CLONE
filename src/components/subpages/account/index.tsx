@@ -7,10 +7,16 @@ import LangText from "../../fragments/LangText"
 const Account = () => {
   return (
     <>
-      <BasicHeader linkPath="/settings" titleTag="h3" titleText={<LangText {...texts.headerTitle} />} />
+      <BasicHeader
+        linkPath="/settings"
+        titleTag="h3"
+        titleText={<LangText {...texts.headerTitle} />}
+      />
 
       <section className="cuenta">
-        <h4 className="subpage-section-title"><LangText {...texts.subtitlePIN} /></h4>
+        <h4 className="subpage-section-title">
+          <LangText {...texts.subtitlePIN} />
+        </h4>
         <SubpageLink to="" title={<LangText {...texts.changePIN} />} />
 
         <SubpageButton toggle title={<LangText {...texts.PINreminder} />}>
@@ -20,15 +26,15 @@ const Account = () => {
         <SubpageButton toggle title={<LangText {...texts.registrationLock} />}>
           <LangText {...texts.registrationLockPar} />
         </SubpageButton>
-        <SubpageLink to="" title={<LangText {...texts.PINsettings}/>} />
+        <SubpageLink to="" title={<LangText {...texts.PINsettings} />} />
 
         <hr />
 
         <h4 className="subpage-section-title">
           <LangText {...texts.subtitleAccount} />
         </h4>
-        <SubpageLink to="" title={<LangText {...texts.transferAccount}  />}>
-          <LangText {...texts.transferAccountPar}  />
+        <SubpageLink to="" title={<LangText {...texts.transferAccount} />}>
+          <LangText {...texts.transferAccountPar} />
         </SubpageLink>
 
         <SubpageLink to="" title={<LangText {...texts.deleteAccount} />} />

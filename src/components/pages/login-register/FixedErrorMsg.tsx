@@ -18,22 +18,30 @@ export const isFormDataValid = (formData: I_FormDataState) => {
   return isValid
 }
 
-const Par = ({ children }: { children: React.ReactNode }) => <p className={classes.msg}>{children}</p>
+const Par = ({ children }: { children: React.ReactNode }) => (
+  <p className={classes.msg}>{children}</p>
+)
 
 const FixedErrorMsg = ({ resetErrors }: { resetErrors: () => void }) => {
-  const [formData,] = useFormDataContext()
+  const [formData] = useFormDataContext()
   const errors = getErrors(formData)
 
-  //re-render is caused by setErrorsCount of the parent
+  // re-render is caused by setErrorsCount of the parent
   useEffect(() => {
     const timeoutId = setTimeout(() => resetErrors(), 6000)
 
     return () => clearTimeout(timeoutId)
   })
 
-  return errors.incompleteData ? <Par><LangText {...texts.incompleteData} /></Par>
-    : errors.emailNotValid ? <Par><LangText {...texts.emailNotValid} /></Par>
-      : null
+  return errors.incompleteData ? (
+    <Par>
+      <LangText {...texts.incompleteData} />
+    </Par>
+  ) : errors.emailNotValid ? (
+    <Par>
+      <LangText {...texts.emailNotValid} />
+    </Par>
+  ) : null
 }
 
 export default FixedErrorMsg

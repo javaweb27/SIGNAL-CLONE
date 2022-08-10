@@ -1,82 +1,83 @@
 export const langDataStorage = {
   headerTitle: {
     spanish: "Datos y almacenamiento",
-    english: "Data nad storage"
+    english: "Data nad storage",
   },
   manageStorage: {
     spanish: "Gestionar almacenamiento",
-    english: "Manage storage"
+    english: "Manage storage",
   },
   subtitleMediaAutoDL: {
     spanish: "Descarga automática de adjuntos",
-    english: "Media auto-download"
+    english: "Media auto-download",
   },
   whenUsingData: {
     spanish: "Al usar datos móviles",
-    english: "When using mobile data"
+    english: "When using mobile data",
   },
   whenUsingDataPar: {
     spanish: "Imágenes, audio",
-    english: "Images, Audio"
+    english: "Images, Audio",
   },
   whenUsingWifi: {
     spanish: "Al usar Wi-Fi",
-    english: "When using Wi-Fi"
+    english: "When using Wi-Fi",
   },
   whenUsingWifiPar: {
     spanish: "Imágenes, audio, video, documentos",
-    english: "Images, Audio, Video, Documents"
+    english: "Images, Audio, Video, Documents",
   },
   whenRoaming: {
     spanish: "En itinerancia (roaming)",
-    english: "When roaming"
+    english: "When roaming",
   },
   whenRoamingPar: {
     spanish: "Ninguno",
-    english: "None"
+    english: "None",
   },
   subtitleMediaQuality: {
     spanish: "Calidad de fotos y vídeos",
-    english: "Media quality"
+    english: "Media quality",
   },
   sentMedia: {
     spanish: "Calidad de envío de fotos y vídeos",
-    english: "Sent media quality"
+    english: "Sent media quality",
   },
   sentMediaPar: {
     spanish: "Normal",
-    english: "Standard"
+    english: "Standard",
   },
   descriptionMedia: {
     spanish: "Se usarán más datos al seleccionar la opcion de alta calidad.",
-    english: "Sending high quality media will use more data."
+    english: "Sending high quality media will use more data.",
   },
   subtitleCalls: {
     spanish: "Llamadas",
-    english: "Calls"
+    english: "Calls",
   },
   useLessData: {
     spanish: "Ahorrar datos en llamadas",
-    english: "Use less data for calls"
+    english: "Use less data for calls",
   },
   useLessDataPar: {
     spanish: "Solo red móvil",
-    english: "Mobile data only"
+    english: "Mobile data only",
   },
   descriptionUseLessData: {
-    spanish: "Al ahorrar datos, mejora la calidad de las llamadas en redes móviles mala cobertura",
-    english: "Using less data may improve calls on bad networks"
+    spanish:
+      "Al ahorrar datos, mejora la calidad de las llamadas en redes móviles mala cobertura",
+    english: "Using less data may improve calls on bad networks",
   },
   subtitleProxy: {
     spanish: "Proxy",
-    english: "Proxy"
+    english: "Proxy",
   },
   useProxy: {
     spanish: "Usar proxy",
-    english: "Use proxy"
+    english: "Use proxy",
   },
   useProxyPar: {
     spanish: "Inactivo",
-    english: "Off"
-  }
+    english: "Off",
+  },
 }

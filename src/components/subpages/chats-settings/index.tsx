@@ -7,7 +7,11 @@ import LangText from "../../fragments/LangText"
 const ChatsSettings = () => {
   return (
     <>
-      <BasicHeader linkPath="/settings" titleTag="h3" titleText={<LangText {...texts.headerTitle} />} />
+      <BasicHeader
+        linkPath="/settings"
+        titleTag="h3"
+        titleText={<LangText {...texts.headerTitle} />}
+      />
 
       <section>
         <SubpageLink to="sms" title={<LangText {...texts.MESSAGE} />} />
@@ -22,11 +26,15 @@ const ChatsSettings = () => {
 
         <hr />
 
-        <h4 className="subpage-section-title"><LangText {...texts.subtitleKeyboard} /></h4>
+        <h4 className="subpage-section-title">
+          <LangText {...texts.subtitleKeyboard} />
+        </h4>
         <SubpageButton toggle title={<LangText {...texts.useSystemEmoji} />} />
         <SubpageButton toggle title={<LangText {...texts.enterKeySends} />} />
 
-        <h4 className="subpage-section-title"><LangText {...texts.subtitleBackups} /></h4>
+        <h4 className="subpage-section-title">
+          <LangText {...texts.subtitleBackups} />
+        </h4>
 
         <SubpageLink to="chats-backup" title={<LangText {...texts.chatBackups} />}>
           <LangText {...texts.chatBackupsPar} />

@@ -4,7 +4,7 @@
 export const lsDeleteAuthToken = () => localStorage.removeItem("token")
 
 /**
- * 
+ *
  * @returns The token that was saved in localStorage with the name "token", it may be null.
  */
 export const lsGetAuthToken = () => localStorage.getItem("token")

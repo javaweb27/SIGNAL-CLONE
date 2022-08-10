@@ -12,18 +12,22 @@ const Appearance = () => {
 
   return (
     <>
-      <BasicHeader linkPath="/settings" titleTag="h3" titleText={<LangText {...texts.headerTitle} />}/>
+      <BasicHeader
+        linkPath="/settings"
+        titleTag="h3"
+        titleText={<LangText {...texts.headerTitle} />}
+      />
 
       <section>
         <ThemeSettings context={[theme, dispatch]} />
 
-        <SubpageLink to="chat-color" title={<LangText {...texts.chatColor} />}/>
+        <SubpageLink to="chat-color" title={<LangText {...texts.chatColor} />} />
 
         <SubpageButton title={<LangText {...texts.messageFontSize} />}>
           <LangText {...texts.messageFontSizePar} />
         </SubpageButton>
 
-        <LanguageSettings context={[language, dispatch]}/>
+        <LanguageSettings context={[language, dispatch]} />
       </section>
     </>
   )

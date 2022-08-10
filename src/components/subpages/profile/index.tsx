@@ -8,7 +8,11 @@ import Svg from "../../svg"
 const Profile = () => {
   return (
     <>
-      <BasicHeader linkPath="/settings" titleTag="h3" titleText={<LangText spanish="Perfil" english="Profile" />} />
+      <BasicHeader
+        linkPath="/settings"
+        titleTag="h3"
+        titleText={<LangText spanish="Perfil" english="Profile" />}
+      />
 
       <section className="profile">
         <div className="photo-container">
@@ -19,15 +23,24 @@ const Profile = () => {
           <Svg name="profile" />
           <div className="container">
             <span>Usuario</span>
-            <span><LangText spanish="Tu nombre" english="Your name" /></span>
+            <span>
+              <LangText spanish="Tu nombre" english="Your name" />
+            </span>
           </div>
         </Link>
 
         <Link to="biography" className="link">
           <Svg name="biography" />
           <div className="container">
-            <span><LangText spanish="Biografia" english="About" /></span>
-            <span><LangText spanish="Escribe unas pocas palabras sobre ti" english="Write a few words about yourself" /></span>
+            <span>
+              <LangText spanish="Biografia" english="About" />
+            </span>
+            <span>
+              <LangText
+                spanish="Escribe unas pocas palabras sobre ti"
+                english="Write a few words about yourself"
+              />
+            </span>
           </div>
         </Link>
         <p className="description">

@@ -12,32 +12,51 @@ const ThemeSettings = ({ context: [theme, dispatch] }: any) => {
     dispatch(changeTheme(theme))
   }
 
-  return <>
-    <SubpageButton
-      event={{ onClick: () => openFixedMenu(fixedMenuRef.current!) }}
-      title={<LangText spanish="Tema" english="Theme" />}
-    >
-      <LangText {...texts[theme.toLowerCase() as "default" | "dark" | "light"]} />
-    </SubpageButton>
+  return (
+    <>
+      <SubpageButton
+        event={{ onClick: () => openFixedMenu(fixedMenuRef.current!) }}
+        title={<LangText spanish="Tema" english="Theme" />}
+      >
+        <LangText {...texts[theme.toLowerCase() as "default" | "dark" | "light"]} />
+      </SubpageButton>
 
-    <FixedMenu
-      title={<LangText spanish="Tema" english="Theme" />}
-      containerRef={fixedMenuRef}
-      isChecked={id => id === theme}
-    >
-      {Item => <>
-        <Item t="radio" name="theme" id="DEFAULT" callback={() => callbackChange("DEFAULT")}>
-          <LangText {...texts.inputDefault} />
-        </Item>
-        <Item t="radio" name="theme" id="LIGHT" callback={() => callbackChange("LIGHT")}>
-          <LangText {...texts.inputLight} />
-        </Item>
-        <Item t="radio" name="theme" id="DARK" callback={() => callbackChange("DARK")}>
-          <LangText {...texts.inputDark} />
-        </Item>
-      </>}
-    </FixedMenu>
-  </>
+      <FixedMenu
+        title={<LangText spanish="Tema" english="Theme" />}
+        containerRef={fixedMenuRef}
+        isChecked={id => id === theme}
+      >
+        {Item => (
+          <>
+            <Item
+              t="radio"
+              name="theme"
+              id="DEFAULT"
+              callback={() => callbackChange("DEFAULT")}
+            >
+              <LangText {...texts.inputDefault} />
+            </Item>
+            <Item
+              t="radio"
+              name="theme"
+              id="LIGHT"
+              callback={() => callbackChange("LIGHT")}
+            >
+              <LangText {...texts.inputLight} />
+            </Item>
+            <Item
+              t="radio"
+              name="theme"
+              id="DARK"
+              callback={() => callbackChange("DARK")}
+            >
+              <LangText {...texts.inputDark} />
+            </Item>
+          </>
+        )}
+      </FixedMenu>
+    </>
+  )
 }
 
 export default ThemeSettings

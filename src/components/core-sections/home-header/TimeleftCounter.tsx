@@ -4,7 +4,7 @@ import { refreshLoginStatus, useLoginStatusContext } from "../../context/login-s
 import LangText from "../../fragments/LangText"
 import { langChatsList } from "../../pages/home/langMsgNoChats"
 
-const getCurrentTime = () => Math.trunc((new Date).getTime() / 1000)
+const getCurrentTime = () => Math.trunc(new Date().getTime() / 1000)
 
 /**
  * Shows a decreasing number if the user is logged, or "GUEST" text if the user is a guest.
@@ -17,7 +17,7 @@ const getCurrentTime = () => Math.trunc((new Date).getTime() / 1000)
 const TimeleftCounter = () => {
   const [loginStatus, setLoginStatus] = useLoginStatusContext()
   const refTimeleft = useRef<HTMLElement | null>(null)
-  const endDate = Number(loginStatus.data?.endDate)// if "data" is null, it results in 0
+  const endDate = Number(loginStatus.data?.endDate) // if "data" is null, it results in 0
 
   useEffect(() => {
     // "isLogged" is false when "loginStatus.data" is null and the token is not "GUEST" text.
@@ -38,11 +38,14 @@ const TimeleftCounter = () => {
     return () => clearInterval(idInterval)
   }, [])
 
-  if (loginStatus.isGuest) return <span><LangText {...langChatsList.btnGuest} /></span>
+  if (loginStatus.isGuest)
+    return (
+      <span>
+        <LangText {...langChatsList.btnGuest} />
+      </span>
+    )
 
-  return <span ref={refTimeleft}>
-    {loginStatus && endDate - getCurrentTime()}
-  </span>
+  return <span ref={refTimeleft}>{loginStatus && endDate - getCurrentTime()}</span>
 }
 
 export default TimeleftCounter
