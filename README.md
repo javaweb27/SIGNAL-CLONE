@@ -1,7 +1,7 @@
 # SIGNAL CLONE
 
 It is a clone of UI of Signal.\
-The user can switch between Dark and Light colors, between Spanish and English languages and write messages in a basic global chat.\
+The user can register with email instead of phone number, switch between Dark and Light colors, between Spanish and English languages and write messages in a basic global chat.\
 Express in Node is used for the APIs.
 
 Single Page Aplication (SPA)
@@ -14,6 +14,7 @@ Role: Frontend
 **Stack:**
 
 - Build tool: Vite
+- Linter: ESLint and Prettier
 - UI Library: React with TypeScript
 - Styles: Sass, CSS Modules
 - App State: Context API
